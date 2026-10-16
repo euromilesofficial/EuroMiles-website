@@ -31,3 +31,33 @@
     if (!dialog.open) dialog.showModal();
   });
 })();
+
+/* Decorative icon glow only: no moving icons or simulated application status. */
+(() => {
+  const journey = document.querySelector('.section-two-guidance-steps');
+  const steps = [...(journey?.querySelectorAll('.section-two-guidance-step') || [])];
+  if (steps.length !== 6) return;
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)');
+  let inView = false;
+  let index = 0;
+  let timer;
+  const stop = () => { clearInterval(timer); timer = undefined; };
+  const render = () => steps.forEach((step, position) => step.classList.toggle('is-glowing', position === index));
+  function sync() {
+    stop();
+    if (reduced.matches) {
+      steps.forEach(step => step.classList.remove('is-glowing'));
+      return;
+    }
+    if (!inView || document.hidden) return;
+    render();
+    timer = setInterval(() => { index = (index + 1) % steps.length; render(); }, 1600);
+  }
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(([entry]) => { inView = entry.isIntersecting; sync(); }, { threshold: .15 }).observe(journey);
+  } else { inView = true; sync(); }
+  reduced.addEventListener('change', sync);
+  document.addEventListener('visibilitychange', sync);
+  window.addEventListener('pagehide', stop);
+  window.addEventListener('pageshow', sync);
+})();

@@ -41,3 +41,21 @@
  .section-two-feature-card__content { height: auto; padding-bottom: 14px; }
  .section-two-feature-card__link { margin-top: 4px; }
 }
+
+/* Sequential local light follows the six-stage guidance journey. */
+.section-two-guidance-step { isolation: isolate; }
+.section-two-guidance-step::before { content: ''; position: absolute; z-index: -1; pointer-events: none; top: -10px; left: 50%; width: 56px; height: 54px; transform: translateX(-50%); border-radius: 50%; opacity: 0; background: radial-gradient(ellipse,#fff6d966 0%,#f5cf7d40 30%,#e7a7441f 52%,#e7a74400 74%); transition: opacity 300ms ease; }
+.section-two-guidance-step.is-glowing::before { opacity: 1; }
+.section-two-guidance-step img { transition: filter 300ms ease; }
+.section-two-guidance-step.is-glowing img { filter: drop-shadow(0 0 3px #f6d58b99); }
+@media (max-width:520px) {
+ .section-two-guidance-steps { position: relative; row-gap: 30px; }
+ .section-two-guidance-step:not(:last-child)::after { display: block; top: 0; right: -13px; width: 24px; height: 30px; }
+ .section-two-guidance-step:nth-child(3)::after { display: none; }
+ /* Connect the end of the first row to the beginning of the second row. */
+ .section-two-guidance-steps::after { content: ''; position: absolute; pointer-events: none; left: 0; right: 0; top: calc(50% - 11px); height: 22px; background: url('../images/icons/section-2-footer/mobile-journey-return.svg') center / 100% 100% no-repeat; }
+}
+@media (prefers-reduced-motion:reduce) {
+ .section-two-guidance-step::before { opacity: .25; transition: none; }
+ .section-two-guidance-step img { transition: none; }
+}
