@@ -40,5 +40,6 @@ Apply these rules to new sections and future edits.
 
 ## Cloud backup scope
 
+- After each completed website change, synchronize the clean GitHub backup: commit and push modified HTML/CSS/JavaScript, new assets and dependencies, and deletions of replaced or unused files. Verify that removed files are no longer referenced before deleting them from the current backup. Keep earlier commits and restore tags intact so previous approved versions remain recoverable; do not rewrite history to remove ordinary superseded website files.
 - The private GitHub repository `euromilesofficial/EuroMiles-website` is for clean website snapshots: include the current HTML, loaded styles/scripts, referenced assets (including dynamically loaded carousel assets), and required licenses. Exclude unused assets, alternate revisions, source mockups not used by the page, ZIPs, temporary files, and operating-system metadata.
 - Preserve the full local working history and original reference files on this computer. Do not push that older history to the clean cloud repository, since it contains unused assets. Use the separate local `cloud-backup` branch for clean snapshots pushed to GitHub's `main` branch.
