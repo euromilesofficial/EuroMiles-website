@@ -179,3 +179,15 @@
   .hero-carousel .carousel-heading { width: 114%; }
   .hero-carousel[data-slide="graduation-dreams"] .carousel-heading { width: max(122%, 390px); max-width: calc(100% + 120px); }
 }
+
+/* Mobile copy follows its content, matching the scholarship slide's 12px join. */
+@media (max-width: 760px) {
+  .hero-carousel:not([data-slide="scholarships"]) { min-height: 0; }
+  .hero-carousel:not([data-slide="scholarships"]) .carousel-copy { min-height: 0; }
+  .hero-carousel::before { top: auto; bottom: 62px; height: 62.5vw; }
+  .hero-carousel[data-slide="graduation-dreams"]::before { height: calc(100vw / 1.15); }
+  .hero-carousel[data-slide="italy-riverside"] .carousel-active-image {
+    -webkit-mask-image: linear-gradient(180deg, transparent, #000 9%, #000 95%, transparent);
+    mask-image: linear-gradient(180deg, transparent, #000 9%, #000 95%, transparent);
+  }
+}
