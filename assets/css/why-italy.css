@@ -1,6 +1,5 @@
 /* Opening header only. Preserve the original six benefit cards. */
-@font-face { font-family: 'EuroMiles Scenic Script'; src: url('../fonts/why-italy/la-belle-aurore.ttf') format('truetype'); font-style: normal; font-weight: 400; font-display: swap; }
-.section-two-opening { display: grid; grid-template-columns: minmax(0,60%) minmax(0,40%); min-height: clamp(260px,20vw,320px); align-items: center; overflow: visible; }
+.section-two-opening { display: grid; grid-template-columns: minmax(0,60%) minmax(0,40%); min-height: max(280px,calc(26.28vw - 20px)); align-items: center; overflow: visible; }
 .section-two-opening-copy { min-width: 0; padding-block: 24px; }
 .section-two-opening-title { width: max-content; max-width: none; font-family: 'EuroMiles Navigation Serif',Georgia,serif; font-size: clamp(32px,3.2vw,46px); line-height: 1.12; margin-bottom: 12px; }
 .section-two-opening-title span { white-space: nowrap; }
@@ -8,22 +7,16 @@
 .section-two-opening-eyebrow { flex-wrap: wrap; line-height: 1.5; }
 .section-two-opening-eyebrow::after { flex: 1 1 24px; min-width: 24px; }
 /* The photograph continues behind the upper cards, as in the reference. */
-.section-two-opening-visual { position: absolute; inset: 0 0 -95px 40%; width: auto; min-height: 0; margin: 0; aspect-ratio: auto; translate: none; overflow: hidden; }
-.section-two-opening-visual img { position: absolute; inset: 0; height: 100%; width: 100%; transform: none; object-fit: cover; object-position: center 75%; }
-.section-two-opening-visual::before { display: block; position: absolute; z-index: 1; inset: 0; pointer-events: none; content: ''; background: linear-gradient(90deg,#faf8f5 0%,#faf8f5f0 5%,#faf8f599 18%,#faf8f500 35%),linear-gradient(180deg,#faf8f5 0%,#faf8f500 8%,#faf8f500 72%,#faf8f5 100%),linear-gradient(270deg,#faf8f5 0%,#faf8f500 3%); }
-.section-two-opening-slogan { position: absolute; z-index: 2; top: 12%; right: 5%; margin: 0; color: #0b2046; font: 400 clamp(21px,2.05vw,33px)/.92 'EuroMiles Scenic Script',cursive; text-align: center; transform: rotate(-10deg); text-shadow: 0 1px 2px #fffdf8,0 0 5px #fffdf8; }
-.section-two-opening-slogan span { display: block; }
-.section-two-opening-slogan span:nth-child(2) { translate: 5px 0; }
-.section-two-opening-slogan span:nth-child(3) { translate: -3px 0; }
-.section-two-opening-slogan::after { content: ''; display: block; height: 5px; margin-top: 7px; border-top: 2px solid #bd8127; border-radius: 50%; transform: rotate(-7deg); }
+.section-two-opening-visual { position: absolute; inset: 0 0 -20px 40%; width: auto; min-height: 0; margin: 0; aspect-ratio: auto; translate: none; overflow: hidden; }
+.section-two-opening-visual img { position: absolute; inset: 0; height: 100%; width: 100%; transform: none; object-fit: cover; object-position: right 75%; }
+.section-two-opening-visual::before { display: block; position: absolute; z-index: 1; inset: 0; pointer-events: none; content: ''; background: linear-gradient(90deg,#faf8f5 0%,#faf8f5f0 5%,#faf8f599 18%,#faf8f500 35%),linear-gradient(180deg,#faf8f5 0%,#faf8f500 8%,#faf8f500 92%,#faf8f5 100%),linear-gradient(270deg,#faf8f5 0%,#faf8f500 3%); }
 @media (min-width:601px) and (max-width:1024px) {
  .section-two-opening { grid-template-columns: minmax(0,1fr); min-height: 0; }
  .section-two-opening-copy { padding: 24px 20px 12px; }
  .section-two-opening-title { font-size: clamp(30px,4vw,38px); }
- .section-two-opening-visual { position: relative; inset: auto; grid-row: 2; width: 100%; aspect-ratio: 2; }
- .section-two-opening-visual img { object-position: center 75%; }
+ .section-two-opening-visual { position: relative; inset: auto; grid-row: 2; width: 100%; aspect-ratio: 1895 / 830; }
+ .section-two-opening-visual img { object-position: right 75%; }
  .section-two-opening-visual::before { background: linear-gradient(180deg,#faf8f5,#faf8f500 7%,#faf8f500 90%,#faf8f5),linear-gradient(90deg,#faf8f5,#faf8f500 3%,#faf8f500 97%,#faf8f5); }
- .section-two-opening-slogan { top: 8%; font-size: 28px; }
 }
 @media (max-width:600px) {
  .section-two-opening { grid-template-columns: minmax(0,1fr); min-height: 0; }
@@ -31,8 +24,12 @@
  .section-two-opening-title { width: auto; max-width: 100%; font-size: clamp(30px,8vw,40px); }
  .section-two-opening-title span { white-space: normal; }
  .section-two-opening-description { font-size: 14px; }
- .section-two-opening-visual { position: relative; inset: auto; grid-row: 2; width: 100%; aspect-ratio: 1586 / 992; }
- .section-two-opening-visual img { object-fit: contain; object-position: center; }
+ .section-two-opening-visual { position: relative; inset: auto; grid-row: 2; width: 100%; aspect-ratio: 1.8; }
+ .section-two-opening-visual img { object-fit: cover; object-position: right center; }
  .section-two-opening-visual::before { background: linear-gradient(180deg,#faf8f5,#faf8f500 6%,#faf8f500 93%,#faf8f5),linear-gradient(90deg,#faf8f5,#faf8f500 3%,#faf8f500 97%,#faf8f5); }
- .section-two-opening-slogan { top: 7%; right: 6%; font-size: clamp(17px,4.25vw,25px); }
+}
+
+/* Narrow-phone correction only: retain the approved card appearance. */
+@media (max-width: 359px) {
+ .section-two-tuition-card--scholarships { height: auto; min-height: 160px; }
 }

@@ -20,6 +20,7 @@ Apply these rules to new sections and future edits.
 
 ## Current approved interaction details
 
+- The Why Italy opening uses the user's scenic WebP with its five-word slogan already embedded in the image. Do not add duplicate HTML lettering or a separate handwriting font for that slogan. Preserve the visible mountains, students, hands, notebook, and laptop when adjusting responsive framing.
 - The six Why Italy benefit cards retain their original images, typography, alignment, dimensions, and curved/tilted image treatment (especially cards 3–6). Opening-header work must not change these cards or their closing guidance strip. Obtain explicit scope from the user before revising card styling.
 - The complete top bar, navigation, and hero section are approved and locked as of 16 October 2026. Preserve their design, content, spacing, animations, and desktop/tablet/mobile behaviour unless the user explicitly requests a change.
 - The corrected mobile carousel spacing is approved and locked: slides 1, 2, 3, and 5 use content-sized copy blocks with a 12px icon-row-to-photo gap and the approved short scenic-image fade. Preserve this during future edits.
