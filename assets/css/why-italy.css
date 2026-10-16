@@ -65,3 +65,20 @@
 /* A short image-edge transition keeps photographs out of the readable copy. */
 .section-two-feature-card::before { clip-path: none; background: linear-gradient(90deg,transparent 25%,#faf8f5 33%); }
 .section-two-feature-card::after { background: none; clip-path: none; }
+/* Preserve the photograph's full lettering and use its existing ivory edge. */
+.section-two-opening-visual::before { display: none; }
+.section-two-opening-visual img { object-fit: contain; object-position: right center; }
+@media (min-width: 1025px) {
+ .section-two-opening-title { width: max-content; max-width: none; }
+ .section-two-opening-title span { white-space: nowrap; }
+ .section-two-opening-visual { translate: -16px 0; }
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+ .section-two-opening { grid-template-columns: minmax(0,1fr); }
+ .section-two-opening-visual { grid-row: 2; min-height: 0; aspect-ratio: 1200 / 502; max-height: 280px; }
+ .section-two-opening-title { max-width: none; }
+ .section-two-opening-title span { white-space: nowrap; }
+}
+@media (max-width: 600px) {
+ .section-two-opening-visual { aspect-ratio: 1200 / 502; }
+}
