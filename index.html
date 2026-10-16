@@ -1092,8 +1092,8 @@
         .hero-benefit:not(:last-of-type) { border-right: 1px solid #e4a13a; }
 
         @media (min-width: 1025px) {
-            .hero-benefit:first-child { justify-content: flex-start; }
-            .hero-benefit:last-of-type { justify-content: flex-end; }
+            /* Give every icon/text group the same surrounding space. */
+            .hero-benefits { grid-template-columns: repeat(6, auto); }
         }
 
         .hero-benefit-icon {
