@@ -21,6 +21,7 @@ Apply these rules to new sections and future edits.
 ## Current approved interaction details
 
 - The complete top bar, navigation, and hero section are approved and locked as of 16 October 2026. Preserve their design, content, spacing, animations, and desktop/tablet/mobile behaviour unless the user explicitly requests a change.
+- The corrected mobile carousel spacing is approved and locked: slides 1, 2, 3, and 5 use content-sized copy blocks with a 12px icon-row-to-photo gap and the approved short scenic-image fade. Preserve this during future edits.
 - The hero left section is approved and locked, including its copy, typography, form, spacing, responsive layout, double-arrow journey, and looping gold-to-green arrival animation. Preserve it during right-carousel work unless the user explicitly requests a change.
 - Hero carousel photographs use the new assets in `assets/images/hero-section-crousel`. Recreate the original mockup banners’ slogans, navy/gold typography, university logos, and feature-icon rows as editable HTML over those photographs; do not substitute the old flattened banner images for the new photos.
 - The fifth graduation design, “Turn Your Dreams into a Global Future,” is the opening slide, followed by universities, student life, scholarships, and the Turin scene. Its supplied reference is preserved; use the final original graduation photograph with editable text and icons. Do not restore the decorative landmark buildings or Italian ribbon overlay.
