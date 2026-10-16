@@ -1,4 +1,4 @@
-/* Responsive Why Italy section; scoped to preserve the approved header and hero. */
+/* Opening header only. Preserve the original six benefit cards. */
 .section-two-opening { grid-template-columns: minmax(0, 58%) minmax(0, 42%); min-height: 260px; align-items: center; }
 .section-two-opening-copy { min-width: 0; padding-block: 28px; }
 .section-two-opening-title { font-family: 'EuroMiles Navigation Serif', Georgia, serif; font-size: clamp(32px, 3.2vw, 46px); line-height: 1.12; margin-bottom: 12px; }
@@ -8,33 +8,10 @@
 .section-two-opening-visual { position: relative; inset: auto; align-self: stretch; min-height: 260px; width: 100%; aspect-ratio: auto; }
 .section-two-opening-visual img { position: absolute; inset: 0; height: 100%; width: 100%; transform: none; object-fit: cover; object-position: 65% center; }
 .section-two-opening-visual::before { background: linear-gradient(90deg,#faf8f5,transparent 10%),linear-gradient(0deg,#faf8f5,transparent 10%); }
-.section-two-card-row { background: #faf8f5; gap: 16px; padding-top: 12px; }
-.section-two-tuition-card { height: auto; min-height: 210px; }
-.section-two-tuition-card__copy { width: 65%; padding: 18px; }
-.section-two-tuition-card__heading { gap: 12px; }
-.section-two-tuition-card__heading > div { min-width: 0; }
-.section-two-tuition-card__title { white-space: normal; font-size: clamp(23px, 2vw, 30px); line-height: 1.15; }
-.section-two-tuition-card__description { margin-left: 0; font-size: 13px; line-height: 1.55; }
-.section-two-tuition-card__link { margin-left: 0; min-height: 44px; font-size: 12px; }
-.section-two-feature-card { height: auto; min-height: 250px; }
-.section-two-feature-card__content { height: 100%; padding-block: 16px; }
-.section-two-feature-card__heading { --feature-icon-size: 36px; --feature-icon-gap: 8px; }
-.section-two-feature-card__eyebrow { white-space: normal; font-size: 9px; line-height: 1.4; }
-.section-two-feature-card__title { font-size: 20px; line-height: 1.2; }
-.section-two-feature-card__description { font-size: 13px; line-height: 1.55; }
-.section-two-feature-card__link { margin-top: auto; }
-@media (max-width: 1199px) {
- .section-two-feature-row { grid-template-columns: repeat(2,minmax(0,1fr)); }
- .section-two-feature-card { min-height: 215px; }
-}
 @media (max-width: 900px) {
  .section-two-opening { grid-template-columns: minmax(0,55%) minmax(0,45%); }
  .section-two-opening-copy { padding: 24px 16px 24px 20px; }
  .section-two-opening-title { font-size: clamp(30px,4vw,38px); }
- .section-two-card-row { grid-template-columns: repeat(2,minmax(0,1fr)); padding-inline: 20px; }
- .section-two-tuition-card__copy { width: 74%; padding: 16px; }
- .section-two-tuition-card__heading { flex-direction: column; gap: 8px; }
- .section-two-tuition-card__title { font-size: 24px; }
 }
 @media (max-width: 600px) {
  .section-two-opening { grid-template-columns: minmax(0,1fr); }
@@ -43,29 +20,7 @@
  .section-two-opening-description { font-size: 14px; }
  .section-two-opening-visual { grid-row: 2; min-height: 0; aspect-ratio: 16/9; }
  .section-two-opening-visual::before { background: linear-gradient(180deg,#faf8f5,transparent 8%),linear-gradient(0deg,#faf8f5,transparent 8%); }
- .section-two-card-row,.section-two-feature-row { grid-template-columns: minmax(0,1fr); gap: 12px; padding-inline: 20px; }
- .section-two-tuition-card { min-height: 0; }
- .section-two-tuition-card__copy { width: 76%; padding: 16px; }
- .section-two-tuition-card__heading { flex-direction: row; align-items: center; }
- .section-two-tuition-card__title { font-size: 24px; }
- .section-two-tuition-card__description { margin-top: 10px; }
- .section-two-feature-card { min-height: 0; }
- .section-two-feature-card__content { padding: 16px 16px 12px 32%; }
- .section-two-guidance-summary { font-size: 13px; line-height: 1.5; }
- .section-two-guidance-step span { font-size: 11px; line-height: 1.35; }
- .section-two-guidance-cta { min-height: 44px; height: auto; white-space: normal; }
 }
-/* Keep explanatory copy complete rather than clamping it to three lines. */
-.section-two-tuition-card__description { display: block; max-width: none; overflow: visible; -webkit-line-clamp: unset; line-clamp: unset; }
-.section-two-tuition-card__price > span:first-child,
-.section-two-tuition-card__price-zero { font-size: 1em; line-height: 1.15; }
-.section-two-tuition-card__title { padding-block: 4px; }
-.section-two-feature-card__description { margin-left: 0; }
-.section-two-feature-card__link { max-width: 100%; white-space: normal; margin-left: 0; }
-/* A short image-edge transition keeps photographs out of the readable copy. */
-.section-two-feature-card::before { clip-path: none; background: linear-gradient(90deg,transparent 25%,#faf8f5 33%); }
-.section-two-feature-card::after { background: none; clip-path: none; }
-/* Preserve the photograph's full lettering and use its existing ivory edge. */
 .section-two-opening-visual::before { display: none; }
 .section-two-opening-visual img { object-fit: contain; object-position: right center; }
 @media (min-width: 1025px) {
