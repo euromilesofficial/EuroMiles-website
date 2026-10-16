@@ -1,0 +1,113 @@
+/* Profile-led hero: editable copy, a compact route, and labelled fields. */
+.hero-left { padding: 20px clamp(24px, 2.5vw, 44px) 128px clamp(32px, 4.1vw, 72px); font-family: 'EuroMiles Navigation Sans', Arial, sans-serif; }
+.hero-left-content { max-width: 715px; }
+.hero-eyebrow { display: flex; align-items: center; gap: 8px; margin: 0 0 8px clamp(110px, 8vw, 148px); color: #805600; font-size: 10px; font-weight: 700; letter-spacing: .08em; line-height: 1.4; text-transform: uppercase; }
+.hero-italy-flag { width: 21px; height: 14px; flex: 0 0 21px; border-radius: 2px; background: linear-gradient(90deg, #008c45 0 33.333%, #fff 33.333% 66.666%, #cd212a 66.666%); box-shadow: 0 0 0 1px #0b20460c; }
+.hero-heading { margin: 0 0 10px; color: #0b2046; font: 700 clamp(36px, 3.2vw, 50px)/1.08 'EuroMiles Navigation Serif', Georgia, serif; letter-spacing: -.035em; }
+.hero-heading > span { display: block; padding-left: clamp(110px, 8vw, 148px); }
+.hero-heading em { display: block; margin-top: 3px; color: #bd8127; font-style: normal; }
+.hero-intro { max-width: 620px; margin: 0 0 12px; color: #52647d; font-size: 14px; line-height: 1.5; }
+.hero-route { margin: 0 0 14px; }
+.hero-route-steps { display: grid; position: relative; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 4px; list-style: none; padding: 0; margin: 0; }
+.hero-route-steps li:not(:last-child)::before { position: absolute; content: ''; height: 1px; background: #d5aa50; top: 12px; left: calc(50% + 18px); width: calc(100% - 32px); }
+.hero-route-steps li:not(:last-child)::after { position: absolute; content: ''; width: 14px; height: 12px; top: 6px; left: calc(100% - 7px); background: #faf8f5 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 12' fill='none' stroke='%23bd8127' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m2 2 4 4-4 4m6-8 4 4-4 4'/%3E%3C/svg%3E") center / 14px 12px no-repeat; }
+.hero-route-steps li { position: relative; display: flex; flex-direction: column; align-items: center; gap: 5px; min-width: 0; text-align: center; color: #0b2046; font-size: 11px; font-weight: 600; line-height: 1.25; }
+.hero-route-stop { display: grid; place-items: center; width: 25px; height: 25px; border: 1px solid #d3b16c; border-radius: 50%; background: #fffaf0; color: #805600; font-size: 10px; font-weight: 700; box-shadow: 0 0 0 4px #faf8f5; }
+.hero-route-steps li:first-child .hero-route-stop { background: #f4c457; border-color: #f4c457; color: #0b2046; }
+.hero-route-steps li:last-child .hero-route-stop { background: #0b2046; border-color: #0b2046; color: #f4c457; }
+.hero-route.is-animated li .hero-route-stop { position: relative; background: #fffaf0; color: #805600; border-color: #d3b16c; }
+.hero-route.is-animated :is(.is-current, .is-complete) .hero-route-stop { background: #f4c457; border-color: #e5b342; color: #0b2046; }
+.hero-route.is-animated li:nth-child(n+3):is(.is-current, .is-complete) { color: #0d684c; }
+.hero-route.is-animated li:nth-child(n+3):is(.is-current, .is-complete) .hero-route-stop,
+.hero-route.is-animated.is-arrived li .hero-route-stop { background: #16835e; border-color: #16835e; color: #fff; }
+.hero-route.is-arrived li { color: #0d684c; }
+.hero-route li:nth-child(n+3):is(.is-current, .is-complete)::before,
+.hero-route.is-arrived li:not(:last-child)::before { background: #16835e; }
+.hero-route li:nth-child(n+3):is(.is-current, .is-complete)::after,
+.hero-route.is-arrived li:not(:last-child)::after { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 12' fill='none' stroke='%2316835e' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m2 2 4 4-4 4m6-8 4 4-4 4'/%3E%3C/svg%3E"); }
+.hero-arrival-burst { position: absolute; top: 12px; left: 50%; width: 0; height: 0; pointer-events: none; }
+.hero-arrival-burst i { position: absolute; width: 4px; height: 3px; border-radius: 1px; opacity: 0; }
+.hero-arrival-burst::before { position: absolute; content: ''; width: 28px; height: 28px; left: -14px; top: -14px; border: 1px solid #16835e; border-radius: 50%; opacity: 0; }
+@media (prefers-reduced-motion: no-preference) {
+  .hero-route.is-animated .hero-route-stop { transition: background-color 180ms ease, border-color 180ms ease, color 180ms ease, transform 180ms ease, box-shadow 180ms ease; }
+  .hero-route .is-current .hero-route-stop { transform: scale(1.08); box-shadow: 0 0 0 4px #faf8f5, 0 0 0 6px #e8b94a38; }
+  .hero-route li:nth-child(n+3).is-current .hero-route-stop { box-shadow: 0 0 0 4px #faf8f5, 0 0 0 6px #16835e24; }
+  .hero-route.is-arrived .hero-arrival-burst i { animation: hero-arrival-confetti 850ms cubic-bezier(.18,.7,.25,1) var(--burst-delay) both; }
+  .hero-route.is-arrived .hero-arrival-burst::before { animation: hero-arrival-ring 850ms ease-out both; }
+}
+@keyframes hero-arrival-confetti {
+  0% { opacity: 0; transform: translate(0, 0) rotate(0); }
+  15% { opacity: 1; }
+  65% { opacity: 1; transform: translate(var(--burst-x), var(--burst-y)) rotate(var(--burst-rotation)); }
+  100% { opacity: 0; transform: translate(var(--burst-x), calc(var(--burst-y) + 8px)) rotate(var(--burst-rotation)); }
+}
+@keyframes hero-arrival-ring {
+  0% { opacity: .65; transform: scale(.8); }
+  100% { opacity: 0; transform: scale(1.8); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-arrival-burst { display: none; }
+}
+.hero-lead-card { margin-top: 0; padding: 14px 18px 12px; border: 1px solid #e9dfcb; border-radius: 14px; box-shadow: 0 8px 24px #0b204609; }
+.hero-lead-header h2 { font: 700 24px/1.15 'EuroMiles Navigation Serif', Georgia, serif; margin-bottom: 12px; }
+.hero-lead-header p { margin: 0 0 12px; font-size: 12px; line-height: 1.4; }
+.hero-lead-form { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 12px; }
+.hero-field-group { gap: 4px; }
+.hero-field-label { display: block; color: #0b2046; font-size: 11px; font-weight: 600; line-height: 1.3; }
+.hero-field-label > span:not(.hero-optional) { color: #a96d13; }
+.hero-optional { color: #64748b; font-weight: 400; }
+.hero-field { min-height: 46px; border-color: #dde2e8; border-radius: 7px; }
+.hero-field input, .hero-field select { height: 44px; font-size: 14px; font-family: inherit; }
+.hero-field input::placeholder { color: #7a8596; }
+.hero-country-code { min-height: 30px; font-size: 13px; padding-inline: 8px; }
+.hero-field > svg { width: 16px; height: 16px; flex-basis: 16px; margin-inline: 9px; }
+.hero-field-feedback { font-size: 11px; line-height: 1.35; }
+.hero-contact-consent { display: flex; grid-column: 1 / -1; min-height: 28px; align-items: center; gap: 8px; color: #52647d; font-size: 10px; line-height: 1.5; cursor: pointer; }
+.hero-contact-consent input { flex: 0 0 15px; width: 15px; height: 15px; margin-top: 0; accent-color: #bd8127; cursor: pointer; }
+.hero-lead-btn { grid-column: 1 / -1; margin-top: 0; min-height: 46px; border-radius: 7px; font: 700 12px/1.4 'EuroMiles Navigation Sans', Arial, sans-serif; padding: 11px 12px; cursor: pointer; }
+.hero-lead-btn:hover, .hero-lead-btn:focus-visible { background: #f7d18c; }
+.hero-lead-trust { grid-column: 1 / -1; flex-wrap: wrap; margin-top: -2px; font-size: 10px; font-weight: 500; gap: 5px; }
+.hero-form-status { grid-column: 1 / -1; margin: 0; }
+.hero-contact-consent input:focus-visible { outline: 2px solid #805600; outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) {
+  .hero-lead-btn:hover, .hero-lead-btn:focus-visible { animation: none; }
+}
+@media (min-width: 761px) and (max-width: 1350px) {
+  .hero-left { padding: 20px 24px 168px 28px; }
+  .hero-heading { font-size: clamp(36px, 3.6vw, 44px); }
+  .hero-eyebrow { font-size: 9px; letter-spacing: .04em; }
+  .hero-field input, .hero-field select { font-size: 16px; }
+}
+@media (max-width: 760px) {
+  .hero-left { padding: 20px 20px 14px; }
+  .hero-eyebrow { margin-left: 0; font-size: 9px; gap: 7px; }
+  .hero-heading { font-size: clamp(32px, 8.6vw, 46px); margin-bottom: 9px; }
+  .hero-heading > span { padding-left: 0; }
+  .hero-intro { font-size: 13px; margin-bottom: 12px; }
+  .hero-route { margin-bottom: 14px; }
+  .hero-route-steps { gap: 0; }
+  .hero-route-steps li { font-size: 10.5px; }
+  .hero-lead-card { padding: 14px 14px 12px; }
+  .hero-lead-header h2 { font-size: 22px; }
+  .hero-lead-header p { font-size: 12px; }
+  .hero-lead-form { gap: 10px; }
+  .hero-field input, .hero-field select { font-size: 16px; }
+  .hero-group-mobile, .hero-group-email { grid-column: 1 / -1; }
+  .hero-group-full-name .hero-field > svg, .hero-group-degree-level .hero-field > svg { display: none; }
+  .hero-group-full-name input, .hero-group-degree-level select { padding-left: 10px; }
+  .hero-lead-trust { font-size: 9px; }
+  .hero-contact-consent { font-size: 11px; }
+}
+@media (min-width: 681px) and (max-width: 760px) {
+  .hero-left { padding-top: 64px; }
+}
+@media (min-width: 561px) and (max-width: 680px) {
+  .hero-left { padding-top: 36px; }
+}
+@media (max-width: 359px) {
+  .hero-left { padding-inline: 16px; }
+  .hero-lead-header h2 { font-size: 20px; }
+  .hero-lead-btn { font-size: 11px; }
+  .hero-lead-card { padding-inline: 12px; }
+  .hero-field-label { font-size: 10px; }
+}

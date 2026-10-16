@@ -1,0 +1,181 @@
+/* New photographs with editable copy styled after the original banners. */
+.hero-carousel { font-family: 'EuroMiles Navigation Sans', Arial, sans-serif; }
+.hero-carousel .carousel-active-image { inset: 0; width: 100%; max-width: none; height: 100%; transform: none; object-fit: cover; object-position: 72% center; -webkit-mask-image: none; mask-image: none; }
+.hero-carousel::before { background: linear-gradient(90deg, #faf8f5, #faf8f5a3 5%, #faf8f500 18%), linear-gradient(180deg, #faf8f5, #faf8f500 11%); }
+.hero-carousel::after { background: linear-gradient(0deg, #faf8f5, #faf8f5e8 11%, #faf8f500 28%), linear-gradient(270deg, #faf8f5, #faf8f500 4%); }
+.carousel-copy { position: absolute; z-index: 2; top: 6%; left: 4.5%; width: 62%; max-width: 520px; color: #0b2046; text-shadow: 0 1px 2px #fff, 0 0 8px #ffffffe0; }
+.carousel-copy[hidden] { display: none; }
+.carousel-eyebrow { display: flex; align-items: center; gap: 10px; margin: 0 0 17px; color: #0b2046; font-size: clamp(10px, .72vw, 12px); font-weight: 600; letter-spacing: .13em; line-height: 1.6; }
+.carousel-eyebrow::before { content: ''; height: 1px; width: 24px; flex: 0 0 24px; background: #a67a20; }
+.carousel-heading { margin: 0 0 9px; font: 700 clamp(38px, 3.15vw, 56px)/1.06 'EuroMiles Navigation Serif', Georgia, serif; letter-spacing: -.035em; }
+.carousel-heading em { color: #a67a20; font-style: normal; }
+.carousel-description { max-width: 94%; position: relative; margin: 0; padding-bottom: 16px; font-size: clamp(16px, 1.15vw, 20px); line-height: 1.35; font-weight: 500; text-shadow: 0 0 5px #fff, 0 0 12px #fff, 0 0 22px #fff; }
+.hero-carousel[data-slide="universities"] .carousel-description { text-transform: uppercase; font-size: clamp(11px, .82vw, 14px); letter-spacing: .08em; }
+.carousel-description::after { content: ''; position: absolute; bottom: 2px; left: 28%; width: 60px; height: 5px; border-top: 2px solid #a67a20; border-radius: 50%; transform: rotate(-3deg); }
+.carousel-highlights { width: 90%; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: 20px; align-items: start; }
+.carousel-highlights.is-universities { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+.carousel-highlights.is-universities,
+.hero-carousel[data-slide="student-life"] .carousel-highlights,
+.hero-carousel[data-slide="scholarships"] .carousel-highlights { position: relative; isolation: isolate; text-shadow: none; }
+.hero-carousel[data-slide="student-life"] .carousel-heading { font-size: clamp(49px, 4.05vw, 70px); }
+.carousel-highlight { display: flex; flex-direction: column; align-items: center; gap: 7px; min-width: 0; padding: 0 5px; text-align: center; }
+.carousel-highlight + .carousel-highlight { border-left: 1px solid #b38b4b80; }
+.carousel-highlight svg { width: 44px; height: 44px; fill: none; stroke: #a67a20; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.carousel-highlight img { width: 56px; height: 56px; object-fit: contain; }
+.carousel-highlight span { font-size: clamp(10px, .75vw, 12px); font-weight: 700; line-height: 1.35; text-transform: uppercase; }
+.hero-carousel .carousel-arrow { top: auto; bottom: 145px; width: 44px; height: 44px; transform: none; border: 1px solid #ddd4c2; background: #fffefaf0; color: #0b2046; }
+.hero-carousel .carousel-arrow:hover { background: #f7d18c; }
+.hero-carousel .carousel-arrow-left { left: calc(50% - 117px); }
+.hero-carousel .carousel-arrow-right { left: calc(50% + 73px); right: auto; }
+.hero-carousel .carousel-dots { bottom: 145px; height: 44px; align-items: center; gap: 0; left: calc(50% - 72px); right: auto; }
+.hero-carousel .carousel-dots .dot { position: relative; width: 36px; height: 44px; border-radius: 0; background: transparent; }
+.hero-carousel .carousel-dots .dot::after { content: ''; position: absolute; width: 8px; height: 8px; border-radius: 50%; top: 18px; left: 14px; background: #8d96a1; }
+.hero-carousel .carousel-dots .dot.active::after { background: #bd8127; box-shadow: 0 0 0 4px #bd81271a; }
+.carousel-playback { position: absolute; z-index: 3; right: 22px; bottom: 145px; width: 44px; height: 44px; border: 1px solid #ddd4c2; border-radius: 50%; background: #fffefaf0; color: #0b2046; font-size: 15px; cursor: pointer; }
+.carousel-playback:hover { background: #f7d18c; }
+.hero-carousel button:focus-visible { outline: 2px solid #805600; outline-offset: 3px; }
+
+/* Preserve the full river, bridge and architecture instead of a portrait crop. */
+.hero-carousel[data-slide="italy-riverside"] .carousel-active-image { top: 20%; height: auto; aspect-ratio: 1.6; object-fit: contain; object-position: center; -webkit-mask-image: linear-gradient(180deg, transparent, #000 20%, #000 95%, transparent); mask-image: linear-gradient(180deg, transparent, #000 20%, #000 95%, transparent); }
+@media (min-width: 761px) and (max-width: 1024px) {
+  .carousel-copy { top: 20px; left: 6%; width: 88%; }
+  .carousel-eyebrow { font-size: 9px; letter-spacing: .07em; gap: 6px; margin-bottom: 10px; }
+  .carousel-eyebrow::before { width: 12px; flex-basis: 12px; }
+  .carousel-heading { font-size: clamp(26px, 2.9vw, 33px); }
+  .hero-carousel[data-slide="student-life"] .carousel-heading { font-size: clamp(31px, 3.35vw, 38px); }
+  .carousel-description { font-size: 14px; }
+  .hero-carousel[data-slide="universities"] .carousel-description { font-size: 10px; }
+  .carousel-highlights, .carousel-highlights.is-universities { width: 100%; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 0; margin-top: 16px; }
+  .carousel-highlights.is-universities { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .carousel-highlight span { font-size: 9px; }
+  .carousel-highlight img { width: 44px; height: 44px; }
+  .carousel-highlight svg { width: 35px; height: 35px; }
+  .hero-carousel .carousel-active-image { top: 420px; height: calc(100% - 500px); object-position: 76% center; }
+  .hero-carousel[data-slide="italy-riverside"] .carousel-active-image { top: 420px; height: calc(100% - 500px); object-fit: contain; object-position: center top; }
+  .hero-carousel::before { top: 420px; }
+  .hero-carousel .carousel-arrow-left { left: 4px; }
+  .hero-carousel .carousel-arrow-right { left: auto; right: 4px; }
+  .hero-carousel .carousel-dots { left: calc(50% - 64px); }
+  .hero-carousel .carousel-dots .dot { width: 32px; }
+  .hero-carousel .carousel-dots .dot::after { left: 12px; }
+  .hero-carousel .carousel-arrow, .hero-carousel .carousel-dots { bottom: 185px; }
+  .carousel-playback { bottom: 235px; right: 12px; }
+}
+@media (max-width: 760px) {
+  .hero-carousel { height: auto; min-height: calc(62.5vw + 412px); padding-bottom: 62px; display: flex; flex-direction: column; }
+  .hero-carousel .carousel-copy { position: relative; inset: auto; order: -1; width: auto; max-width: none; padding: 18px 22px 12px; min-height: 350px; }
+  .carousel-eyebrow { font-size: 10px; letter-spacing: .1em; margin-bottom: 14px; }
+  .carousel-heading { font-size: clamp(34px, 8.6vw, 48px); }
+  .hero-carousel[data-slide="student-life"] .carousel-heading { font-size: clamp(41px, 10.5vw, 64px); }
+  .carousel-description { font-size: 16px; }
+  .hero-carousel[data-slide="universities"] .carousel-description { font-size: 11px; }
+  .carousel-highlights { width: 100%; }
+  .carousel-highlight span { font-size: 10px; }
+  .carousel-highlight img { width: 48px; height: 48px; }
+  .carousel-highlight svg { width: 38px; height: 38px; }
+  .hero-carousel .carousel-active-image, .hero-carousel[data-slide="italy-riverside"] .carousel-active-image { position: relative; inset: auto; height: auto; width: 100%; aspect-ratio: 1.6; object-fit: contain; object-position: center; }
+  .hero-carousel::before { top: 350px; background: linear-gradient(180deg, #faf8f5, #faf8f500 12%), linear-gradient(90deg, #faf8f5, #faf8f500 4%); }
+  .hero-carousel::after { background: linear-gradient(0deg, #faf8f5, #faf8f5 62px, #faf8f500 95px), linear-gradient(270deg, #faf8f5, #faf8f500 4%); }
+  .hero-carousel .carousel-arrow, .hero-carousel .carousel-dots, .carousel-playback { bottom: 8px; }
+  .hero-carousel .carousel-arrow-left { left: calc(50% - 135px); }
+  .hero-carousel .carousel-arrow-right { left: calc(50% + 55px); }
+  .hero-carousel .carousel-dots { left: calc(50% - 90px); }
+  .carousel-playback { right: 12px; }
+}
+@media (max-width: 359px) {
+  .carousel-highlights.is-universities { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px 0; }
+  .hero-carousel .carousel-copy { min-height: 420px; padding-inline: 18px; }
+  .hero-carousel { min-height: calc(62.5vw + 482px); }
+  .hero-carousel::before { top: 420px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-carousel .carousel-active-image { transition: none; }
+  .carousel-playback { display: none; }
+}
+
+/* Three education-led highlights on the final slide, at every breakpoint. */
+.hero-carousel[data-slide="italy-riverside"] .carousel-highlights { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+/* Phosphor MIT-licensed vector artwork; original geometry and duotone layers. */
+.carousel-highlight svg.carousel-professional-icon { color: #a67a20; width: 52px; height: 52px; }
+@media (max-width: 1024px) {
+  .carousel-highlight svg.carousel-professional-icon { width: 40px; height: 40px; }
+}
+/* Fifth design leads the carousel with the original photograph and editable copy. */
+.hero-carousel[data-slide="graduation-dreams"] .carousel-active-image { left: 0; width: 100%; height: 100%; object-fit: cover; object-position: 72% top; -webkit-mask-image: none; mask-image: none; }
+.hero-carousel[data-slide="graduation-dreams"] .carousel-copy { width: 55%; max-width: 480px; top: 6%; }
+.hero-carousel[data-slide="graduation-dreams"] .carousel-heading { font-size: clamp(41px, 3.4vw, 60px); line-height: 1.02; }
+.hero-carousel[data-slide="graduation-dreams"] .carousel-description { font-size: clamp(13px, 1.05vw, 18px); }
+.hero-carousel .carousel-dots .dot { width: 28px; }
+.hero-carousel .carousel-dots .dot::after { left: 10px; }
+@media (min-width: 761px) and (max-width: 1024px) {
+  .hero-carousel[data-slide="graduation-dreams"] .carousel-copy { top: 20px; left: 6%; width: 88%; }
+  .hero-carousel[data-slide="graduation-dreams"] .carousel-heading { font-size: clamp(26px, 2.85vw, 33px); }
+  .hero-carousel[data-slide="graduation-dreams"] .carousel-description { font-size: 13px; }
+  .hero-carousel[data-slide="graduation-dreams"] .carousel-active-image { left: 0; top: 420px; width: 100%; height: calc(100% - 500px); object-position: 94% top; }
+  .hero-carousel .carousel-dots .dot { width: 26px; }
+  .hero-carousel .carousel-dots .dot::after { left: 9px; }
+}
+@media (max-width: 760px) {
+  .hero-carousel[data-slide="graduation-dreams"] .carousel-copy { position: relative; inset: auto; width: auto; max-width: none; }
+  .hero-carousel[data-slide="graduation-dreams"] .carousel-heading { font-size: clamp(34px, 8.5vw, 50px); }
+  .hero-carousel[data-slide="graduation-dreams"] .carousel-description { font-size: 15px; }
+  .hero-carousel[data-slide="graduation-dreams"] .carousel-active-image { position: relative; inset: auto; width: 100%; height: auto; aspect-ratio: 1.15; object-position: 94% top; -webkit-mask-image: linear-gradient(180deg, transparent, #000 9%, #000 92%, transparent); mask-image: linear-gradient(180deg, transparent, #000 9%, #000 92%, transparent); }
+}
+.hero-carousel[data-slide="graduation-dreams"] .carousel-highlights { width: 100%; }
+
+@media (min-width: 1025px) {
+  .hero-carousel[data-slide="graduation-dreams"] .carousel-highlight span { font-size: clamp(9.5px, .7vw, 11px); }
+}
+/* Reveal the shared hero background at the join, including the opening artwork. */
+@media (min-width: 761px) {
+  .hero-carousel {
+    -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 min(28px, 4%));
+    mask-image: linear-gradient(90deg, transparent 0, #000 min(28px, 4%));
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+  }
+}
+/* Local light behind every carousel icon and logo, without washing out photos. */
+.hero-carousel .carousel-highlight { position: relative; isolation: isolate; }
+.hero-carousel .carousel-highlight::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+  top: -14px;
+  left: 50%;
+  width: 78px;
+  height: 72px;
+  transform: translateX(-50%);
+  background: radial-gradient(ellipse, #fffdf8fa 0%, #fffdf8eb 30%, #fffdf885 55%, #fffdf800 75%);
+}
+@media (max-width: 1024px) {
+  .hero-carousel .carousel-highlight::before { width: 66px; height: 64px; top: -14px; }
+}
+.hero-carousel .carousel-highlight span { text-shadow: 0 0 3px #fffdf8, 0 0 7px #fffdf8, 0 0 12px #fffdf8; }
+/* Decorative architecture dissolves before the shared ivory join on every slide. */
+@media (min-width: 761px) {
+  .homepage-hero { --hero-copy-share: 42%; }
+  .homepage-hero::before {
+    -webkit-mask-image: linear-gradient(90deg, #000 0, #000 calc(var(--hero-copy-share) - 150px), transparent calc(var(--hero-copy-share) - 15px));
+    mask-image: linear-gradient(90deg, #000 0, #000 calc(var(--hero-copy-share) - 150px), transparent calc(var(--hero-copy-share) - 15px));
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .homepage-hero { --hero-copy-share: 52%; }
+}
+@media (min-width: 761px) and (max-width: 1024px) {
+  .homepage-hero { --hero-copy-share: 70%; }
+}
+@media (min-width: 761px) and (max-width: 1024px) {
+  .hero-carousel[data-slide="scholarships"] .carousel-active-image { top: 442px; height: calc(100% - 522px); }
+  .hero-carousel[data-slide="scholarships"]::before { top: 442px; }
+}
+/* Let larger desktop headings use available space without widening the icon rows. */
+@media (min-width: 1025px) {
+  .hero-carousel .carousel-heading { width: 114%; }
+  .hero-carousel[data-slide="graduation-dreams"] .carousel-heading { width: max(122%, 390px); max-width: calc(100% + 120px); }
+}
