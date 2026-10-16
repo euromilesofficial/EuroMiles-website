@@ -1091,6 +1091,11 @@
 
         .hero-benefit:not(:last-of-type) { border-right: 1px solid #e4a13a; }
 
+        @media (min-width: 1025px) {
+            .hero-benefit:first-child { justify-content: flex-start; }
+            .hero-benefit:last-of-type { justify-content: flex-end; }
+        }
+
         .hero-benefit-icon {
             display: grid;
             width: 44px;
@@ -1235,7 +1240,7 @@
                 grid-template-columns: repeat(2, minmax(0, 1fr));
                 gap: 6px 0;
                 margin: 14px 14px 18px;
-                padding: 12px 12px 44px;
+                padding: 12px 12px 32px;
             }
             .hero-benefit { display: grid; grid-template-columns: 34px minmax(0, 1fr); align-items: center; gap: 8px; padding: 0 8px; }
             .hero-benefit:not(:last-of-type) { border-right: 0; }
@@ -1243,9 +1248,9 @@
             .hero-benefit-icon { width: 34px; height: 34px; flex-basis: 34px; }
             .hero-benefit-icon svg { width: 23px; height: 23px; }
             .hero-benefit-label { font-size: 12px; }
-            .hero-benefits-caption { display: flex; align-items: center; justify-content: center; gap: 5px; bottom: 9px; padding: 0 12px; font-size: 11px; line-height: 1.35; }
+            .hero-benefits-caption { display: flex; align-items: center; justify-content: center; gap: 6px; bottom: 9px; padding: 0 12px; font-size: clamp(7px, 2.2vw, 11px); line-height: 1.35; white-space: nowrap; }
             .hero-benefits-caption::before,
-            .hero-benefits-caption::after { width: 6vw; flex: 0 0 6vw; margin: 0; }
+            .hero-benefits-caption::after { width: auto; min-width: 8px; flex: 1 1 0; margin: 0; }
         }
 
         /* Section 2 opening band, matched to the supplied reference mockup. */
