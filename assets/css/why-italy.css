@@ -1,4 +1,4 @@
-/* Opening header only. Preserve the original six benefit cards. */
+/* Opening header and requested mobile spacing. Preserve the original card design. */
 .section-two-opening { display: grid; grid-template-columns: minmax(0,60%) minmax(0,40%); min-height: max(280px,calc(26.28vw - 20px)); align-items: center; overflow: visible; }
 .section-two-opening-copy { min-width: 0; padding-block: 24px; }
 .section-two-opening-title { width: max-content; max-width: none; font-family: 'EuroMiles Navigation Serif',Georgia,serif; font-size: clamp(32px,3.2vw,46px); line-height: 1.12; margin-bottom: 12px; }
@@ -32,4 +32,12 @@
 /* Narrow-phone correction only: retain the approved card appearance. */
 @media (max-width: 359px) {
  .section-two-tuition-card--scholarships { height: auto; min-height: 160px; }
+}
+
+/* Approved mobile spacing refinements; retain desktop cards and curved edges. */
+@media (max-width: 760px) {
+ .section-two-card-row { padding-top: 8px; }
+ .section-two-feature-card { height: auto; }
+ .section-two-feature-card__content { height: auto; padding-bottom: 14px; }
+ .section-two-feature-card__link { margin-top: 4px; }
 }
