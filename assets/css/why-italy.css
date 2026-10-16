@@ -37,3 +37,17 @@
 @media (max-width: 600px) {
  .section-two-opening-visual { aspect-ratio: 1200 / 502; }
 }
+/* Full scenic photograph with editable lettering in the clear sky area. */
+.section-two-opening-visual { align-self: center; min-height: 0; aspect-ratio: 1586 / 992; }
+.section-two-opening-visual img { object-position: center; }
+.section-two-opening-slogan { position: absolute; z-index: 2; top: 4%; right: 4%; margin: 0; color: #0b2046; font: 500 clamp(13px, 1.8vw, 27px)/.94 'Caveat','Brush Script MT',cursive; text-align: center; transform: rotate(-7deg); text-shadow: 0 0 3px #fffdf8,0 0 6px #fffdf8; }
+.section-two-opening-slogan span { display: block; }
+.section-two-opening-slogan::after { content: ''; display: block; height: 4px; margin-top: 4px; border-top: 2px solid #bd8127; border-radius: 50%; transform: rotate(-5deg); }
+@media (min-width: 601px) and (max-width: 1024px) {
+ .section-two-opening-visual { width: min(100%,640px); max-height: none; justify-self: center; aspect-ratio: 1586 / 992; }
+ .section-two-opening-slogan { font-size: 25px; }
+}
+@media (max-width: 600px) {
+ .section-two-opening-visual { aspect-ratio: 1586 / 992; }
+ .section-two-opening-slogan { font-size: clamp(13px,3.25vw,19px); }
+}
