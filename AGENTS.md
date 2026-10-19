@@ -20,6 +20,8 @@ Apply these rules to new sections and future edits.
 
 ## Current approved interaction details
 
+- As of 20 October 2026, the user has approved and locked the complete website UI from the top bar/navigation through the end of Section 3, including all responsive layouts, images, icons, finder, tabs, subject tiles, and closing shortlist strip. Preserve these approved sections unless the user requests a change. Content remains placeholder until the separate final content-writing stage. The user explicitly authorized a GitHub backup of this approved state on this date.
+
 - Section 3 shortlist-strip benefit icons are approved as of 20 October 2026: preserve the four crisp gold-and-ivory SVG designs (personalised team, checked shield, consultation document, and conversation bubbles), localized soft gold glow, and responsive sizing.
 
 - Section 2 is approved and locked, including its scenic header and blending, six card designs, compact mobile card spacing, and footer journey with mobile connectors and sequential six-icon glow. Preserve these details unless the user requests a change.
