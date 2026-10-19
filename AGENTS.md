@@ -20,6 +20,9 @@ Apply these rules to new sections and future edits.
 
 ## Current approved interaction details
 
+- Section 3 shortlist-strip benefit icons are approved as of 20 October 2026: preserve the four crisp gold-and-ivory SVG designs (personalised team, checked shield, consultation document, and conversation bubbles), localized soft gold glow, and responsive sizing.
+
+- Section 2 is approved and locked, including its scenic header and blending, six card designs, compact mobile card spacing, and footer journey with mobile connectors and sequential six-icon glow. Preserve these details unless the user requests a change.
 - The Why Italy opening uses the user's scenic WebP with its five-word slogan already embedded in the image. Do not add duplicate HTML lettering or a separate handwriting font for that slogan. Preserve the visible mountains, students, hands, notebook, and laptop when adjusting responsive framing.
 - The six Why Italy benefit cards retain their original images, typography, alignment, dimensions, and curved/tilted image treatment (especially cards 3–6). Opening-header work must not change these cards or their closing guidance strip. Obtain explicit scope from the user before revising card styling.
 - The complete top bar, navigation, and hero section are approved and locked as of 16 October 2026. Preserve their design, content, spacing, animations, and desktop/tablet/mobile behaviour unless the user explicitly requests a change.
@@ -43,6 +46,7 @@ Apply these rules to new sections and future edits.
 
 ## Cloud backup scope
 
-- After each completed website change, synchronize the clean GitHub backup: commit and push modified HTML/CSS/JavaScript, new assets and dependencies, and deletions of replaced or unused files. Verify that removed files are no longer referenced before deleting them from the current backup. Keep earlier commits and restore tags intact so previous approved versions remain recoverable; do not rewrite history to remove ordinary superseded website files.
+- Create a local Git checkpoint after each approved website step and before the next revision, including the changed code and its required assets. Keep these checkpoints recoverable without pushing; push to GitHub only when the user requests it.
+- Save website edits locally while working. Batch GitHub backups and push only when the user requests it, such as at the end of the working day, rather than after every small change. Each requested backup must include all pending modified HTML/CSS/JavaScript, new assets and dependencies, and deletions of replaced or unused files. Verify that removed files are no longer referenced before deleting them from the current backup. Keep earlier commits and restore tags intact so previous approved versions remain recoverable; do not rewrite history to remove ordinary superseded website files.
 - The private GitHub repository `euromilesofficial/EuroMiles-website` is for clean website snapshots: include the current HTML, loaded styles/scripts, referenced assets (including dynamically loaded carousel assets), and required licenses. Exclude unused assets, alternate revisions, source mockups not used by the page, ZIPs, temporary files, and operating-system metadata.
 - Preserve the full local working history and original reference files on this computer. Do not push that older history to the clean cloud repository, since it contains unused assets. Use the separate local `cloud-backup` branch for clean snapshots pushed to GitHub's `main` branch.

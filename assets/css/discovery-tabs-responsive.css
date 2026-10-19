@@ -1,0 +1,39 @@
+/* Preserve the approved desktop cards. On smaller screens, show each supplied
+   photograph at its native ratio so its embedded category label stays intact. */
+@media (max-width: 1190px) {
+    .section-three-programme-card:nth-child(1) { --programme-photo-ratio: 361 / 127; }
+    .section-three-programme-card:nth-child(2) { --programme-photo-ratio: 329 / 127; }
+    .section-three-programme-card:nth-child(3) { --programme-photo-ratio: 350 / 127; }
+    .section-three-programme-card:nth-child(4) { --programme-photo-ratio: 338 / 127; }
+
+    .section-three-programme-photo {
+        height: auto;
+        aspect-ratio: var(--programme-photo-ratio);
+        background-size: 100% 100%;
+    }
+
+    /* The original image already includes the same gold category label. */
+    .section-three-programme-badge { visibility: hidden; }
+    .section-three-programme-meta { flex-wrap: wrap; gap: 6px 10px; }
+}
+
+@media (max-width: 700px) {
+    .section-three-university-card,
+    .section-three-university-card:nth-child(3) { height: auto; min-height: 250px; }
+    .section-three-university-photo { position: absolute; inset: 0; }
+    .section-three-university-copy > * { flex-shrink: 0; }
+    .section-three-programme-name,
+    .section-three-programme-description {
+        display: block;
+        min-height: 0;
+        overflow: visible;
+        -webkit-line-clamp: unset;
+    }
+    .section-three-programme-copy { min-height: 0; }
+    .section-three-programme-link { min-height: 36px; margin-top: 4px; }
+}
+
+@media (max-width: 420px) {
+    .section-three-university-card,
+    .section-three-university-card:nth-child(3) { min-height: 240px; }
+}

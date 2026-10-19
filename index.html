@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EuroMiles | Top Bar & Logo Only</title>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600&family=Manrope:wght@500;600;700&family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         /* CSS Resets */
         * {
@@ -4341,6 +4341,11 @@
     <link rel="stylesheet" href="assets/css/hero-left.css?v=20261015-journey-animation">
     <link rel="stylesheet" href="assets/css/hero-carousel.css?v=20261016-mobile-carousel-spacing">
     <link rel="stylesheet" href="assets/css/why-italy.css?v=20261016-guidance-glow">
+    <link rel="stylesheet" href="assets/css/discovery-header.css?v=20261017-header-integrated-finder">
+    <link rel="stylesheet" href="assets/css/discovery-finder.css?v=20261017-finder-narrow-v7">
+    <link rel="stylesheet" href="assets/css/discovery-tabs-responsive.css?v=20261017-card-reflow-v2">
+    <link rel="stylesheet" href="assets/css/discovery-subjects.css?v=20261018-inter-subjects-v5">
+    <link rel="stylesheet" href="assets/css/discovery-shortlist.css?v=20261020-benefit-icons-v1">
     <script src="assets/js/main.js?v=20261016-final-graduation-photo" defer></script>
     <script src="assets/js/hero-route.js?v=20261015-journey-arrival-hold" defer></script>
     <script src="assets/js/why-italy.js?v=20261016-guidance-glow" defer></script>
@@ -4973,51 +4978,78 @@
     </section>
 
     <section class="section-three-discovery-header" id="section-3-discovery-hub" aria-labelledby="section-three-discovery-title">
+        <svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute"><defs><filter id="discovery-reference-ink" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  -3 -3 -3 0 5"/></filter></defs></svg>
+        <div class="section-three-discovery-watermark" aria-hidden="true"></div>
+        <div class="section-three-discovery-visual">
+            <img src="assets/images/section-3/section-3-header.webp" alt="Indian student writing in a notebook beside his laptop in a historic Italian architectural setting" width="2172" height="724" loading="lazy" decoding="async">
+            <div class="section-three-discovery-slogan" role="img" aria-label="Your Italian Dream Starts Here">
+                <img src="assets/images/mockups/section-3-header-background-cropped-for-left-heading.webp" alt="" width="2043" height="632" loading="lazy" decoding="async">
+            </div>
+        </div>
         <div class="section-three-discovery-copy">
             <p class="section-three-discovery-eyebrow"><span class="section-three-discovery-flag" aria-hidden="true"><span></span><span></span><span></span></span>Explore Your Options in Italy</p>
             <h2 class="section-three-discovery-title" id="section-three-discovery-title">Find the Right <span class="section-three-gold">University &amp;</span><br><span class="section-three-gold">Programme</span> for Your Future.</h2>
-            <p class="section-three-discovery-description">Explore Italian universities and English-taught programmes by university, subject, city, degree level, ranking and academic goals.</p>
+            <p class="section-three-discovery-description">Explore your options. Understand what fits.<br>Plan your next step with <strong class="section-three-discovery-brand">EuroMiles</strong>.</p>
         </div>
-    </section>
 
-    <form class="section-three-search-panel" id="section-three-search-panel" role="search" aria-label="Find an Italian university or programme">
-        <label class="section-three-search-field section-three-search-query">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.7"></circle><path d="m15.5 15.5 5 5"></path></svg>
-            <span>
-                <span class="section-three-search-label">What are you looking for?</span>
-                <input type="search" name="search" placeholder="Search university, programme or subject..." aria-label="Search university, programme or subject">
-            </span>
-        </label>
-        <label class="section-three-search-field">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m2 8 10-5 10 5-10 5L2 8Z"></path><path d="M6 10v5c3.5 2.7 8.5 2.7 12 0v-5M22 8v6"></path></svg>
-            <span>
-                <span class="section-three-search-label">Degree Level</span>
-                <select name="degree" aria-label="Degree Level"><option>Any Level</option><option>Bachelor's</option><option>Master's</option><option>PhD</option></select>
-            </span>
-        </label>
-        <label class="section-three-search-field">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>
-            <span>
-                <span class="section-three-search-label">City / Region</span>
-                <select name="city" aria-label="City or Region"><option>Any City</option><option>Milan</option><option>Rome</option><option>Bologna</option><option>Turin</option><option>Padua</option><option>Florence</option></select>
-            </span>
-        </label>
-        <label class="section-three-search-field">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.5c3-1.7 6-1.7 9 0v15c-3-1.7-6-1.7-9 0v-15Zm18 0c-3-1.7-6-1.7-9 0v15c3-1.7 6-1.7 9 0v-15Z"></path><path d="M6 9h3m-3 3h3m6-3h3m-3 3h3"></path></svg>
-            <span>
-                <span class="section-three-search-label">Field of Study</span>
-                <select name="field" aria-label="Field of Study"><option>Any Field</option><option>Computer Science &amp; AI</option><option>Engineering</option><option>Business &amp; Economics</option><option>Architecture &amp; Design</option><option>Medicine &amp; Health Sciences</option><option>Science &amp; Life Sciences</option></select>
-            </span>
-        </label>
-        <label class="section-three-search-field">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5"></circle><path d="M2.5 12h19M12 2.5a15 15 0 0 1 0 19M12 2.5a15 15 0 0 0 0 19"></path></svg>
-            <span>
-                <span class="section-three-search-label">Language</span>
-                <select name="language" aria-label="Language"><option>English</option><option>Italian</option></select>
-            </span>
-        </label>
-        <button class="section-three-search-button" type="button">Search Now <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"></path></svg></button>
+    <form class="section-three-search-panel discovery-finder" id="section-three-search-panel" role="search" aria-label="Explore your study options in Italy">
+        <h3 class="discovery-finder-intro">Find Your Study Options in Italy</h3>
+        <p class="discovery-finder-subtitle">Start with your goals. We’ll help you explore the possibilities.</p>
+        <div class="discovery-finder-fields">
+            <label class="discovery-finder-field discovery-finder-query">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg>
+                <span><span class="discovery-finder-label">What are you looking for?</span>
+                    <input name="search" type="search" aria-label="University or course name" placeholder="University or course name" autocomplete="off">
+                </span>
+            </label>
+            <label class="discovery-finder-field">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m2 8 10-5 10 5-10 5L2 8Z"/><path d="M6 10v5c3.5 2.7 8.5 2.7 12 0v-5M22 8v6"/></svg>
+                <span><span class="discovery-finder-label">Current Education</span>
+                    <select name="qualification" aria-label="Current or highest qualification">
+                        <option value="">Select qualification</option>
+                        <option value="school-studying">Class 11 / 12 — studying</option>
+                        <option value="class-12">Class 12 — completed</option>
+                        <option value="diploma">Diploma</option>
+                        <option value="bachelors-studying">Bachelor’s — studying</option>
+                        <option value="bachelors-completed">Bachelor’s — completed</option>
+                        <option value="masters-studying">Master’s — studying</option>
+                        <option value="masters-completed">Master’s — completed</option>
+                        <option value="other">Other qualification</option>
+                    </select>
+                </span>
+            </label>
+            <label class="discovery-finder-field">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.5c3-1.7 6-1.7 9 0v15c-3-1.7-6-1.7-9 0v-15Zm18 0c-3-1.7-6-1.7-9 0v15c3-1.7 6-1.7 9 0v-15Z"/><path d="M6 9h3m-3 3h3m6-3h3m-3 3h3"/></svg>
+                <span><span class="discovery-finder-label">Subject Interest</span>
+                    <select name="subject" aria-label="What would you like to study?">
+                        <option value="">Choose a subject</option>
+                        <option value="computer-science">Computer Science &amp; AI</option>
+                        <option value="engineering">Engineering</option>
+                        <option value="business">Business &amp; Economics</option>
+                        <option value="architecture">Architecture &amp; Design</option>
+                        <option value="medicine">Medicine &amp; Health Sciences</option>
+                        <option value="science">Science &amp; Life Sciences</option>
+                        <option value="fashion">Fashion &amp; Design</option>
+                        <option value="humanities">Humanities &amp; Social Sciences</option>
+                        <option value="undecided">Help me decide</option>
+                    </select>
+                </span>
+            </label>
+            <label class="discovery-finder-field">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4m10-4v4M3 10h18M7 14h3m4 0h3m-10 3h3"/></svg>
+                <span><span class="discovery-finder-label">Preferred Intake</span>
+                    <select name="intake" aria-label="When would you like to start?">
+                        <option value="">Choose start year</option>
+                        <option value="2027">2027</option><option value="2028">2028</option><option value="2029">2029</option>
+                        <option value="undecided">Not decided yet</option>
+                    </select>
+                </span>
+            </label>
+            <button class="section-three-search-button discovery-finder-button" type="button">Explore My Options <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></button>
+        </div>
+
     </form>
+    </section>
 
     <section class="section-three-discovery-content" aria-label="Explore Italian universities and programmes">
         <div class="section-three-university-toolbar" id="section-three-universities">
@@ -5154,26 +5186,71 @@
                     <div class="section-three-toolbar-note"><span>Discover programmes across diverse subject areas to match your interests</span><a class="section-three-toolbar-link" href="#section-three-search-panel">View All Subjects <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"></path></svg></a></div>
                 </div>
                 <div class="section-three-programme-subject-grid">
-                    <a class="section-three-programme-subject section-three-programme-subject--active" href="#section-three-search-panel"><span class="section-three-programme-subject-icon"><svg viewBox="0 0 32 32"><rect x="5" y="5" width="22" height="22" rx="3"></rect><path d="M10 10h3v3h-3zm9 0h3v3h-3zm-9 9h3v3h-3zm9 0h3v3h-3zM16 2v3m0 22v3M2 16h3m22 0h3M8 3v3m16 20v3M3 8h3m20 16h3"></path></svg></span><span>Computer Science &amp; AI</span><svg class="section-three-programme-subject-arrow" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6"></path></svg></a>
-                    <a class="section-three-programme-subject" href="#section-three-search-panel"><span class="section-three-programme-subject-icon"><svg viewBox="0 0 32 32"><path d="M16 4v24M6 10h20M9 10c0 8 3 12 7 12s7-4 7-12M8 28h16"></path><circle cx="16" cy="7" r="3"></circle></svg></span><span>Medicine &amp; Health Sciences</span><svg class="section-three-programme-subject-arrow" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6"></path></svg></a>
-                    <a class="section-three-programme-subject" href="#section-three-search-panel"><span class="section-three-programme-subject-icon"><svg viewBox="0 0 32 32"><path d="m16 3 10 26M16 3 6 29m-3 0h26M9 20h14m-11-8h8"></path></svg></span><span>Architecture &amp; Interior Design</span><svg class="section-three-programme-subject-arrow" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6"></path></svg></a>
-                    <a class="section-three-programme-subject" href="#section-three-search-panel"><span class="section-three-programme-subject-icon"><svg viewBox="0 0 32 32"><path d="M16 4c-5 4-8 9-8 15 0 5 3 9 8 9s8-4 8-9c0-6-3-11-8-15Z"></path><path d="M11 20c3-2 7-2 10 0m-5-6v14"></path></svg></span><span>Fashion &amp; Design</span><svg class="section-three-programme-subject-arrow" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6"></path></svg></a>
-                    <a class="section-three-programme-subject" href="#section-three-search-panel"><span class="section-three-programme-subject-icon"><svg viewBox="0 0 32 32"><path d="m16 3 2 4-2 4-2-4 2-4Zm0 18 2 4-2 4-2-4 2-4ZM3 16l4-2 4 2-4 2-4-2Zm18 0 4-2 4 2-4 2-4-2Z"></path><circle cx="16" cy="16" r="4"></circle></svg></span><span>Engineering</span><svg class="section-three-programme-subject-arrow" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6"></path></svg></a>
-                    <a class="section-three-programme-subject" href="#section-three-search-panel"><span class="section-three-programme-subject-icon"><svg viewBox="0 0 32 32"><path d="M4 27h24M7 25V17h5v8m4 0V11h5v14m4 0V6h4v19"></path><path d="m5 13 7-5 6 2 9-7m-5 0h5v5"></path></svg></span><span>Business &amp; Management</span><svg class="section-three-programme-subject-arrow" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6"></path></svg></a>
-                    <a class="section-three-programme-subject" href="#section-three-search-panel"><span class="section-three-programme-subject-icon"><svg viewBox="0 0 32 32"><path d="M25 7C12 6 6 13 7 24c11 2 18-5 18-17Z"></path><path d="M7 25c4-7 8-11 15-15"></path></svg></span><span>Life Sciences</span><svg class="section-three-programme-subject-arrow" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6"></path></svg></a>
-                    <a class="section-three-programme-subject" href="#section-three-search-panel"><span class="section-three-programme-subject-icon"><svg viewBox="0 0 32 32"><circle cx="12" cy="10" r="5"></circle><circle cx="23" cy="12" r="4"></circle><path d="M3 28v-3a9 9 0 0 1 18 0v3m0-6a7 7 0 0 1 8 7"></path></svg></span><span>Social Sciences &amp; Humanities</span><svg class="section-three-programme-subject-arrow" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6"></path></svg></a>
+                    <a class="section-three-programme-subject" href="#section-three-search-panel">
+                        <span class="section-three-programme-subject-icon" aria-hidden="true"><img src="assets/icons/subjects/computer-science.svg" alt="" width="32" height="32" loading="lazy" decoding="async"></span>
+                        <span class="discovery-subject-label">Computer Science &amp; AI</span>
+                        <svg class="section-three-programme-subject-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg>
+                    </a>
+                    <a class="section-three-programme-subject" href="#section-three-search-panel">
+                        <span class="section-three-programme-subject-icon" aria-hidden="true"><img src="assets/icons/subjects/engineering.svg?v=3" alt="" width="32" height="32" loading="lazy" decoding="async"></span>
+                        <span class="discovery-subject-label">Engineering</span>
+                        <svg class="section-three-programme-subject-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg>
+                    </a>
+                    <a class="section-three-programme-subject" href="#section-three-search-panel">
+                        <span class="section-three-programme-subject-icon" aria-hidden="true"><img src="assets/icons/subjects/business.svg?v=2" alt="" width="32" height="32" loading="lazy" decoding="async"></span>
+                        <span class="discovery-subject-label">Business &amp; Management</span>
+                        <svg class="section-three-programme-subject-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg>
+                    </a>
+                    <a class="section-three-programme-subject" href="#section-three-search-panel">
+                        <span class="section-three-programme-subject-icon" aria-hidden="true"><img src="assets/icons/subjects/architecture.svg?v=2" alt="" width="32" height="32" loading="lazy" decoding="async"></span>
+                        <span class="discovery-subject-label">Architecture &amp; Interior Design</span>
+                        <svg class="section-three-programme-subject-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg>
+                    </a>
+                    <a class="section-three-programme-subject" href="#section-three-search-panel">
+                        <span class="section-three-programme-subject-icon" aria-hidden="true"><img src="assets/icons/subjects/medicine.svg?v=2" alt="" width="32" height="32" loading="lazy" decoding="async"></span>
+                        <span class="discovery-subject-label">Medicine &amp; Health Sciences</span>
+                        <svg class="section-three-programme-subject-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg>
+                    </a>
+                    <a class="section-three-programme-subject" href="#section-three-search-panel">
+                        <span class="section-three-programme-subject-icon" aria-hidden="true"><img src="assets/icons/subjects/life-sciences.svg" alt="" width="32" height="32" loading="lazy" decoding="async"></span>
+                        <span class="discovery-subject-label">Life Sciences</span>
+                        <svg class="section-three-programme-subject-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg>
+                    </a>
+                    <a class="section-three-programme-subject" href="#section-three-search-panel">
+                        <span class="section-three-programme-subject-icon" aria-hidden="true"><img src="assets/icons/subjects/fashion.svg?v=2" alt="" width="32" height="32" loading="lazy" decoding="async"></span>
+                        <span class="discovery-subject-label">Fashion &amp; Design</span>
+                        <svg class="section-three-programme-subject-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg>
+                    </a>
+                    <a class="section-three-programme-subject" href="#section-three-search-panel">
+                        <span class="section-three-programme-subject-icon" aria-hidden="true"><img src="assets/icons/subjects/humanities.svg?v=2" alt="" width="32" height="32" loading="lazy" decoding="async"></span>
+                        <span class="discovery-subject-label">Social Sciences &amp; Humanities</span>
+                        <svg class="section-three-programme-subject-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg>
+                    </a>
                 </div>
             </section>
 
-        <section class="section-three-shortlist-image" aria-labelledby="section-three-shortlist-title">
-            <div class="section-three-shortlist-image-canvas">
-                <img src="assets/images/mockups/section-3-personalized-shortlist-footer-strip.webp" alt="EuroMiles navy footer art with a graduation-cap emblem, benefit icons and Italian dome watermark">
-                <div class="section-three-shortlist-image-copy">
+        <section class="section-three-shortlist-image shortlist-strip" aria-labelledby="section-three-shortlist-title">
+            <svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute"><defs>
+                <filter id="shortlist-gold-ink" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  2 0 -2 0 -.1"/></filter>
+                <filter id="shortlist-watermark-ink" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  1 1 1 0 -.7"/></filter>
+            </defs></svg>
+            <div class="shortlist-strip-watermark" aria-hidden="true"></div>
+            <div class="shortlist-strip-intro">
+                <span class="shortlist-strip-emblem" aria-hidden="true"><span></span></span>
+                <div>
                     <p class="section-three-shortlist-kicker">NOT SURE WHICH OPTION IS RIGHT FOR YOU?</p>
                     <h2 class="section-three-shortlist-title" id="section-three-shortlist-title">The Right Choice Isn’t Always the Most Popular One.</h2>
                     <p class="section-three-shortlist-copy">We look beyond rankings and course titles — considering your academic profile, eligibility, budget, location and long-term goals.</p>
                 </div>
-                <a class="section-three-shortlist-image-cta" href="#consultation-dialog">GET MY PERSONALIZED SHORTLIST <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"></path></svg></a>
+            </div>
+            <div class="shortlist-strip-action">
+                <a class="section-three-shortlist-image-cta section-three-shortlist-button" href="#consultation-dialog" aria-haspopup="dialog" aria-controls="consultation-dialog">Get My Personalised Shortlist <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></a>
+                <ul class="shortlist-strip-benefits" aria-label="Shortlist guidance benefits">
+                    <li><svg class="shortlist-strip-benefit-icon shortlist-icon-people" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="16" cy="9" r="4" fill="currentColor" stroke="none"/><circle cx="6" cy="12" r="3" fill="currentColor" fill-opacity=".45" stroke="none"/><circle cx="26" cy="12" r="3" fill="currentColor" fill-opacity=".45" stroke="none"/><path d="M8.5 28v-5a7.5 7.5 0 0 1 15 0v5Z" fill="currentColor" fill-opacity=".16"/><path d="M4.5 25H2v-4a5 5 0 0 1 5-5M27.5 25H30v-4a5 5 0 0 0-5-5"/><path d="m13 22 2 2 4-4" class="shortlist-icon-highlight"/></svg><span>Personalised<br>Recommendations</span></li>
+                    <li><svg class="shortlist-strip-benefit-icon shortlist-icon-shield" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M16 2.5c4 3 8 4.5 12 5v8c0 7-5 11-12 14-7-3-12-7-12-14v-8c4-.5 8-2 12-5Z" fill="currentColor" fill-opacity=".12"/><path d="M16 6.5c2.5 1.5 5 2.5 8 3v6c0 4.5-3 7.5-8 10" stroke-opacity=".4"/><path d="m10.5 15.5 3.5 3.5 7.5-7.5" class="shortlist-icon-highlight"/></svg><span>Expert<br>Guidance</span></li>
+                    <li><svg class="shortlist-strip-benefit-icon shortlist-icon-document" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 3h13l6 6v18a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z" fill="currentColor" fill-opacity=".12"/><path d="M20 3v6h6M10 14h10M10 19h6M10 24h4"/><circle cx="24" cy="23" r="6" fill="#0a2b4b"/><path d="m21 23 2 2 4-4" class="shortlist-icon-highlight"/></svg><span>100% Free<br>Consultation</span></li>
+                    <li><svg class="shortlist-strip-benefit-icon shortlist-icon-chat" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M17 5H11a8 8 0 0 0-8 8v3a8 8 0 0 0 4 7v6l6-5h4a8 8 0 0 0 8-8v-3a8 8 0 0 0-8-8Z" fill="currentColor" fill-opacity=".12"/><path d="M28 13a7 7 0 0 1 2 5v2a7 7 0 0 1-3 5v4l-4-3h-3" stroke-opacity=".6"/><path d="M9 13h10M9 18h6" class="shortlist-icon-highlight"/></svg><span>No<br>Obligation</span></li>
+                </ul>
             </div>
         </section>
     </section>
