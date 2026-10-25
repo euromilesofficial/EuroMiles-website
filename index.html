@@ -2443,13 +2443,27 @@
         .section-four-approach-title {
             margin: 0 0 2px;
             color: #0b2046;
-            font: 700 15px/1.18 'Playfair Display', Georgia, serif;
+            font: 700 15px/1.35 'Plus Jakarta Sans', sans-serif;
         }
 
         .section-four-approach-copy {
             margin: 0;
             color: #29384d;
-            font: 500 12px/1.28 'Plus Jakarta Sans', sans-serif;
+            font: 500 13px/1.5 'Plus Jakarta Sans', sans-serif;
+        }
+
+        @media (max-width: 480px) {
+            .section-four-approach .section-four-approach-grid { grid-template-columns: 1fr; gap: 0; }
+            .section-four-approach .section-four-approach-item {
+                grid-template-columns: 44px minmax(0, 1fr);
+                gap: 12px;
+                padding: 13px 4px;
+                border-right: 0;
+                border-bottom: 1px solid rgba(189, 129, 39, 0.18);
+            }
+            .section-four-approach .section-four-approach-item:last-child { border-bottom: 0; }
+            .section-four-approach .section-four-approach-icon { width: 44px; height: 44px; }
+            .section-four-approach .section-four-approach-icon svg { width: 27px; height: 27px; }
         }
 
         .section-four-strategy-footer {
@@ -2589,11 +2603,13 @@
 
         @media (max-width: 1100px) {
             .section-four-approach { padding-right: 24px; padding-left: 24px; }
+            .section-four-approach-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 0; }
+            .section-four-approach-item:nth-child(2) { border-right: 0; }
             .section-four-approach-item { grid-template-columns: 46px minmax(0, 1fr); gap: 9px; padding-right: 12px; padding-left: 12px; }
             .section-four-approach-icon { width: 44px; height: 44px; }
             .section-four-approach-icon svg { width: 24px; height: 24px; }
             .section-four-approach-title { font-size: 14px; }
-            .section-four-approach-copy { font-size: 11px; }
+            .section-four-approach-copy { font-size: 13px; }
             .section-four-strategy-footer { grid-template-columns: 104px 1px minmax(0, 1fr) minmax(230px, 280px) 170px; }
             .section-four-strategy-cap { width: 88px; height: 90px; margin-left: 16px; background-size: 1600px 800px; background-position: -68px -690px; }
         }
@@ -2604,8 +2620,8 @@
             .section-four-approach-item { min-height: 64px; padding: 4px 8px; }
             .section-four-approach-item:nth-child(2) { border-right: 0; }
             .section-four-approach-item:nth-child(3) { padding-left: 8px; }
-            .section-four-approach-title { font-size: 13px; }
-            .section-four-approach-copy { font-size: 10px; }
+            .section-four-approach-title { font-size: 14px; }
+            .section-four-approach-copy { font-size: 13px; }
             .section-four-strategy-footer {
                 min-height: 0;
                 grid-template-columns: 58px minmax(0, 1fr);
@@ -2630,8 +2646,8 @@
             .section-four-approach-item { grid-template-columns: 38px minmax(0, 1fr); gap: 7px; padding-right: 6px; padding-left: 6px; }
             .section-four-approach-icon { width: 36px; height: 36px; }
             .section-four-approach-icon svg { width: 21px; height: 21px; }
-            .section-four-approach-title { font-size: 12px; }
-            .section-four-approach-copy { font-size: 9px; }
+            .section-four-approach-title { font-size: 14px; }
+            .section-four-approach-copy { font-size: 13px; }
             .section-four-strategy-footer { grid-template-columns: 46px minmax(0, 1fr); gap: 0 10px; padding: 13px; }
             .section-four-strategy-cap { width: 46px; height: 54px; background-size: 736px 368px; background-position: -31px -317px; }
             .section-four-strategy-title { font-size: 16px; }
@@ -2645,6 +2661,85 @@
             .section-four-principle,
             .section-four-principle-icon,
             .section-four-principle-arrow { transition: none; }
+        }
+
+        /* Remove the source photograph’s navy tile, preserving the original gold cap. */
+        .section-four-strategy-cap { filter: url(#section-four-cap-background); }
+
+        /* Section 4 closing strip: preserve its artwork and copy at every width. */
+        .section-four-strategy-footer {
+            grid-template-columns: 104px 1px minmax(0, 1fr) minmax(280px, 340px) clamp(130px, 12vw, 190px);
+            gap: 0;
+            padding: 16px 0;
+        }
+        .section-four-strategy-cap {
+            grid-column: 1; grid-row: 1;
+            width: 88px; height: 90px; min-height: 0;
+            margin-left: 12px;
+            background-size: 1600px 800px;
+            background-position: -68px -690px;
+        }
+        .section-four-strategy-divider { grid-column: 2; grid-row: 1; }
+        .section-four-strategy-copy { grid-column: 3; grid-row: 1; padding: 0 20px; }
+        .section-four-strategy-cta-wrap { grid-column: 4; grid-row: 1; min-width: 0; padding: 0 12px; }
+        .section-four-strategy-watermark-space { grid-column: 5; grid-row: 1; }
+        .section-four-strategy-footer::before {
+            display: block; top: auto; right: 0; bottom: 0;
+            width: 280px; height: 100px;
+            background-size: 1600px 800px;
+            background-position: -1260px -684px;
+        }
+        .section-four-strategy-description { font-size: 13px; line-height: 1.5; }
+        .section-four-strategy-cta { min-height: 48px; white-space: normal; padding: 12px 14px; }
+        .section-four-strategy-cta svg { flex-shrink: 0; }
+        @media (max-width: 1100px) {
+            .section-four-strategy-footer {
+                grid-template-columns: 90px 1px minmax(0, 1fr) minmax(230px, 270px);
+                margin-right: 24px; margin-left: 24px;
+            }
+            .section-four-strategy-cap { margin-left: 6px; width: 82px; }
+            .section-four-strategy-watermark-space { display: none; }
+            .section-four-strategy-footer::before { opacity: 0.45; }
+        }
+        @media (max-width: 900px) {
+            .section-four-strategy-footer {
+                grid-template-columns: 64px minmax(0, 1fr);
+                gap: 0 16px;
+                padding: 20px;
+            }
+            .section-four-strategy-cap {
+                width: 64px; height: 66px; margin: 0;
+                background-size: 1152px 576px;
+                background-position: -49px -497px;
+            }
+            .section-four-strategy-divider { display: none; }
+            .section-four-strategy-copy { grid-column: 2; grid-row: 1; padding: 0; }
+            .section-four-strategy-eyebrow { font-size: 10px; line-height: 1.5; letter-spacing: 0.12em; }
+            .section-four-strategy-title { font-size: 24px; line-height: 1.2; }
+            .section-four-strategy-cta-wrap {
+                grid-column: 2; grid-row: 2;
+                justify-content: flex-start;
+                margin-top: 16px; padding: 0;
+            }
+            .section-four-strategy-cta { width: min(100%, 322px); font-size: 12px; }
+        }
+        @media (max-width: 600px) {
+            .section-four-strategy-footer {
+                grid-template-columns: 48px minmax(0, 1fr);
+                gap: 0 12px;
+                margin: 0 16px 18px;
+                padding: 18px 16px;
+            }
+            .section-four-strategy-cap {
+                align-self: start;
+                width: 48px; height: 48px;
+                background-size: 864px 432px;
+                background-position: -37px -373px;
+            }
+            .section-four-strategy-title { font-size: 20px; }
+            .section-four-strategy-description { font-size: 13px; }
+            .section-four-strategy-cta-wrap { grid-column: 1 / -1; }
+            .section-four-strategy-cta { width: 100%; }
         }
 
         /* Section 5 journey roadmap: the supplied artwork already includes its route, pins and icon nodes. */
@@ -4346,9 +4441,12 @@
     <link rel="stylesheet" href="assets/css/discovery-tabs-responsive.css?v=20261017-card-reflow-v2">
     <link rel="stylesheet" href="assets/css/discovery-subjects.css?v=20261018-inter-subjects-v5">
     <link rel="stylesheet" href="assets/css/discovery-shortlist.css?v=20261020-benefit-icons-v1">
+    <link rel="stylesheet" href="assets/css/why-euromiles-intro.css?v=20261022-consultation-edge-blend-v3">
+    <link rel="stylesheet" href="assets/css/why-euromiles-benefits.css?v=20261025-readable-benefits-v5">
     <script src="assets/js/main.js?v=20261016-final-graduation-photo" defer></script>
     <script src="assets/js/hero-route.js?v=20261015-journey-arrival-hold" defer></script>
     <script src="assets/js/why-italy.js?v=20261016-guidance-glow" defer></script>
+    <script src="assets/js/why-euromiles-benefits.js?v=20261022-curved-route" defer></script>
     <script src="assets/js/section-six-data.js" defer></script>
     <script src="assets/js/section-six.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&amp;family=Roboto+Condensed:wght@400&amp;display=swap" rel="stylesheet">
@@ -5256,10 +5354,11 @@
     </section>
 
     <section class="section-four-header" id="why-euromiles" aria-labelledby="section-four-header-title">
+        <div class="section-four-intro">
         <div class="section-four-header-copy">
             <p class="section-four-header-eyebrow"><span class="section-four-header-flag" aria-hidden="true"><span></span><span></span><span></span></span>Why EuroMiles</p>
             <h2 class="section-four-header-title" id="section-four-header-title">Not Just an Application.<span>A Strategy for Your Future.</span></h2>
-            <p class="section-four-header-description">Choosing a university in another country is a major decision. EuroMiles combines Italy-focused expertise, personalised strategy and end-to-end support to help you make that decision with clarity.</p>
+            <p class="section-four-header-description">Your academics, interests and budget shape our recommendations. From exploring universities in Italy to preparing applications and planning your arrival, we help you and your family understand each next step.</p>
             <div class="section-four-header-values" aria-label="Our guidance is built around you">
                 <div class="section-four-header-value">
                     <span class="section-four-value-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="m3 11 13-7 13 7-13 7-13-7Z"></path><path d="M8 14v8c5 4 11 4 16 0v-8m5-3v10"></path></svg></span>
@@ -5275,48 +5374,82 @@
                 </div>
             </div>
         </div>
+        <div class="section-four-intro-photo">
+            <img src="assets/images/section-4/why-euromiles-consultation-original.webp" alt="Illustration of an Indian student and parent reviewing university options with an education counsellor" width="1774" height="887" loading="lazy" decoding="async">
+        </div>
+        </div>
         <div class="section-four-header-principles" aria-label="Why students choose EuroMiles">
-            <article class="section-four-principle">
-                <span class="section-four-principle-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M10 18v-7"></path><path d="M11.119 2.205a2 2 0 0 1 1.762 0l7.84 3.846A.5.5 0 0 1 20.5 7h-17a.5.5 0 0 1-.22-.949z"></path><path d="M14 18v-7"></path><path d="M18 18v-7"></path><path d="M3 22h18"></path><path d="M6 18v-7"></path></svg></span>
+            <article class="section-four-principle" aria-labelledby="euromiles-benefit-1">
                 <span class="section-four-principle-number">01</span>
-                <div class="section-four-principle-copy"><h3 class="section-four-principle-title">We Know the Italy Route.</h3><p class="section-four-principle-description">From universities and programmes to scholarships, applications, university and visa preparation, our guidance is built around the Italian education pathway.</p></div>
-                <span class="section-four-principle-thumb section-four-principle-thumb--1" role="img" aria-label="Rome's Colosseum"></span>
-                <svg class="section-four-principle-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"></path></svg>
+                <span class="section-four-principle-icon" aria-hidden="true"><img src="assets/images/section-4/benefit-01-icon.webp" width="110" height="110" alt="" loading="lazy"></span>
+                <div class="section-four-principle-copy">
+                    <p class="section-four-principle-category">PERSONALISED STRATEGY</p>
+                    <h3 class="section-four-principle-title" id="euromiles-benefit-1">Your Ambition. A Plan Built Around You.</h3>
+                    <p class="section-four-principle-description">Your academics, interests and budget shape your Italy study plan.</p>
+                </div>
+                <img class="section-four-principle-photo" src="assets/images/section-4/benefit-01-photo.webp" alt="The Colosseum at sunset: Dream, Plan, Achieve" width="362" height="168" loading="lazy" decoding="async">
+                <ul class="section-four-principle-highlights"><li>Personalised roadmap</li><li>Course &amp; career guidance</li><li>Expert 1:1 counselling</li></ul>
+                <span class="section-four-principle-arrow-wrap" aria-hidden="true"><svg class="section-four-principle-arrow" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"></path></svg></span>
             </article>
-            <article class="section-four-principle">
-                <span class="section-four-principle-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><circle cx="16" cy="10" r="5.5"></circle><path d="M5 27c.6-5.2 4.8-8.2 11-8.2S26.4 21.8 27 27v1H5v-1Z"></path><path d="M10 20.5 16 25l6-4.5"></path></svg></span>
+            <article class="section-four-principle" aria-labelledby="euromiles-benefit-2">
                 <span class="section-four-principle-number">02</span>
-                <div class="section-four-principle-copy"><h3 class="section-four-principle-title">Your Profile Comes First.</h3><p class="section-four-principle-description">We don’t start with a list of universities. We start with your academics, interests, budget, eligibility and long-term goals.</p></div>
-                <span class="section-four-principle-thumb section-four-principle-thumb--2" role="img" aria-label="Student reviewing university options"></span>
-                <svg class="section-four-principle-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"></path></svg>
+                <span class="section-four-principle-icon" aria-hidden="true"><img src="assets/images/section-4/benefit-02-icon.webp" width="110" height="110" alt="" loading="lazy"></span>
+                <div class="section-four-principle-copy">
+                    <p class="section-four-principle-category">RIGHT UNIVERSITY &amp; PROGRAMME</p>
+                    <h3 class="section-four-principle-title" id="euromiles-benefit-2">Discover Where You Truly Fit.</h3>
+                    <p class="section-four-principle-description">Find programmes that fit your profile, with clear entry requirements.</p>
+                </div>
+                <img class="section-four-principle-photo" src="assets/images/section-4/benefit-02-photo.webp" alt="Student studying: Right University, Brighter Future" width="361" height="173" loading="lazy" decoding="async">
+                <ul class="section-four-principle-highlights"><li>Best-fit universities</li><li>Eligibility check</li><li>Programme comparison</li></ul>
+                <span class="section-four-principle-arrow-wrap" aria-hidden="true"><svg class="section-four-principle-arrow" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"></path></svg></span>
             </article>
-            <article class="section-four-principle">
-                <span class="section-four-principle-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><circle cx="15" cy="17" r="11"></circle><circle cx="15" cy="17" r="6.5"></circle><circle cx="15" cy="17" r="2"></circle><path d="m17 15 10-10m-5 0h5v5"></path></svg></span>
+            <article class="section-four-principle" aria-labelledby="euromiles-benefit-3">
                 <span class="section-four-principle-number">03</span>
-                <div class="section-four-principle-copy"><h3 class="section-four-principle-title">Not Every Good University Is Right for You.</h3><p class="section-four-principle-description">We help identify universities and programmes that align with your academic profile, budget, preferences and career direction.</p></div>
-                <span class="section-four-principle-thumb section-four-principle-thumb--3" role="img" aria-label="Historic Italian university campus"></span>
-                <svg class="section-four-principle-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"></path></svg>
+                <span class="section-four-principle-icon" aria-hidden="true"><img src="assets/images/section-4/benefit-03-icon.webp" width="110" height="110" alt="" loading="lazy"></span>
+                <div class="section-four-principle-copy">
+                    <p class="section-four-principle-category">SCHOLARSHIP OPPORTUNITIES</p>
+                    <h3 class="section-four-principle-title" id="euromiles-benefit-3">Your Dream Degree. Potentially Fully Funded.</h3>
+                    <p class="section-four-principle-description">Explore tuition and living-cost scholarships, with application support.</p>
+                </div>
+                <img class="section-four-principle-photo" src="assets/images/section-4/benefit-03-photo.webp" alt="Graduation cap in Florence: More Opportunities, Less Financial Stress" width="359" height="189" loading="lazy" decoding="async">
+                <ul class="section-four-principle-highlights"><li>Scholarship eligibility check</li><li>Application support</li><li>Maximum funding opportunities</li></ul>
+                <span class="section-four-principle-arrow-wrap" aria-hidden="true"><svg class="section-four-principle-arrow" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"></path></svg></span>
             </article>
-            <article class="section-four-principle">
-                <span class="section-four-principle-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><ellipse cx="10" cy="9" rx="6.5" ry="3"></ellipse><path d="M3.5 9v6c0 1.7 2.9 3 6.5 3 1.3 0 2.4-.2 3.4-.5M3.5 15v5.5c0 1.7 2.9 3 6.5 3 1.6 0 3-.3 4-.8"></path><ellipse cx="22.5" cy="20" rx="6" ry="3"></ellipse><path d="M16.5 20v5.5c0 1.7 2.7 3 6 3s6-1.3 6-3V20"></path><text x="18" y="14" fill="#bd8127" stroke="none" font-size="9" font-weight="700">€</text></svg></span>
+            <article class="section-four-principle" aria-labelledby="euromiles-benefit-4">
                 <span class="section-four-principle-number">04</span>
-                <div class="section-four-principle-copy"><h3 class="section-four-principle-title">Make Every Euro Count.</h3><p class="section-four-principle-description">We help you understand tuition, regional scholarships, university funding and other financial-support pathways relevant to your circumstances.</p></div>
-                <span class="section-four-principle-thumb section-four-principle-thumb--4" role="img" aria-label="Scholarship savings"></span>
-                <svg class="section-four-principle-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"></path></svg>
+                <span class="section-four-principle-icon" aria-hidden="true"><img src="assets/images/section-4/benefit-04-icon.webp" width="110" height="110" alt="" loading="lazy"></span>
+                <div class="section-four-principle-copy">
+                    <p class="section-four-principle-category">APPLICATION SUPPORT</p>
+                    <h3 class="section-four-principle-title" id="euromiles-benefit-4">Give Your Application Its Best Chance.</h3>
+                    <p class="section-four-principle-description">Apply with reviewed documents, clear guidance and deadline support.</p>
+                </div>
+                <img class="section-four-principle-photo" src="assets/images/section-4/benefit-04-photo.webp" alt="Application documents: Complete, Accurate, On Time" width="359" height="173" loading="lazy" decoding="async">
+                <ul class="section-four-principle-highlights"><li>Document checklist</li><li>Application review</li><li>Deadline management</li></ul>
+                <span class="section-four-principle-arrow-wrap" aria-hidden="true"><svg class="section-four-principle-arrow" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"></path></svg></span>
             </article>
-            <article class="section-four-principle">
-                <span class="section-four-principle-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M6 3h15l5 5v18H6V3Zm15 0v6h5M10 13h11m-11 4h9m-9 4h6"></path><circle cx="22.5" cy="22" r="5"></circle><path d="m26 25.5 3 3"></path></svg></span>
+            <article class="section-four-principle" aria-labelledby="euromiles-benefit-5">
                 <span class="section-four-principle-number">05</span>
-                <div class="section-four-principle-copy"><h3 class="section-four-principle-title">Prepare With Confidence.</h3><p class="section-four-principle-description">From document preparation and financial documentation to university and interview readiness, we help you build a complete and consistent visa file.</p></div>
-                <span class="section-four-principle-thumb section-four-principle-thumb--5" role="img" aria-label="Passport and visa documents"></span>
-                <svg class="section-four-principle-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"></path></svg>
+                <span class="section-four-principle-icon" aria-hidden="true"><img src="assets/images/section-4/benefit-05-icon.webp" width="110" height="110" alt="" loading="lazy"></span>
+                <div class="section-four-principle-copy">
+                    <p class="section-four-principle-category">VISA PREPARATION</p>
+                    <h3 class="section-four-principle-title" id="euromiles-benefit-5">Your Visa Journey. Expertly Guided.</h3>
+                    <p class="section-four-principle-description">Get Universitaly, financial document and visa preparation guidance.</p>
+                </div>
+                <img class="section-four-principle-photo" src="assets/images/section-4/benefit-05-photo.webp" alt="Visa preparation: Smooth Process, Greater Confidence" width="359" height="162" loading="lazy" decoding="async">
+                <ul class="section-four-principle-highlights"><li>Universitaly guidance</li><li>Financial document support</li><li>Interview preparation</li></ul>
+                <span class="section-four-principle-arrow-wrap" aria-hidden="true"><svg class="section-four-principle-arrow" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"></path></svg></span>
             </article>
-            <article class="section-four-principle">
-                <span class="section-four-principle-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"></path></svg></span>
+            <article class="section-four-principle" aria-labelledby="euromiles-benefit-6">
                 <span class="section-four-principle-number">06</span>
-                <div class="section-four-principle-copy"><h3 class="section-four-principle-title">Our Guidance Doesn’t End With an Offer Letter.</h3><p class="section-four-principle-description">Pre-departure preparation, accommodation guidance, travel planning and arrival support help you transition from admission to life in Italy.</p></div>
-                <span class="section-four-principle-thumb section-four-principle-thumb--6" role="img" aria-label="Students arriving in Italy"></span>
-                <svg class="section-four-principle-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"></path></svg>
+                <span class="section-four-principle-icon" aria-hidden="true"><img src="assets/images/section-4/benefit-06-icon.webp" width="110" height="110" alt="" loading="lazy"></span>
+                <div class="section-four-principle-copy">
+                    <p class="section-four-principle-category">PRE-DEPARTURE &amp; BEYOND</p>
+                    <h3 class="section-four-principle-title" id="euromiles-benefit-6">From India to Italy. We&#x27;re With You.</h3>
+                    <p class="section-four-principle-description">Get accommodation, travel and arrival support for your move to Italy.</p>
+                </div>
+                <img class="section-four-principle-photo" src="assets/images/section-4/benefit-06-photo.webp" alt="Student overlooking Florence: A Brighter Future in Italy" width="359" height="154" loading="lazy" decoding="async">
+                <ul class="section-four-principle-highlights"><li>Accommodation support</li><li>Travel &amp; arrival guidance</li><li>Ongoing student support</li></ul>
+                <span class="section-four-principle-arrow-wrap" aria-hidden="true"><svg class="section-four-principle-arrow" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"></path></svg></span>
             </article>
         </div>
     </section>
@@ -5325,25 +5458,33 @@
         <h2 class="section-four-approach-heading" id="section-four-approach-title">Our Approach</h2>
         <div class="section-four-approach-grid">
             <article class="section-four-approach-item">
-                <span class="section-four-approach-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><circle cx="13.5" cy="13.5" r="9.5"></circle><path d="m20.5 20.5 8 8" class="approach-gold"></path><path d="M8 13.5h11" class="approach-gold"></path></svg></span>
-                <div><h3 class="section-four-approach-title">Research-Led</h3><p class="section-four-approach-copy">We work from current university, programme and scholarship information.</p></div>
+                <span class="section-four-approach-icon" aria-hidden="true"><svg viewBox="0 0 32 32" focusable="false"><path d="M7 27H4V4h17v7M8 9h8M8 14h5"/><circle cx="20" cy="21" r="6"/><path class="approach-gold" d="m24.5 25.5 4 4m-11-9 2 2 4-4"/></svg></span>
+                <div><h3 class="section-four-approach-title">Informed Guidance</h3><p class="section-four-approach-copy">We use university and scholarship requirements to guide your next step.</p></div>
             </article>
             <article class="section-four-approach-item">
-                <span class="section-four-approach-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M16 3 27 7v8c0 6.6-4.4 11.1-11 14-6.6-2.9-11-7.4-11-14V7l11-4Z"></path><path d="m11 16 3.5 3.5L21 13" class="approach-gold"></path></svg></span>
-                <div><h3 class="section-four-approach-title">Transparent</h3><p class="section-four-approach-copy">We explain requirements, costs, timelines and limitations clearly.</p></div>
+                <span class="section-four-approach-icon" aria-hidden="true"><svg viewBox="0 0 32 32" focusable="false"><path d="M5 5h22v17H14l-8 6v-6H5V5Z"/><path class="approach-gold" d="M10 11h12m-12 5h8"/></svg></span>
+                <div><h3 class="section-four-approach-title">Clear Communication</h3><p class="section-four-approach-copy">We explain costs, timelines and requirements in plain language.</p></div>
             </article>
             <article class="section-four-approach-item">
-                <span class="section-four-approach-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><circle cx="12" cy="10" r="4"></circle><circle cx="23" cy="12" r="3.5" class="approach-gold"></circle><path d="M3 27v-2a9 9 0 0 1 18 0v2H3Z"></path><path d="M21 21a7 7 0 0 1 8 6" class="approach-gold"></path></svg></span>
-                <div><h3 class="section-four-approach-title">Personalised</h3><p class="section-four-approach-copy">Recommendations are based on the student’s actual profile.</p></div>
+                <span class="section-four-approach-icon" aria-hidden="true"><svg viewBox="0 0 32 32" focusable="false"><circle cx="14" cy="10" r="5"/><path d="M4 28v-2a10 10 0 0 1 17-7"/><circle class="approach-gold" cx="24" cy="24" r="6"/><path class="approach-gold" d="m21 24 2 2 4-4"/></svg></span>
+                <div><h3 class="section-four-approach-title">Personal Attention</h3><p class="section-four-approach-copy">Your academics, priorities and budget shape our recommendations.</p></div>
             </article>
             <article class="section-four-approach-item">
-                <span class="section-four-approach-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M13 3h6l1 4.1a9.5 9.5 0 0 1 2.2 1.3l4-1.1 3 5.2-3.1 2.9a9.5 9.5 0 0 1 0 2.6l3.1 2.9-3 5.2-4-1.1a9.5 9.5 0 0 1-2.2 1.3L19 30h-6l-1-4.1a9.5 9.5 0 0 1-2.2-1.3l-4 1.1-3-5.2 3.1-2.9a9.5 9.5 0 0 1 0-2.6l-3.1-2.9 3-5.2 4 1.1A9.5 9.5 0 0 1 12 7.1L13 3Z"></path><circle cx="16" cy="16" r="4" class="approach-gold"></circle></svg></span>
-                <div><h3 class="section-four-approach-title">End-to-End</h3><p class="section-four-approach-copy">Support continues beyond admission and visa preparation.</p></div>
+                <span class="section-four-approach-icon" aria-hidden="true"><svg viewBox="0 0 32 32" focusable="false"><circle cx="7" cy="7" r="3"/><circle class="approach-gold" cx="25" cy="25" r="3"/><path d="M10 7h12a5 5 0 0 1 0 10H10a4 4 0 0 0 0 8h12"/><path class="approach-gold" d="m14 13 4 4-4 4"/></svg></span>
+                <div><h3 class="section-four-approach-title">Continued Support</h3><p class="section-four-approach-copy">Guidance continues through applications, departure and arrival in Italy.</p></div>
             </article>
         </div>
     </section>
 
     <section class="section-four-strategy-footer" aria-labelledby="section-four-strategy-title">
+        <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+            <defs>
+                <filter id="section-four-cap-background" color-interpolation-filters="sRGB" x="0" y="0" width="100%" height="100%">
+                    <feColorMatrix in="SourceGraphic" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  1.5 0 0 0 -0.18" result="goldMask"/>
+                    <feComposite in="SourceGraphic" in2="goldMask" operator="in"/>
+                </filter>
+            </defs>
+        </svg>
         <span class="section-four-strategy-cap" aria-hidden="true"></span>
         <span class="section-four-strategy-divider" aria-hidden="true"></span>
         <div class="section-four-strategy-copy">

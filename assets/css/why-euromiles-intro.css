@@ -1,0 +1,86 @@
+/* Section 4, step 1: keep introductory copy clear of the consultation scene. */
+#why-euromiles {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+    align-items: stretch;
+    min-height: 0;
+}
+#why-euromiles::before,
+#why-euromiles::after { display: none; }
+.section-four-intro { grid-column: 1; grid-row: 1; min-width: 0; }
+#why-euromiles .section-four-header-copy {
+    min-height: 0;
+    padding: 26px 24px 0 clamp(28px, 4.7vw, 76px);
+}
+#why-euromiles .section-four-header-eyebrow { white-space: nowrap; font-size: 13px; }
+#why-euromiles .section-four-header-eyebrow::after { flex: 1; min-width: 24px; width: auto; }
+#why-euromiles .section-four-header-title {
+    font-size: clamp(34px, 3.1vw, 48px);
+    line-height: 1.12;
+    margin-bottom: 14px;
+}
+#why-euromiles .section-four-header-description {
+    max-width: 590px;
+    font-size: 14px;
+    line-height: 1.65;
+}
+#why-euromiles .section-four-header-values {
+    width: 100%;
+    max-width: 590px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+    margin-top: 20px;
+}
+#why-euromiles .section-four-header-value,
+#why-euromiles .section-four-header-value:nth-child(3) {
+    position: static;
+    grid-column: auto;
+    grid-row: auto;
+    grid-template-columns: 38px minmax(0, 1fr);
+    gap: 8px;
+    transform: none;
+}
+#why-euromiles .section-four-value-icon { width: 38px; height: 38px; }
+#why-euromiles .section-four-value-icon svg { width: 24px; height: 24px; }
+#why-euromiles .section-four-header-value strong { font-size: 14px; line-height: 1.35; }
+#why-euromiles .section-four-header-value small { font-size: 12px; line-height: 1.4; }
+.section-four-intro-photo {
+    --photo-fade-left: 0%;
+    --photo-fade-right: 6%;
+    margin-top: 14px;
+    aspect-ratio: 2;
+    overflow: hidden;
+    /* Intersect narrow side fades with the existing top/bottom blend. */
+    mask-image:
+        linear-gradient(to bottom, transparent, #000 5%, #000 94%, transparent),
+        linear-gradient(to right, transparent, #000 var(--photo-fade-left), #000 calc(100% - var(--photo-fade-right)), transparent);
+    mask-composite: intersect;
+}
+.section-four-intro-photo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+@media (max-width: 1100px) {
+    #why-euromiles { display: block; padding: 0 24px 20px; overflow: hidden; }
+    #why-euromiles .section-four-header-copy { max-width: 800px; margin: 0 auto; padding: 26px 0 0; }
+    #why-euromiles .section-four-header-title { max-width: 760px; font-size: clamp(34px, 4.4vw, 46px); }
+    #why-euromiles .section-four-header-description { max-width: 700px; font-size: 15px; }
+    #why-euromiles .section-four-header-values { max-width: 590px; }
+    .section-four-intro-photo { --photo-fade-left: 5%; --photo-fade-right: 5%; max-width: 850px; margin: 18px auto 0; }
+    #why-euromiles .section-four-header-principles { margin-top: 16px; }
+}
+@media (max-width: 600px) {
+    #why-euromiles { padding: 0 16px 20px; }
+    #why-euromiles .section-four-header-copy { padding-top: 24px; }
+    #why-euromiles .section-four-header-eyebrow { font-size: 11px; gap: 9px; margin-bottom: 14px; }
+    #why-euromiles .section-four-header-title { font-size: clamp(30px, 7.8vw, 40px); line-height: 1.15; }
+    #why-euromiles .section-four-header-description { font-size: 14px; line-height: 1.65; }
+    #why-euromiles .section-four-header-values { gap: 10px; }
+    #why-euromiles .section-four-header-value,
+    #why-euromiles .section-four-header-value:nth-child(3) { grid-template-columns: 1fr; justify-items: start; gap: 7px; }
+    #why-euromiles .section-four-header-value strong { font-size: 13px; }
+    #why-euromiles .section-four-header-value small { font-size: 11px; }
+    .section-four-intro-photo { --photo-fade-left: 0%; --photo-fade-right: 0%; aspect-ratio: 2; margin: 16px -16px 0; }
+}
