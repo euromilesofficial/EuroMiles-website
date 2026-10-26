@@ -2742,7 +2742,7 @@
             .section-four-strategy-cta { width: 100%; }
         }
 
-        /* Section 5 journey roadmap: the supplied artwork already includes its route, pins and icon nodes. */
+        /* Section 5: live separated artwork and responsive layout load in section-five-journey.css. */
         .section-five-journey {
             position: relative;
             width: 100%;
@@ -2750,8 +2750,7 @@
             overflow: hidden;
             background-color: #faf8f5;
             background-image:
-                linear-gradient(180deg, #faf8f5 0%, rgba(250, 248, 245, .72) 3%, rgba(250, 248, 245, .25) 6%, rgba(250, 248, 245, 0) 10%),
-                url('assets/images/mockups/section-5-journey-background-no-cards.webp');
+                linear-gradient(180deg, #faf8f5 0%, rgba(250, 248, 245, .72) 3%, rgba(250, 248, 245, .25) 6%, rgba(250, 248, 245, 0) 10%);
             background-position: center top, center calc(0px - 3.75vw);
             background-size: 100% 100%, 100% 100%;
             background-repeat: no-repeat;
@@ -2958,7 +2957,7 @@
             right: 0;
             bottom: 0;
             width: clamp(32px, 3.5vw, 72px);
-            background-image: url('assets/images/mockups/section-5-roadmap.jpg');
+            background-image: none;
             background-repeat: no-repeat;
             background-size: 100vw 50vw;
             background-position: right -3.45vw bottom -.55vw;
@@ -4443,13 +4442,15 @@
     <link rel="stylesheet" href="assets/css/discovery-shortlist.css?v=20261020-benefit-icons-v1">
     <link rel="stylesheet" href="assets/css/why-euromiles-intro.css?v=20261022-consultation-edge-blend-v3">
     <link rel="stylesheet" href="assets/css/why-euromiles-benefits.css?v=20261025-readable-benefits-v5">
+    <link rel="stylesheet" href="assets/css/section-five-journey.css?v=20261026-phosphor-footer-icons-2">
     <script src="assets/js/main.js?v=20261016-final-graduation-photo" defer></script>
     <script src="assets/js/hero-route.js?v=20261015-journey-arrival-hold" defer></script>
     <script src="assets/js/why-italy.js?v=20261016-guidance-glow" defer></script>
     <script src="assets/js/why-euromiles-benefits.js?v=20261022-curved-route" defer></script>
+    <script src="assets/js/section-five-journey.js?v=20261026-phosphor-footer-icons-2" defer></script>
     <script src="assets/js/section-six-data.js" defer></script>
     <script src="assets/js/section-six.js" defer></script>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&amp;family=Roboto+Condensed:wght@400&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&amp;family=Roboto+Condensed:wght@400;700&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/section-seven.css?v=20261015-transitions">
     <script src="assets/js/section-seven-data.js" defer></script>
     <script src="assets/js/section-seven.js?v=20261015-hover" defer></script>
@@ -5497,69 +5498,86 @@
     </section>
 
     <section class="section-five-journey" id="euromiles-journey" aria-labelledby="section-five-title">
+        <div class="section-five-header">
+        <div class="section-five-header-landmark" aria-hidden="true"></div>
         <header class="section-five-intro">
             <p class="section-five-eyebrow">The EuroMiles Journey</p>
             <h2 class="section-five-title" id="section-five-title">From Your Profile to Your<span>New Beginning in Italy</span></h2>
             <p class="section-five-description">A clear, step-by-step journey with expert guidance at every stage — so you can focus on your future while we take care of the process.</p>
         </header>
+        <div class="section-five-header-photo" aria-hidden="true"></div>
+        </div>
 
+
+        <div class="section-five-stage">
+        <img class="section-five-road-art" src="assets/images/section-5/section-5-road-trees-structures.webp" width="2033" height="264" alt="" decoding="async">
+        <img class="section-five-architecture" src="assets/images/section-5/section-5-lower-architecture.webp" width="2244" height="701" alt="" decoding="async">
+        <div class="section-five-endpoint-label section-five-endpoint-label--start"><span class="section-five-endpoint-pin" aria-hidden="true" style="--pin-ratio:0.67568;--pin-width:292.70001%;--pin-height:197.77027%;--pin-left:-94.84215%;--pin-top:-51.52081%"><img src="assets/images/section-5/You-Profile-pin.webp" width="1254" height="1254" alt="" decoding="async"></span><strong>You</strong>Your Goals<br> Our Guidance</div>
         <div class="section-five-roadmap-grid" aria-label="Seven steps from your goals to your new beginning in Italy">
             <article class="section-five-roadmap-card section-five-roadmap-card--01">
-                <div class="section-five-roadmap-heading"><span class="section-five-roadmap-number">01</span><h3 class="section-five-roadmap-title">Profile<br>Assessment</h3><svg class="section-five-roadmap-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M8.5 3.5 13 8l-4.5 4.5"></path></svg></div>
+                <span class="section-five-step-node" aria-hidden="true" data-road-x="358" data-road-y="169.00" style="--asset-width:300.04307%;--asset-left:-99.18888%;--asset-top:-102.83055%"><span class="section-five-node-art"><img src="assets/images/section-5/journey-01-profile.webp" width="1254" height="1254" alt="" decoding="async"></span></span>
+                <div class="section-five-roadmap-heading"><span class="section-five-roadmap-number">01</span><h3 class="section-five-roadmap-title">Profile<br> Assessment</h3><svg class="section-five-roadmap-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M8.5 3.5 13 8l-4.5 4.5"></path></svg></div>
                 <ul class="section-five-roadmap-points"><li>Understand your profile</li><li>Academic &amp; financial review</li><li>Eligibility assessment</li><li>Personalized roadmap</li></ul>
             </article>
             <article class="section-five-roadmap-card section-five-roadmap-card--02">
-                <div class="section-five-roadmap-heading"><span class="section-five-roadmap-number">02</span><h3 class="section-five-roadmap-title">University<br>Selection Strategy</h3><svg class="section-five-roadmap-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M8.5 3.5 13 8l-4.5 4.5"></path></svg></div>
+                <span class="section-five-step-node" aria-hidden="true" data-road-x="549" data-road-y="221.00" style="--asset-width:329.91318%;--asset-left:-114.65667%;--asset-top:-116.42989%"><span class="section-five-node-art"><img src="assets/images/section-5/journey-01-university.webp" width="1254" height="1254" alt="" decoding="async"></span></span>
+                <div class="section-five-roadmap-heading"><span class="section-five-roadmap-number">02</span><h3 class="section-five-roadmap-title">University<br> Selection Strategy</h3><svg class="section-five-roadmap-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M8.5 3.5 13 8l-4.5 4.5"></path></svg></div>
                 <ul class="section-five-roadmap-points"><li>Find the right universities</li><li>Program &amp; intake matching</li><li>Entry requirements</li><li>Application timeline</li></ul>
             </article>
             <article class="section-five-roadmap-card section-five-roadmap-card--03">
-                <div class="section-five-roadmap-heading"><span class="section-five-roadmap-number">03</span><h3 class="section-five-roadmap-title">Applications<br>&amp; Admission</h3><svg class="section-five-roadmap-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M8.5 3.5 13 8l-4.5 4.5"></path></svg></div>
+                <span class="section-five-step-node" aria-hidden="true" data-road-x="793" data-road-y="147.00" style="--asset-width:299.36975%;--asset-left:-99.71591%;--asset-top:-100.60638%"><span class="section-five-node-art"><img src="assets/images/section-5/journey-01-application.webp" width="1254" height="1254" alt="" decoding="async"></span></span>
+                <div class="section-five-roadmap-heading"><span class="section-five-roadmap-number">03</span><h3 class="section-five-roadmap-title">Applications<br> &amp; Admission</h3><svg class="section-five-roadmap-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M8.5 3.5 13 8l-4.5 4.5"></path></svg></div>
                 <ul class="section-five-roadmap-points"><li>Document preparation</li><li>SOP &amp; LOR guidance</li><li>Application submission</li><li>Admission follow-up</li></ul>
             </article>
             <article class="section-five-roadmap-card section-five-roadmap-card--04">
-                <div class="section-five-roadmap-heading"><span class="section-five-roadmap-number">04</span><h3 class="section-five-roadmap-title">Scholarship<br>Strategy</h3><svg class="section-five-roadmap-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M8.5 3.5 13 8l-4.5 4.5"></path></svg></div>
+                <span class="section-five-step-node" aria-hidden="true" data-road-x="996" data-road-y="214.50" style="--asset-width:330.45220%;--asset-left:-115.27880%;--asset-top:-114.67271%"><span class="section-five-node-art"><img src="assets/images/section-5/journey-01-scholarship.webp" width="1254" height="1254" alt="" decoding="async"></span></span>
+                <div class="section-five-roadmap-heading"><span class="section-five-roadmap-number">04</span><h3 class="section-five-roadmap-title">Scholarship<br> Strategy</h3><svg class="section-five-roadmap-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M8.5 3.5 13 8l-4.5 4.5"></path></svg></div>
                 <ul class="section-five-roadmap-points"><li>DSU &amp; regional scholarships</li><li>University &amp; government funding</li><li>Eligibility guidance</li><li>Maximize your financial support</li></ul>
             </article>
             <article class="section-five-roadmap-card section-five-roadmap-card--05">
-                <div class="section-five-roadmap-heading"><span class="section-five-roadmap-number">05</span><h3 class="section-five-roadmap-title">Visa<br>Preparation</h3><svg class="section-five-roadmap-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M8.5 3.5 13 8l-4.5 4.5"></path></svg></div>
+                <span class="section-five-step-node" aria-hidden="true" data-road-x="1199" data-road-y="144.00" style="--asset-width:293.33333%;--asset-left:-96.25263%;--asset-top:-98.29240%"><span class="section-five-node-art"><img src="assets/images/section-5/journey-01-visa.webp" width="1254" height="1254" alt="" decoding="async"></span></span>
+                <div class="section-five-roadmap-heading"><span class="section-five-roadmap-number">05</span><h3 class="section-five-roadmap-title">Visa<br> Preparation</h3><svg class="section-five-roadmap-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M8.5 3.5 13 8l-4.5 4.5"></path></svg></div>
                 <ul class="section-five-roadmap-points"><li>Complete document checklist</li><li>Financial documentation</li><li>Universitaly support</li><li>Interview preparation</li></ul>
             </article>
             <article class="section-five-roadmap-card section-five-roadmap-card--06">
-                <div class="section-five-roadmap-heading"><span class="section-five-roadmap-number">06</span><h3 class="section-five-roadmap-title">Pre-Departure<br>Support</h3><svg class="section-five-roadmap-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M8.5 3.5 13 8l-4.5 4.5"></path></svg></div>
+                <span class="section-five-step-node" aria-hidden="true" data-road-x="1423" data-road-y="226.50" style="--asset-width:346.58117%;--asset-left:-122.52225%;--asset-top:-122.82903%"><span class="section-five-node-art"><img src="assets/images/section-5/journey-01-pre-departure.webp" width="1254" height="1254" alt="" decoding="async"></span></span>
+                <div class="section-five-roadmap-heading"><span class="section-five-roadmap-number">06</span><h3 class="section-five-roadmap-title">Pre-Departure<br> Support</h3><svg class="section-five-roadmap-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M8.5 3.5 13 8l-4.5 4.5"></path></svg></div>
                 <ul class="section-five-roadmap-points"><li>Accommodation guidance</li><li>Travel &amp; insurance advice</li><li>Packing checklist</li><li>Pre-departure briefing</li></ul>
             </article>
             <article class="section-five-roadmap-card section-five-roadmap-card--07">
-                <div class="section-five-roadmap-heading"><span class="section-five-roadmap-number">07</span><h3 class="section-five-roadmap-title">Arrival &amp;<br>Settlement</h3><svg class="section-five-roadmap-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M8.5 3.5 13 8l-4.5 4.5"></path></svg></div>
+                <span class="section-five-step-node" aria-hidden="true" data-road-x="1667" data-road-y="158.00" style="--asset-width:287.75988%;--asset-left:-93.43935%;--asset-top:-94.82537%"><span class="section-five-node-art"><img src="assets/images/section-5/journey-01-arrival.webp" width="1254" height="1254" alt="" decoding="async"></span></span>
+                <div class="section-five-roadmap-heading"><span class="section-five-roadmap-number">07</span><h3 class="section-five-roadmap-title">Arrival &amp;<br> Settlement</h3><svg class="section-five-roadmap-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M8.5 3.5 13 8l-4.5 4.5"></path></svg></div>
                 <ul class="section-five-roadmap-points"><li>Airport arrival guidance</li><li>Accommodation support</li><li>University orientation</li><li>Ongoing assistance</li></ul>
             </article>
         </div>
-        <div class="section-five-endpoint-label section-five-endpoint-label--start"><strong>You</strong>Your Goals<br>Our Guidance</div>
-        <div class="section-five-endpoint-label section-five-endpoint-label--finish"><strong>Italy</strong>Your New<br>Beginning</div>
+        <div class="section-five-endpoint-label section-five-endpoint-label--finish"><span class="section-five-endpoint-pin" aria-hidden="true" style="--pin-ratio:0.67568;--pin-width:329.13386%;--pin-height:222.38774%;--pin-left:-114.16273%;--pin-top:-60.06597%"><img src="assets/images/section-5/Italian-flag-pin.webp" width="1254" height="1254" alt="" decoding="async"></span><strong>Italy</strong>Your New<br> Beginning</div>
+
+        </div>
 
         <footer class="section-five-footer" aria-label="End-to-end guidance">
-            <img class="section-five-footer-mark" src="assets/images/icons/euromiles-footer-reference-icons/team-guidance-three-people.svg" alt="">
-            <span class="section-five-footer-divider" aria-hidden="true"></span>
+            <img class="section-five-footer-mark" src="assets/images/icons/section-5/footer-phosphor/users-three.svg" alt="">
             <div class="section-five-footer-copy">
                 <p class="section-five-footer-eyebrow">One Journey. One Team.</p>
                 <h2 class="section-five-footer-title">End-to-End Guidance</h2>
                 <p class="section-five-footer-description">Personalized support from your first consultation to your successful start in Italy.</p>
             </div>
+            <span class="section-five-footer-divider" aria-hidden="true"></span>
             <div class="section-five-footer-benefits" aria-label="Our guidance benefits">
                 <div class="section-five-footer-benefit">
-                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 20 6v5c0 5-3.3 8.2-8 10-4.7-1.8-8-5-8-10V6l8-3Z"></path><path d="m8.5 12 2.2 2.2 4.8-5"></path></svg>
-                    <span>Expert<br>Guidance</span>
+                    <img class="section-five-footer-benefit-icon" src="assets/images/icons/section-5/footer-phosphor/seal-check.svg" width="32" height="32" alt="" aria-hidden="true">
+                    <span>Expert<br> Guidance</span>
                 </div>
                 <div class="section-five-footer-benefit">
-                    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"></circle><circle cx="12" cy="12" r="4.8"></circle><circle cx="12" cy="12" r="1.4"></circle><path d="m16.2 7.8 4.3-4.3"></path></svg>
-                    <span>Personalized<br>Strategy</span>
+                    <img class="section-five-footer-benefit-icon" src="assets/images/icons/section-5/footer-phosphor/strategy.svg" width="32" height="32" alt="" aria-hidden="true">
+                    <span>Personalized<br> Strategy</span>
                 </div>
                 <div class="section-five-footer-benefit">
-                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3.5h8l4 4V21H7z"></path><path d="M15 3.5v4h4M10 12h6M10 15.5h6M10 19h3"></path><path d="m3 7 .8 1.1L6 6"></path></svg>
-                    <span>Transparent<br>Process</span>
+                    <img class="section-five-footer-benefit-icon" src="assets/images/icons/section-5/footer-phosphor/clipboard-text.svg" width="32" height="32" alt="" aria-hidden="true">
+                    <span>Transparent<br> Process</span>
                 </div>
                 <div class="section-five-footer-benefit">
-                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 8.8c0 5.1-8.5 11-8.5 11s-8.5-5.9-8.5-11a4.7 4.7 0 0 1 8.5-2.7 4.7 4.7 0 0 1 8.5 2.7Z"></path></svg>
-                    <span>Ongoing<br>Support</span>
+                    <img class="section-five-footer-benefit-icon" src="assets/images/icons/section-5/footer-phosphor/hand-heart.svg" width="32" height="32" alt="" aria-hidden="true">
+                    <span>Ongoing<br> Support</span>
                 </div>
             </div>
             <a class="section-five-footer-cta" href="#consultation-dialog">Start Your Journey Today <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"></path></svg></a>

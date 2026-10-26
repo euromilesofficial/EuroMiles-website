@@ -20,6 +20,8 @@ Apply these rules to new sections and future edits.
 
 ## Current approved interaction details
 
+- Section 5 is approved and locked as of 26 October 2026, including the supplied WebP header and visible left watermark, original circular icons with localized gold glow, foreground trees, symmetrical card rows, all 28 original pointers, Roboto Condensed Bold (700) step numerals, lower architecture aligned to the footer strip, reference-proportioned responsive footer, and gold/ivory Phosphor duotone footer icons. The user explicitly authorized a GitHub backup of this approved state. Do not perform subsequent Git staging, commits, checkpoints or pushes unless explicitly requested.
+
 - Section 4 is approved and locked as of 25 October 2026: preserve the blended consultation opening, six reference-based benefit cards, numbered curved route, readable benefit rows, consistent orange hover, Our Approach strip and responsive closing footer with its blended gold cap. The user explicitly requested a GitHub backup of this state. Do not perform subsequent Git staging, commits, checkpoints or pushes unless the user explicitly requests them.
 
 - As of 20 October 2026, the user has approved and locked the complete website UI from the top bar/navigation through the end of Section 3, including all responsive layouts, images, icons, finder, tabs, subject tiles, and closing shortlist strip. Preserve these approved sections unless the user requests a change. Content remains placeholder until the separate final content-writing stage. The user explicitly authorized a GitHub backup of this approved state on this date.
