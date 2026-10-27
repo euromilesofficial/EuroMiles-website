@@ -4,7 +4,30 @@
   if (!section) return;
   const tabs = [...section.querySelectorAll('[role="tab"]')];
   const panels = [...section.querySelectorAll('[role="tabpanel"]')];
+  const strip = section.querySelector('.s8-tabs');
   const categories = window.EuroMilesFaqConfig;
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)');
+  const stacked = matchMedia('(max-width: 1000px)');
+  // Fade the right edge of the tab strip only while more tabs are still off-screen.
+  const syncTabHint = () => {
+    if (!strip) return;
+    const more = strip.scrollWidth - strip.clientWidth > 2 && strip.scrollLeft + strip.clientWidth < strip.scrollWidth - 2;
+    strip.classList.toggle('has-more', more);
+  };
+  strip?.addEventListener('scroll', syncTabHint, { passive: true });
+  addEventListener('resize', syncTabHint);
+  syncTabHint();
+  document.fonts?.ready.then(syncTabHint);
+  // The static HTML supplies the structure; this file only fills in the copy, so the
+  // article count in index.html must always match the data file.
+  if (categories) {
+    const drift = categories.map(category => {
+      const panel = section.querySelector(`#s8-panel-${category.id}`);
+      const articles = panel ? panel.querySelectorAll('.s8-question').length : 0;
+      return articles === category.questions.length ? null : `${category.id}: HTML ${articles} vs data ${category.questions.length}`;
+    }).filter(Boolean);
+    if (drift.length) console.warn('FAQ HTML and section-eight-data.js are out of sync —', drift.join('; '));
+  }
   // Keep the static HTML fallback usable and the editorial content easy to update.
   categories?.forEach(category => {
     const panel = section.querySelector(`#s8-panel-${category.id}`);
@@ -38,10 +61,10 @@
     });
     if (focus) tabs[index].focus();
     // Bring the selected tab into its horizontal strip without moving the page.
-    const strip = section.querySelector('.s8-tabs');
     const tab = tabs[index];
-    if (tab.offsetLeft < strip.scrollLeft) strip.scrollLeft = tab.offsetLeft;
-    else if (tab.offsetLeft + tab.offsetWidth > strip.scrollLeft + strip.clientWidth) strip.scrollLeft = tab.offsetLeft + tab.offsetWidth - strip.clientWidth;
+    if (strip && tab.offsetLeft < strip.scrollLeft) strip.scrollLeft = tab.offsetLeft;
+    else if (strip && tab.offsetLeft + tab.offsetWidth > strip.scrollLeft + strip.clientWidth) strip.scrollLeft = tab.offsetLeft + tab.offsetWidth - strip.clientWidth;
+    syncTabHint();
   }
   tabs.forEach((tab,index) => {
     tab.addEventListener('click',() => activate(index));
@@ -63,7 +86,10 @@
     activate(index);
     const questionIndex = Number(button.dataset.faqQuestion) - 1;
     setQuestion(panels[index],questionIndex);
-    panels[index].querySelectorAll('.s8-question-trigger')[questionIndex].focus({preventScroll:true});
+    // Below 1001px the topic list sits under the panel, so bring the tabs and their
+    // freshly opened question back into view before moving focus.
+    if (stacked.matches) strip?.scrollIntoView({behavior:reduced.matches ? 'auto' : 'smooth',block:'start'});
+    panels[index].querySelectorAll('.s8-question-trigger')[questionIndex]?.focus({preventScroll:true});
   }));
   section.querySelectorAll('[data-faq-consultation]').forEach(button => button.addEventListener('click',() => {
     const dialog = document.querySelector('#consultation-dialog');

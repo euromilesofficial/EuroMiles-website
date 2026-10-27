@@ -1,16 +1,15 @@
-/* Temporary external references: replace individual records with approved EuroMiles media here.
-   Public sources checked on 15 October 2026. Instagram previews are illustrative local artwork. */
+/* Offline showcase data. Third-party media/accounts are temporary. Replace URLs, covers and facets here with EuroMiles content. */
 window.EuroMilesVideoConfig = {
   "header": {
-    "eyebrow": "Follow the EuroMiles Journey",
+    "eyebrow": "The EuroMiles Journey",
     "title": "See EuroMiles in",
     "highlight": "Action.",
     "lead": "Real students. Real destinations. Real experiences.",
     "description": "Explore our latest Instagram Reels and YouTube videos — all in one place."
   },
   "socialLinks": {
-    "instagram": null,
-    "youtube": null
+    "instagram": "https://www.instagram.com/eurodreams1/",
+    "youtube": "https://www.youtube.com/@eurodreams"
   },
   "socialStats": {
     "studentStories": null,
@@ -36,7 +35,13 @@ window.EuroMilesVideoConfig = {
       "ownership": "third-party",
       "featured": true,
       "status": "published",
-      "temporary": true
+      "temporary": true,
+      "facets": [
+        "stories",
+        "campus",
+        "admissions"
+      ],
+      "fallbackThumbnail": "assets/images/mockups/section-2-image-04-world-ranked-universities.webp"
     },
     {
       "id": "reel-student-journey",
@@ -57,7 +62,12 @@ window.EuroMilesVideoConfig = {
       "ownership": "third-party",
       "featured": false,
       "status": "published",
-      "temporary": true
+      "temporary": true,
+      "facets": [
+        "stories",
+        "arrival"
+      ],
+      "fallbackThumbnail": "assets/images/mockups/section-2-image-06-visa-guidance.webp"
     },
     {
       "id": "italy-scholarships-2026",
@@ -75,7 +85,13 @@ window.EuroMilesVideoConfig = {
       "ownership": "third-party",
       "featured": false,
       "status": "published",
-      "temporary": true
+      "temporary": true,
+      "facets": [
+        "funding",
+        "eligibility",
+        "tips"
+      ],
+      "fallbackThumbnail": "assets/images/mockups/section-2-image-03-scholarships.webp"
     },
     {
       "id": "bergamo-admissions-2025",
@@ -93,7 +109,36 @@ window.EuroMilesVideoConfig = {
       "ownership": "third-party",
       "featured": false,
       "status": "published",
-      "temporary": true
+      "temporary": true,
+      "facets": [
+        "campus",
+        "admissions",
+        "programmes"
+      ],
+      "fallbackThumbnail": "assets/images/mockups/section-2-image-04-world-ranked-universities.webp"
+    },
+    {
+      "id": "florence-city-guide",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/watch?v=Ut-e40u3lS0",
+      "title": "Florence: Heart of the Renaissance",
+      "description": "Explore Florence’s art, architecture and neighbourhoods.",
+      "topics": [
+        "italy",
+        "student-life"
+      ],
+      "facets": [
+        "city",
+        "culture"
+      ],
+      "thumbnail": null,
+      "fallbackThumbnail": "assets/images/section-4/benefit-06-photo.webp",
+      "creator": "Rick Steves’ Europe",
+      "ownership": "third-party",
+      "featured": false,
+      "status": "published",
+      "temporary": true,
+      "source": "https://www.ricksteves.com/watch-read-listen/video/tv-show/florence-heart-of-the-renaissance"
     },
     {
       "id": "italy-student-visa",
@@ -112,7 +157,13 @@ window.EuroMilesVideoConfig = {
       "ownership": "third-party",
       "featured": false,
       "status": "published",
-      "temporary": true
+      "temporary": true,
+      "facets": [
+        "stories",
+        "documents",
+        "interviews"
+      ],
+      "fallbackThumbnail": "assets/images/mockups/section-2-image-06-visa-guidance.webp"
     },
     {
       "id": "videsh-student-experience",
@@ -130,7 +181,13 @@ window.EuroMilesVideoConfig = {
       "ownership": "third-party",
       "featured": false,
       "status": "published",
-      "temporary": true
+      "temporary": true,
+      "facets": [
+        "stories",
+        "arrival",
+        "tips"
+      ],
+      "fallbackThumbnail": "assets/images/mockups/section-2-image-03-scholarships.webp"
     },
     {
       "id": "polimi-dsu-2025",
@@ -149,7 +206,13 @@ window.EuroMilesVideoConfig = {
       "ownership": "third-party",
       "featured": false,
       "status": "published",
-      "temporary": true
+      "temporary": true,
+      "facets": [
+        "funding",
+        "eligibility",
+        "applications"
+      ],
+      "fallbackThumbnail": "assets/images/mockups/section-2-image-04-world-ranked-universities.webp"
     },
     {
       "id": "regional-funding-2025",
@@ -167,7 +230,12 @@ window.EuroMilesVideoConfig = {
       "ownership": "third-party",
       "featured": false,
       "status": "published",
-      "temporary": true
+      "temporary": true,
+      "facets": [
+        "funding",
+        "eligibility"
+      ],
+      "fallbackThumbnail": "assets/images/mockups/section-2-image-03-scholarships.webp"
     },
     {
       "id": "regional-application-guide",
@@ -185,7 +253,13 @@ window.EuroMilesVideoConfig = {
       "ownership": "third-party",
       "featured": false,
       "status": "published",
-      "temporary": true
+      "temporary": true,
+      "facets": [
+        "applications",
+        "documents",
+        "tips"
+      ],
+      "fallbackThumbnail": "assets/images/mockups/section-2-image-03-scholarships.webp"
     },
     {
       "id": "visa-interview-2024",
@@ -203,7 +277,12 @@ window.EuroMilesVideoConfig = {
       "ownership": "third-party",
       "featured": false,
       "status": "published",
-      "temporary": true
+      "temporary": true,
+      "facets": [
+        "interviews",
+        "tips"
+      ],
+      "fallbackThumbnail": "assets/images/mockups/section-2-image-06-visa-guidance.webp"
     },
     {
       "id": "reel-study-overview",
@@ -225,7 +304,13 @@ window.EuroMilesVideoConfig = {
       "ownership": "third-party",
       "featured": false,
       "status": "published",
-      "temporary": true
+      "temporary": true,
+      "facets": [
+        "admissions",
+        "funding",
+        "tips"
+      ],
+      "fallbackThumbnail": "assets/images/mockups/section-2-image-04-world-ranked-universities.webp"
     },
     {
       "id": "reel-visa-updates",
@@ -245,7 +330,12 @@ window.EuroMilesVideoConfig = {
       "ownership": "third-party",
       "featured": false,
       "status": "published",
-      "temporary": true
+      "temporary": true,
+      "facets": [
+        "documents",
+        "tips"
+      ],
+      "fallbackThumbnail": "assets/images/mockups/section-2-image-06-visa-guidance.webp"
     },
     {
       "id": "reel-imat-visa",
@@ -266,7 +356,13 @@ window.EuroMilesVideoConfig = {
       "ownership": "third-party",
       "featured": false,
       "status": "published",
-      "temporary": true
+      "temporary": true,
+      "facets": [
+        "admissions",
+        "programmes",
+        "documents"
+      ],
+      "fallbackThumbnail": "assets/images/mockups/section-2-image-04-world-ranked-universities.webp"
     },
     {
       "id": "reel-italy-transition",
@@ -287,7 +383,14 @@ window.EuroMilesVideoConfig = {
       "ownership": "third-party",
       "featured": false,
       "status": "published",
-      "temporary": true
+      "temporary": true,
+      "facets": [
+        "stories",
+        "arrival",
+        "predeparture"
+      ],
+      "fallbackThumbnail": "assets/images/mockups/section-2-image-06-visa-guidance.webp"
     }
-  ]
+  ],
+  "previewAccounts": true
 };

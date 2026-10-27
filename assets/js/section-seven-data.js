@@ -5,7 +5,7 @@ window.EuroMilesReviewConfig = {
   "verified": false,
   "rating": "4.9",
   "maxRating": "5",
-  "autoplayInterval": 5000,
+  "autoplayInterval": 10000,
   "summary": "Based on verified Google reviews",
   "pageStarts": [
     0,

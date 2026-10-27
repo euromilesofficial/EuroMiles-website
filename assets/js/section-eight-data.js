@@ -1,4 +1,7 @@
-/* Editable FAQ content; official sources checked 15 October 2026. */
+/* Editable FAQ content. Additional questions checked against official sources on 27 October 2026.
+   Each category must keep exactly five question objects: the copy below overwrites the five
+   static <article class="s8-question"> blocks already in index.html for that category, so add or
+   remove the HTML articles at the same time or section-eight.js will log a sync warning. */
 window.EuroMilesFaqConfig = [
   {
     "id": "admissions",
@@ -43,6 +46,32 @@ window.EuroMilesFaqConfig = [
         "source": {
           "url": "https://www.cisiaonline.it/cent/tutto-sul-CEnT/tutto-sul-CEnT",
           "label": "CISIA CEnT-S guidance"
+        }
+      },
+      {
+        "question": "When should I start preparing my university applications?",
+        "paragraphs": [
+          "Start by checking your chosen programme’s current admission call, document requirements and application rounds. Universities and programmes set their own deadlines, so one Italy-wide application date is not enough.",
+          "Allow time for language evidence, entrance tests and qualification documents. If you need a study visa, also plan Universitaly pre-enrolment and the consular process separately."
+        ],
+        "tip": "Build a timeline around your actual programme and intake before paying application or test fees.",
+        "cta": "Plan my admission timeline",
+        "source": {
+          "url": "https://www.universitaly.it/it/studenti-stranieri",
+          "label": "Official international student procedures"
+        }
+      },
+      {
+        "question": "Do I need CIMEA documents, a Declaration of Value or translations?",
+        "paragraphs": [
+          "The university decides which documents it needs to assess your qualification. Translation, proof of authenticity and evidence of the qualification’s value are separate requirements; the accepted methods and exemptions can differ.",
+          "Check the university’s instructions before ordering a CIMEA service or a Declaration of Value. Do not assume that every applicant needs both documents or the same translations."
+        ],
+        "tip": "Confirm the document checklist for your qualification and university before starting paid procedures.",
+        "cta": "Check my qualification documents",
+        "source": {
+          "url": "https://www.unibo.it/en/study/enrolment-fees-and-other-procedures/degree-programmes/translation-authenticity-and-value-of-foreign-qualifications",
+          "label": "Foreign qualification document guidance"
         }
       }
     ]
@@ -91,6 +120,32 @@ window.EuroMilesFaqConfig = [
           "url": "https://www.universitaly.it/it/studenti-stranieri",
           "label": "Universitaly course and admission guidance"
         }
+      },
+      {
+        "question": "Is a Laurea Magistrale the same as a Professional Master’s programme?",
+        "paragraphs": [
+          "No. A Laurea Magistrale is an Italian second-cycle degree. A Master universitario, often called a Professional Master’s, is a different postgraduate qualification focused on specialist training.",
+          "Compare the exact qualification awarded, entry requirements and progression options. A course advertised in English as a “master” should not be assumed to have the same academic purpose as every other master’s course."
+        ],
+        "tip": "Choose the qualification that supports your intended career or further-study route, not just the course title.",
+        "cta": "Compare my postgraduate options",
+        "source": {
+          "url": "https://www.unibo.it/en/study/phd-professional-masters-specialisation-schools-and-other-programmes/professional-master",
+          "label": "Professional Master’s qualification guidance"
+        }
+      },
+      {
+        "question": "How do bachelor’s, master’s and single-cycle degrees differ?",
+        "paragraphs": [
+          "Italian first-cycle degrees are generally three-year bachelor’s programmes, while second-cycle degrees are generally two-year master’s programmes. Some subjects use a longer single-cycle degree instead.",
+          "The right entry route depends on the qualification you already hold and the course you want to study. Check the official course structure and admission requirements rather than choosing by duration alone."
+        ],
+        "tip": "Match your current qualification to the correct study cycle before building your shortlist.",
+        "cta": "Find my study level",
+        "source": {
+          "url": "https://www.unibo.it/en/study/guide-to-choosing-your-programme/the-university-system",
+          "label": "Guide to the Italian university system"
+        }
       }
     ]
   },
@@ -137,6 +192,32 @@ window.EuroMilesFaqConfig = [
         "source": {
           "url": "https://www.unibo.it/en/study/enrolment-fees-and-other-procedures/degree-programmes/tuition-fees-and-exemptions",
           "label": "University fees and exemptions"
+        }
+      },
+      {
+        "question": "Are scholarship deadlines separate from university admission deadlines?",
+        "paragraphs": [
+          "Yes. A regional scholarship competition has its own call, eligibility rules and application timetable. Completing a university application does not mean you have submitted a scholarship application.",
+          "Read the relevant region’s current call and check how enrolment status, financial documents and any accommodation request must be handled. Do not wait for a final admission outcome without first checking the funding deadline."
+        ],
+        "tip": "Keep separate checklists for university admission, scholarship applications and accommodation.",
+        "cta": "Plan my scholarship applications",
+        "source": {
+          "url": "https://www.dsu.toscana.it/borsa-di-studio",
+          "label": "DSU Toscana scholarship call and guidance"
+        }
+      },
+      {
+        "question": "Will I automatically keep my scholarship for the whole degree?",
+        "paragraphs": [
+          "Do not assume that one award guarantees funding for every year. Regional schemes set financial and academic conditions, including progress requirements that depend on the year and type of study.",
+          "Check the current call for application or renewal steps, assessment dates and the circumstances in which benefits can be reduced or withdrawn. The rules of one region should not be applied to another."
+        ],
+        "tip": "Treat academic progress and funding deadlines as part of the same study plan.",
+        "cta": "Understand scholarship conditions",
+        "source": {
+          "url": "https://www.dsu.toscana.it/borsa-di-studio",
+          "label": "Scholarship eligibility and benefit conditions"
         }
       }
     ]
@@ -185,6 +266,32 @@ window.EuroMilesFaqConfig = [
           "url": "https://www.universitaly.it/it/first-steps",
           "label": "Universitaly enrolment steps"
         }
+      },
+      {
+        "question": "What must I do about my residence permit after arriving in Italy?",
+        "paragraphs": [
+          "A study visa and a residence permit serve different purposes. For a long stay requiring a permit, the Italian Ministry of the Interior states that the application must be made within eight working days of entry.",
+          "Before departure, check the process that applies to your situation and prepare the documents needed for the application. Your university’s international office can help explain local submission and appointment arrangements."
+        ],
+        "tip": "Put the residence-permit application on your arrival checklist; do not wait until your visa is close to expiry.",
+        "cta": "Plan my arrival formalities",
+        "source": {
+          "url": "https://www.interno.gov.it/it/temi/immigrazione-e-asilo/modalita-dingresso/visto-e-permesso-soggiorno",
+          "label": "Italian Ministry of the Interior: residence permits"
+        }
+      },
+      {
+        "question": "Do I need health insurance for my stay in Italy?",
+        "paragraphs": [
+          "Check the health-cover requirements for your visa and residence-permit application before buying a policy. University guidance describes routes such as suitable private insurance and, where applicable, registration with Italy’s national health service.",
+          "The options have different conditions, costs and coverage periods. Confirm that your chosen cover is accepted for your application and understand what medical treatment and exclusions it includes."
+        ],
+        "tip": "Check cover dates and administrative requirements alongside your travel and arrival plans.",
+        "cta": "Check my arrival preparation",
+        "source": {
+          "url": "https://www.unibo.it/en/study/life-at-university-and-in-the-city/health-and-assistance/health-and-medical-assistance-in-bologna-cesena-forli-ravenna-e-rimini/medical-assistance-for-international-students",
+          "label": "Health-cover guidance for international students"
+        }
       }
     ]
   },
@@ -231,6 +338,32 @@ window.EuroMilesFaqConfig = [
         "source": {
           "url": "https://www.unibo.it/en/study/life-at-university-and-in-the-city/housing-and-residences/housing",
           "label": "University housing services"
+        }
+      },
+      {
+        "question": "How can my university help me prepare for employment?",
+        "paragraphs": [
+          "Look for career guidance, employer events, internship information and job-placement services at your university. These can help you understand opportunities and prepare stronger applications.",
+          "Start during your degree: develop a suitable CV, practise interviews and build relevant skills and experience. Access to a careers service is useful support, but it is not a promise of employment."
+        ],
+        "tip": "Build your career plan alongside your studies instead of waiting until graduation.",
+        "cta": "Plan my student-to-career journey",
+        "source": {
+          "url": "https://www.unibo.it/en/study/towards-the-job-market/from-study-to-work-how-to-prepare",
+          "label": "University career preparation and placement services"
+        }
+      },
+      {
+        "question": "Will I need recognition of my degree to work in another country?",
+        "paragraphs": [
+          "The answer depends on the destination and occupation. Professional recognition is especially important where a profession is regulated; the relevant authority determines the requirements.",
+          "For a planned move, check with the destination country’s competent authority or ENIC-NARIC information centre. An Italian qualification should not be treated as automatic permission to practise every profession abroad."
+        ],
+        "tip": "If your career is regulated, check recognition requirements before choosing a programme.",
+        "cta": "Discuss my long-term study goals",
+        "source": {
+          "url": "https://enic-naric.net/page-professional-recognition",
+          "label": "ENIC-NARIC professional recognition guidance"
         }
       }
     ]
@@ -279,12 +412,38 @@ window.EuroMilesFaqConfig = [
           "url": "https://integrazionemigranti.gov.it/it-it/Ricerca-news/Dettaglio-news/id/3301/Conversione-del-permesso-di-soggiorno-da-studio-a-lavoro-Cosa-e-cambiato-con-il-decreto-Cutro",
           "label": "Student employment and permit guidance"
         }
+      },
+      {
+        "question": "Are campus jobs and student collaboration opportunities available?",
+        "paragraphs": [
+          "Some universities publish calls for paid student collaboration in libraries, offices and other services. These opportunities have their own eligibility rules, application dates and selection processes.",
+          "For example, Bologna’s student-collaboration scheme uses income, merit and enrolment criteria. Availability and conditions differ between institutions, so do not count on a campus role as guaranteed income."
+        ],
+        "tip": "Check your university’s official calls and keep an independent budget for essential expenses.",
+        "cta": "Plan study and work together",
+        "source": {
+          "url": "https://www.unibo.it/en/study/study-grants-and-subsidies/call-for-applications-and-ranking-lists-for-student-collaboration-150-hours",
+          "label": "Official university student-collaboration opportunities"
+        }
+      },
+      {
+        "question": "How can I recognise a suspicious job offer?",
+        "paragraphs": [
+          "Check the employer’s identity and verify an offer through its official contact channels. Be careful with unexpected messages, unrealistic promises and requests for sensitive financial information during recruitment.",
+          "EURES advises researching unfamiliar companies and checking suspicious communications. A claimed connection to a university or employment service should be independently verified before you share documents or make a commitment."
+        ],
+        "tip": "Use official university careers services and verified employer channels when looking for work.",
+        "cta": "Discuss work-readiness planning",
+        "source": {
+          "url": "https://eures.europa.eu/how-spot-fraudulent-job-offers-and-misinformation-2023-06-15_en",
+          "label": "EURES guidance on fraudulent job offers"
+        }
       }
     ]
   },
   {
     "id": "erasmus",
-    "label": "Erasmus, Internships & Study",
+    "label": "Erasmus & Internships",
     "icon": "globe",
     "description": "Exchange semesters, international placements and funding.",
     "questions": [
@@ -325,6 +484,32 @@ window.EuroMilesFaqConfig = [
         "source": {
           "url": "https://erasmus-plus.ec.europa.eu/programme-guide/part-b/key-action-1/higher-education-mobility-projects",
           "label": "Erasmus+ mobility programme rules"
+        }
+      },
+      {
+        "question": "How are Erasmus study activities and credits agreed before departure?",
+        "paragraphs": [
+          "Your Erasmus mobility should be planned through a Learning Agreement with the relevant institutions. It records the agreed study or training activities and how they fit into your degree.",
+          "Confirm the academic arrangements before travelling and use the approved process for any changes. Speak to your university’s international office about recognition, documents and your responsibilities during the exchange."
+        ],
+        "tip": "Agree the academic plan before booking travel so the mobility supports your degree.",
+        "cta": "Plan my exchange pathway",
+        "source": {
+          "url": "https://erasmus-plus.ec.europa.eu/programme-guide/part-b/key-action-1/higher-education-mobility-projects",
+          "label": "Erasmus+ mobility and Learning Agreement rules"
+        }
+      },
+      {
+        "question": "Can I take an Erasmus traineeship after graduating?",
+        "paragraphs": [
+          "Recent graduates may be eligible for an Erasmus traineeship if their university offers that route. The programme guide requires selection during the final year of study and completion within one year of graduation.",
+          "The institution may choose not to offer recent-graduate traineeships, and the placement counts towards the relevant study-cycle mobility allowance. Check your university’s call before you graduate."
+        ],
+        "tip": "Ask about recent-graduate traineeships during your final year rather than after leaving university.",
+        "cta": "Explore my traineeship options",
+        "source": {
+          "url": "https://erasmus-plus.ec.europa.eu/programme-guide/part-b/key-action-1/higher-education-mobility-projects",
+          "label": "Erasmus+ recent-graduate traineeship rules"
         }
       }
     ]
