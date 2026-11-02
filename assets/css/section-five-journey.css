@@ -101,12 +101,44 @@
     .section-five-roadmap-card--02, .section-five-roadmap-card--04, .section-five-roadmap-card--06 { width: 20%; }
 }
 @media (max-width: 1199px) {
-    .section-five-header { min-height: 0; }
-    .section-five-header-photo { position: relative; inset: auto; width: 100%; height: 40vw; margin-top: 10px; background: url('../images/section-5/section-5-header-artwork.webp') right center / 100% auto no-repeat; }
+    .section-five-header {
+        position: relative;
+        isolation: isolate;
+        overflow: hidden;
+        min-height: 0;
+        padding: 24px 20px 20px;
+    }
+    .section-five-header-photo {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        pointer-events: none;
+        margin: 0;
+        opacity: 0.38;
+        background: url('../images/section-5/section-5-header-artwork.webp') right center / auto 100% no-repeat;
+        -webkit-mask-image: linear-gradient(180deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.55) 60%, transparent 100%), linear-gradient(90deg, transparent 0%, #000 25%);
+        mask-image: linear-gradient(180deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.55) 60%, transparent 100%), linear-gradient(90deg, transparent 0%, #000 25%);
+        -webkit-mask-composite: source-in;
+        mask-composite: intersect;
+    }
     .section-five-header-photo img { display: none; }
-    .section-five-intro { width: 100%; min-height: 0; padding: 28px 24px 0; }
-    .section-five-title { font-size: clamp(30px, 3.6vw, 40px); }
-    .section-five-description { font-size: 13px; }
+    .section-five-intro {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        min-height: 0;
+        padding: 0;
+    }
+    .section-five-title {
+        font-size: clamp(30px, 3.6vw, 40px);
+        text-shadow: 0 0 4px #faf8f5, 0 0 10px #faf8f5, 0 1px 2px #fff;
+    }
+    .section-five-description {
+        font-size: 13px;
+        text-shadow: 0 0 4px #faf8f5, 0 0 8px #faf8f5;
+    }
     .section-five-stage { height: auto; margin: 0; }
     .section-five-road-art { display: none; }
     .section-five-architecture { width: 100%; bottom: 0; opacity: .6; }
@@ -139,12 +171,10 @@
     .section-five-footer-cta { grid-column: 1 / -1; grid-row: 3; }
 }
 @media (max-width: 700px) {
-    .section-five-header { min-height: 0; }
-    .section-five-intro { width: auto; margin: 0; padding: 24px 20px 8px; }
+    .section-five-header { padding: 22px 16px 16px; }
+    .section-five-intro { width: auto; margin: 0; padding: 0; }
     .section-five-eyebrow { font-size: 10px; }
     .section-five-title { font-size: clamp(29px, 6vw, 38px); }
-    .section-five-header-photo { position: relative; inset: auto; width: 100%; height: 40vw; margin-top: 0; }
-    .section-five-header-photo img { height: auto; object-fit: contain; }
     .section-five-roadmap-grid { margin: 0 14px; padding-left: 62px; }
     .section-five-roadmap-card,
     .section-five-roadmap-card--02,
@@ -172,3 +202,6 @@
 .section-five-footer-mark { filter: drop-shadow(0 0 5px #eeb84b35); }
 @media (max-width: 1199px) { .section-five-footer-benefit-icon { width: 30px; height: 30px; } }
 @media (max-width: 700px) { .section-five-footer-benefit-icon { width: 29px; height: 29px; } }
+@media(min-width:1191px) and (max-width:1350px) {
+ .section-five-footer-description { white-space:normal; }
+}

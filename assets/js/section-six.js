@@ -230,13 +230,13 @@
     player.replaceChildren();
     const iframe = document.createElement('iframe');
     iframe.title = `YouTube player: ${video.title}`;
-    iframe.allow = 'encrypted-media; fullscreen; picture-in-picture';
+    iframe.allow = 'autoplay; encrypted-media; fullscreen; picture-in-picture';
     iframe.allowFullscreen = true;
     iframe.referrerPolicy = 'strict-origin-when-cross-origin';
     iframe.addEventListener('error', () => {
       player.replaceChildren(node('p', 'section-six-player-error', 'The player could not load. Use Watch on YouTube below.'));
     }, {once:true});
-    iframe.src = `https://www.youtube-nocookie.com/embed/${id}?rel=0&playsinline=1`;
+    iframe.src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0&playsinline=1`;
     player.append(iframe);
     scrollOverflow = document.body.style.overflow;
     document.body.style.overflow = 'hidden';

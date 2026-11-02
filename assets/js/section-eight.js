@@ -52,6 +52,15 @@
       button.querySelector('.s8-toggle').textContent = open ? '−' : '+';
       document.getElementById(button.getAttribute('aria-controls')).hidden = !open;
     });
+    syncShortcuts();
+  }
+  function syncShortcuts() {
+    section.querySelectorAll('[data-faq-topic]').forEach(button => {
+      const panel = section.querySelector(`#s8-panel-${button.dataset.faqTopic}`);
+      const question = panel?.querySelectorAll('.s8-question-trigger')[Number(button.dataset.faqQuestion) - 1];
+      if (panel && !panel.hidden && question?.getAttribute('aria-expanded') === 'true') button.setAttribute('aria-current','true');
+      else button.removeAttribute('aria-current');
+    });
   }
   function activate(index,focus = false) {
     tabs.forEach((tab,i) => {
@@ -65,7 +74,9 @@
     if (strip && tab.offsetLeft < strip.scrollLeft) strip.scrollLeft = tab.offsetLeft;
     else if (strip && tab.offsetLeft + tab.offsetWidth > strip.scrollLeft + strip.clientWidth) strip.scrollLeft = tab.offsetLeft + tab.offsetWidth - strip.clientWidth;
     syncTabHint();
+    syncShortcuts();
   }
+  syncShortcuts();
   tabs.forEach((tab,index) => {
     tab.addEventListener('click',() => activate(index));
     tab.addEventListener('keydown',event => {
@@ -95,4 +106,15 @@
     const dialog = document.querySelector('#consultation-dialog');
     if (dialog && !dialog.open) dialog.showModal();
   }));
+  section.querySelectorAll('[data-faq-whatsapp]').forEach(button => {
+    const link = document.createElement('a');
+    link.className = button.className;
+    link.innerHTML = button.innerHTML;
+    link.href = window.EuroMilesFaqContact?.whatsappUrl || 'https://www.whatsapp.com/';
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    link.dataset.faqWhatsapp = '';
+    link.setAttribute('aria-label', `${button.textContent.replace('→','').trim()} on WhatsApp (opens in a new tab)`);
+    button.replaceWith(link);
+  });
 })();

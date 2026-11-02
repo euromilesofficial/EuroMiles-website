@@ -191,3 +191,70 @@
     mask-image: linear-gradient(180deg, transparent, #000 9%, #000 95%, transparent);
   }
 }
+/* Tablet: balance both hero columns, frame each slide photograph, soften edge blends, and align controls. */
+@media(min-width:761px) and (max-width:1024px) {
+ .homepage-hero { grid-template-columns:minmax(0,60%) minmax(0,40%); --hero-copy-share:60%; }
+ .hero-carousel { display:flex; flex-direction:column; height:auto; min-height:645px; padding:20px 0 158px; }
+ .hero-carousel .carousel-copy,
+ .hero-carousel[data-slide="graduation-dreams"] .carousel-copy {
+  position:relative; inset:auto; order:0; width:auto; max-width:none; margin:0 18px 12px;
+ }
+ .hero-carousel .carousel-heading { width:auto; max-width:100%; font-size:clamp(27px,3.2vw,33px); }
+ .hero-carousel[data-slide="student-life"] .carousel-heading,
+ .hero-carousel[data-slide="graduation-dreams"] .carousel-heading { font-size:clamp(28px,3.3vw,34px); }
+ .hero-carousel .carousel-description { font-size:13px; }
+ .hero-carousel .carousel-highlights { margin-top:14px; gap:12px 0; }
+ .hero-carousel .carousel-highlight span { font-size:9px; }
+ .hero-carousel .carousel-active-image,
+ .hero-carousel[data-slide="graduation-dreams"] .carousel-active-image,
+ .hero-carousel[data-slide="scholarships"] .carousel-active-image,
+ .hero-carousel[data-slide="italy-riverside"] .carousel-active-image {
+  position:relative; inset:auto; order:1; width:100%; height:auto; min-height:210px; aspect-ratio:1.3;
+  object-fit:cover; flex:1 0 210px;
+  -webkit-mask-image:linear-gradient(180deg,transparent 0%,rgba(0,0,0,0.2) 12px,rgba(0,0,0,0.85) 36px,#000 48px,#000 calc(100% - 48px),rgba(0,0,0,0.85) calc(100% - 36px),rgba(0,0,0,0.2) calc(100% - 12px),transparent 100%);
+  mask-image:linear-gradient(180deg,transparent 0%,rgba(0,0,0,0.2) 12px,rgba(0,0,0,0.85) 36px,#000 48px,#000 calc(100% - 48px),rgba(0,0,0,0.85) calc(100% - 36px),rgba(0,0,0,0.2) calc(100% - 12px),transparent 100%);
+ }
+ .hero-carousel[data-slide="graduation-dreams"] .carousel-active-image { object-position:92% 15%; }
+ .hero-carousel[data-slide="universities"] .carousel-active-image { object-position:78% 20%; }
+ .hero-carousel[data-slide="student-life"] .carousel-active-image { object-position:70% 28%; }
+ .hero-carousel[data-slide="scholarships"] .carousel-active-image { object-position:74% 30%; }
+ .hero-carousel[data-slide="italy-riverside"] .carousel-active-image { object-position:center 50%; }
+ .hero-carousel::before,.hero-carousel[data-slide="scholarships"]::before { display:none; }
+ .hero-carousel::after { height:160px; top:auto; background:linear-gradient(0deg,#faf8f5 70%,transparent); }
+ .hero-carousel .carousel-arrow,
+ .hero-carousel .carousel-dots,
+ .hero-carousel .carousel-playback {
+  bottom:162px;
+ }
+ .hero-carousel .carousel-arrow {
+  width:38px;
+  height:38px;
+ }
+ .hero-carousel .carousel-arrow-left {
+  left:calc(50% - 94px);
+  right:auto;
+ }
+ .hero-carousel .carousel-arrow-right {
+  left:calc(50% + 56px);
+  right:auto;
+ }
+ .hero-carousel .carousel-dots {
+  left:50%;
+  transform:translateX(-50%);
+  height:38px;
+ }
+ .hero-carousel .carousel-dots .dot {
+  width:20px;
+  height:38px;
+ }
+ .hero-carousel .carousel-dots .dot::after {
+  left:6px;
+  top:15px;
+ }
+ .hero-carousel .carousel-playback {
+  right:12px;
+  width:38px;
+  height:38px;
+  font-size:13px;
+ }
+}

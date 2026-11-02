@@ -22,7 +22,7 @@
     mask-image: linear-gradient(90deg, transparent, #000 24%);
 }
 
-.section-three-discovery-visual img {
+.section-three-discovery-visual > img {
     display: block;
     width: 100%;
     height: 100%;
@@ -136,33 +136,64 @@
     content: '';
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
     .section-three-discovery-header {
-        display: flex;
-        flex-direction: column;
-        min-height: 0;
-        padding: 24px 0 0;
-    }
-    .section-three-discovery-copy {
-        order: 0;
-        width: 100%;
-        padding: 0 clamp(24px, 4vw, 40px) 14px;
-        transform: none;
-    }
-    .section-three-discovery-title { max-width: 800px; font-size: clamp(36px, 5.2vw, 48px); }
-    .section-three-discovery-description { max-width: 650px; font-size: 15px; }
-    .section-three-discovery-visual {
-        order: 1;
         position: relative;
-        inset: auto;
-        z-index: 0;
+        isolation: isolate;
+        overflow: hidden;
+        display: block;
+        min-height: 0;
+        padding: 24px clamp(20px, 4vw, 32px) 20px;
+    }
+    .section-three-discovery-visual {
+        position: absolute;
+        inset: 0;
         width: 100%;
-        height: clamp(220px, 30vw, 300px);
-        mask-image: linear-gradient(180deg, transparent, #000 12%, #000 90%, transparent);
+        height: 100%;
+        z-index: 0;
+        pointer-events: none;
+        margin: 0;
+        order: unset;
+        opacity: 0.35;
+        -webkit-mask-image: linear-gradient(180deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.6) 65%, transparent 100%), linear-gradient(90deg, transparent 0%, #000 20%);
+        mask-image: linear-gradient(180deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.6) 65%, transparent 100%), linear-gradient(90deg, transparent 0%, #000 20%);
+        -webkit-mask-composite: source-in;
+        mask-composite: intersect;
+    }
+    .section-three-discovery-visual > img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: right 60%;
     }
     .section-three-discovery-visual::after { display: none; }
-    .section-three-discovery-slogan { top: 16px; left: 24%; width: 150px; }
-    .section-three-discovery-watermark { bottom: auto; height: 270px; width: 185px; opacity: .44; }
+    .section-three-discovery-slogan {
+        top: 14px;
+        right: 4%;
+        left: auto;
+        width: clamp(130px, 20vw, 180px);
+        opacity: 0.85;
+    }
+    .section-three-discovery-copy {
+        position: relative;
+        z-index: 1;
+        order: unset;
+        width: 100%;
+        padding: 0 0 16px;
+        transform: none;
+    }
+    .section-three-discovery-title {
+        max-width: 800px;
+        font-size: clamp(34px, 5.2vw, 48px);
+        text-shadow: 0 0 4px #faf8f5, 0 0 10px #faf8f5, 0 1px 2px #fff;
+    }
+    .section-three-discovery-description {
+        max-width: 650px;
+        font-size: 15px;
+        text-shadow: 0 0 3px #faf8f5, 0 0 8px #faf8f5;
+    }
 }
 
 @media (max-width: 700px) {
@@ -170,23 +201,15 @@
 }
 
 @media (max-width: 520px) {
-    .section-three-discovery-header { padding-top: 22px; padding-bottom: 0; scroll-margin-top: 145px; }
-    .section-three-discovery-copy { padding: 0 20px 6px; }
-    .section-three-discovery-eyebrow { gap: 9px; margin-bottom: 13px; font-size: 10px; letter-spacing: .055em; }
+    .section-three-discovery-header { padding-top: 20px; padding-bottom: 8px; scroll-margin-top: 145px; }
+    .section-three-discovery-copy { padding: 0 0 6px; }
+    .section-three-discovery-eyebrow { gap: 9px; margin-bottom: 12px; font-size: 10px; letter-spacing: .055em; }
     .section-three-discovery-flag { width: 23px; flex-basis: 23px; height: 15px; }
-    .section-three-discovery-title { font-size: clamp(32px, 8.8vw, 44px); line-height: 1.12; margin-bottom: 14px; }
-    .section-three-discovery-description { max-width: 430px; font-size: 14px; line-height: 1.65; }
-    .section-three-discovery-visual {
-        height: clamp(230px, 68vw, 320px);
-        mask-image: linear-gradient(180deg, transparent, #000 12%, #000 88%, transparent);
-    }
-    .section-three-discovery-visual::after {
-        display: block;
-        position: absolute;
-        inset: 0;
-        content: '';
-        background: linear-gradient(90deg, #faf8f5, transparent 28%);
-    }
-    .section-three-discovery-slogan { top: 22px; left: 3%; width: 132px; }
+    .section-three-discovery-title { font-size: clamp(30px, 8.5vw, 42px); line-height: 1.12; margin-bottom: 12px; }
+    .section-three-discovery-description { max-width: 430px; font-size: 14px; line-height: 1.6; }
+    .section-three-discovery-slogan { top: 12px; right: 2%; width: 125px; }
     .section-three-discovery-watermark { height: 260px; width: 145px; opacity: .4; }
 }
+/* Small copy offset without changing the scene or finder position. */
+.section-three-discovery-copy { position:relative; top:12px; }
+.section-three-discovery-slogan { margin-top:12px; }

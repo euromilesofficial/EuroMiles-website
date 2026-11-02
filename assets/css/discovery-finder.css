@@ -122,3 +122,405 @@
 @media (prefers-reduced-motion: reduce) {
     .discovery-finder-field { transition: none; }
 }
+/* Unified single-row desktop finder with quiet internal dividers. */
+.section-three-search-panel.discovery-finder {
+ width:100%; max-width:none; margin:24px 0 0; padding:10px;
+ background:#fff; border:1px solid #e3ded3; border-radius:16px;
+ box-shadow:0 6px 22px rgba(11,32,70,.07);
+}
+.discovery-finder-fields { grid-template-columns:minmax(0,1.45fr) repeat(3,minmax(0,1fr)) minmax(175px,.95fr); gap:0; align-items:stretch; }
+.discovery-finder-field {
+ grid-template-columns:22px minmax(0,1fr); gap:10px; padding:8px 14px;
+ border:0; border-right:1px solid #e9e6df; border-radius:0; background:transparent;
+}
+.discovery-finder-field > svg { width:22px; height:22px; }
+.discovery-finder-label { font-family:'EuroMiles Navigation Sans',Arial,sans-serif; font-size:11px; font-weight:700; color:#637083; margin-bottom:3px; }
+.discovery-finder-field input,.discovery-finder-field select {
+ border:0; border-radius:4px; height:32px; padding-left:0;
+ font-family:'EuroMiles Navigation Sans',Arial,sans-serif; font-size:13px; font-weight:600; background-color:transparent;
+}
+.discovery-finder-field:focus-within { background:#fffbf2; box-shadow:inset 0 -2px #c38b32; }
+.discovery-finder-query { grid-column:auto; }
+.section-three-search-button.discovery-finder-button {
+ grid-column:auto; width:calc(100% - 10px); margin-left:10px; height:56px; min-height:48px;
+ padding:10px 12px; border-radius:10px; font:700 12px/1.3 'EuroMiles Navigation Sans',Arial,sans-serif;
+ background:linear-gradient(135deg,#f7d475,#efb33e); box-shadow:0 3px 8px rgba(166,115,28,.13);
+ text-transform:none;
+}
+.discovery-finder-intro { display:none; }
+@media(min-width:1001px) and (max-width:1200px) {
+ .discovery-finder-fields { grid-template-columns:minmax(0,1.3fr) repeat(3,minmax(0,1fr)) 160px; }
+ .discovery-finder-field { padding-inline:8px; grid-template-columns:18px minmax(0,1fr); gap:6px; }
+ .discovery-finder-field > svg { width:18px; height:18px; }
+ .discovery-finder-field input,.discovery-finder-field select { font-size:12px; }
+}
+@media(max-width:1000px) {
+ .section-three-search-panel.discovery-finder { width:calc(100% - 48px); margin:18px 24px; padding:10px; }
+ .discovery-finder-fields { grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; }
+ .discovery-finder-field { border:1px solid #e9e6df; border-radius:8px; padding:8px 10px; }
+ .discovery-finder-query { grid-column:auto; }
+ .discovery-finder-field input,.discovery-finder-field select { height:36px; font-size:14px; }
+ .section-three-search-button.discovery-finder-button { grid-column:1 / -1; margin:0; width:100%; height:48px; }
+}
+@media(max-width:520px) {
+ .section-three-search-panel.discovery-finder { width:calc(100% - 32px); margin:16px; }
+ .discovery-finder-fields { grid-template-columns:1fr; }
+ .discovery-finder-field input,.discovery-finder-field select { height:40px; font-size:16px; }
+ .discovery-finder-label { font-size:12px; }
+}
+/* Refined finder: softly inset controls and a clear navy action. */
+.section-three-search-panel.discovery-finder {
+ padding:12px;
+ border:1px solid #e7ddca;
+ border-radius:20px;
+ background:rgba(255,255,255,.98);
+ box-shadow:0 12px 32px rgba(11,32,70,.09),0 2px 5px rgba(11,32,70,.025);
+}
+.discovery-finder-fields {
+ grid-template-columns:minmax(0,1.4fr) repeat(3,minmax(0,1fr)) minmax(180px,.95fr);
+ gap:8px;
+ align-items:stretch;
+}
+.discovery-finder-field {
+ position:relative;
+ grid-template-columns:28px minmax(0,1fr);
+ gap:10px;
+ padding:13px 12px;
+ border:1px solid #eeebe4;
+ border-radius:12px;
+ background:#f9f8f5;
+ transition:background 180ms ease,border-color 180ms ease,box-shadow 180ms ease;
+}
+.discovery-finder-field > svg {
+ width:24px; height:24px;
+ stroke:#b98027;
+ stroke-width:1.65;
+}
+.discovery-finder-query > svg { stroke:#b98027; stroke-width:1.8; }
+.discovery-finder-label {
+ margin-bottom:5px;
+ font-size:10px;
+ font-weight:700;
+ letter-spacing:.055em;
+ line-height:1.3;
+ color:#687181;
+ text-transform:uppercase;
+}
+.discovery-finder-field input,.discovery-finder-field select {
+ height:28px;
+ padding:0 20px 0 0;
+ border:0;
+ background-color:transparent;
+ color:#0b2046;
+ font:600 13px/1.4 'EuroMiles Navigation Sans',Arial,sans-serif;
+}
+.discovery-finder-field input { padding-right:0; }
+.discovery-finder-field input::placeholder,
+.discovery-finder-field select:has(option[value=""]:checked) { color:#263c58; }
+.discovery-finder-field select { background-position:right 0 center; background-size:13px; }
+.discovery-finder-field:hover { border-color:#dac9a8; background:#fdfbf6; }
+.discovery-finder-field:focus-within { border-color:#c79645; background:#fffdf7; box-shadow:0 0 0 3px rgba(197,151,70,.11); }
+.section-three-search-button.discovery-finder-button {
+ width:100%; height:auto; min-height:76px; margin:0;
+ align-self:stretch;
+ padding:14px 16px;
+ border:1px solid #102e54;
+ border-radius:12px;
+ background:#0b2046;
+ color:#fff;
+ box-shadow:0 5px 12px rgba(11,32,70,.15);
+ font-size:13px;
+ font-weight:700;
+ letter-spacing:0;
+ gap:12px;
+ transition:background 180ms ease,box-shadow 180ms ease;
+}
+.section-three-search-button.discovery-finder-button svg { width:20px; height:20px; color:#f4c666; stroke:currentColor; }
+.section-three-search-button.discovery-finder-button:hover { background:#17365d; color:#fff; box-shadow:0 7px 16px rgba(11,32,70,.2); }
+.section-three-search-button.discovery-finder-button:focus-visible { outline:3px solid #c79645; outline-offset:3px; }
+@media(min-width:1001px) and (max-width:1200px) {
+ .discovery-finder-fields { grid-template-columns:minmax(0,1.25fr) repeat(3,minmax(0,1fr)) 155px; gap:6px; }
+ .discovery-finder-field { grid-template-columns:20px minmax(0,1fr); padding:12px 9px; gap:7px; }
+ .discovery-finder-field > svg { width:20px; height:20px; }
+ .discovery-finder-label { font-size:9px; letter-spacing:.02em; }
+ .discovery-finder-field input,.discovery-finder-field select { font-size:11px; }
+ .section-three-search-button.discovery-finder-button { font-size:11px; padding:12px; }
+}
+@media(max-width:1000px) {
+ .discovery-finder-fields { grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; }
+ .discovery-finder-field input,.discovery-finder-field select { height:34px; font-size:14px; }
+ .section-three-search-button.discovery-finder-button { grid-column:1 / -1; min-height:52px; }
+}
+@media(max-width:520px) {
+ .section-three-search-panel.discovery-finder { padding:12px; border-radius:16px; }
+ .discovery-finder-fields { grid-template-columns:1fr; gap:9px; }
+ .discovery-finder-field { padding:11px 12px; }
+ .discovery-finder-field input,.discovery-finder-field select { height:36px; font-size:16px; }
+ .discovery-finder-label { font-size:10px; }
+}
+@media(prefers-reduced-motion:reduce) {
+ .discovery-finder-field,.section-three-search-button.discovery-finder-button { transition:none; }
+}
+/* Editorial finder: a single composed panel rather than repeated input cards. */
+.section-three-search-panel.discovery-finder {
+ position:relative;
+ padding:0;
+ overflow:visible;
+ border:1px solid #dcdfe4;
+ border-radius:16px;
+ background:#fff;
+ box-shadow:0 12px 30px rgba(11,32,70,.10);
+}
+.discovery-finder-intro {
+ display:flex;
+ align-items:center;
+ gap:12px;
+ margin:0;
+ padding:12px 22px;
+ border-radius:15px 15px 0 0;
+ background:#0b2046;
+ color:#fff;
+ font:600 13px/1.4 'EuroMiles Navigation Sans',Arial,sans-serif;
+ letter-spacing:.01em;
+}
+.discovery-finder-intro::before { content:''; width:6px; height:6px; border-radius:50%; background:#f3c76e; box-shadow:0 0 0 4px #f3c76e1a; }
+.discovery-finder-subtitle { display:none; }
+.discovery-finder-fields {
+ grid-template-columns:minmax(0,1.4fr) repeat(3,minmax(0,1fr)) minmax(190px,1fr);
+ gap:0;
+ padding:15px 12px;
+ align-items:center;
+}
+.discovery-finder-field {
+ grid-template-columns:20px minmax(0,1fr);
+ gap:12px;
+ padding:6px 18px;
+ border:0;
+ border-right:1px solid #e7e9ed;
+ border-radius:0;
+ background:transparent;
+}
+.discovery-finder-field > svg { width:20px; height:20px; stroke:#9b793d; }
+.discovery-finder-label {
+ margin:0 0 6px;
+ color:#737b88;
+ font-size:10px;
+ font-weight:600;
+ letter-spacing:.045em;
+ text-transform:uppercase;
+}
+.discovery-finder-field input,.discovery-finder-field select {
+ height:30px;
+ border:0;
+ border-radius:0;
+ background-color:transparent;
+ font-size:13px;
+ font-weight:600;
+ color:#102849;
+}
+.discovery-finder-field:hover { background:transparent; border-color:#e7e9ed; }
+.discovery-finder-field:focus-within { background:#fcfaf5; box-shadow:inset 0 -2px #c3923f; border-color:#e7e9ed; }
+.section-three-search-button.discovery-finder-button {
+ width:calc(100% - 16px);
+ min-height:52px;
+ height:52px;
+ margin-left:16px;
+ padding:12px;
+ border:1px solid #e5b34f;
+ border-radius:9px;
+ background:#f4c45f;
+ color:#0b2046;
+ box-shadow:0 3px 8px rgba(162,112,22,.10);
+ font-size:12px;
+ gap:12px;
+}
+.section-three-search-button.discovery-finder-button svg { stroke:#0b2046; color:#0b2046; }
+.section-three-search-button.discovery-finder-button:hover { background:#f7d17d; color:#0b2046; box-shadow:0 4px 10px rgba(162,112,22,.15); }
+@media(min-width:1001px) and (max-width:1200px) {
+ .discovery-finder-fields { grid-template-columns:minmax(0,1.3fr) repeat(3,minmax(0,1fr)) 165px; padding:12px 8px; }
+ .discovery-finder-field { grid-template-columns:16px minmax(0,1fr); padding:6px 10px; gap:7px; }
+ .discovery-finder-field > svg { width:16px; height:16px; }
+ .discovery-finder-label { font-size:9px; letter-spacing:.01em; }
+ .discovery-finder-field input,.discovery-finder-field select { font-size:11px; }
+ .section-three-search-button.discovery-finder-button { font-size:11px; }
+}
+@media(max-width:1000px) {
+ .discovery-finder-fields { grid-template-columns:repeat(2,minmax(0,1fr)); padding:14px; gap:14px 0; }
+ .discovery-finder-field { padding:6px 14px; }
+ .discovery-finder-field:nth-child(even) { border-right:0; }
+ .section-three-search-button.discovery-finder-button { grid-column:1 / -1; width:100%; margin:0; }
+ .discovery-finder-field input,.discovery-finder-field select { font-size:14px; height:36px; }
+}
+@media(max-width:520px) {
+ .section-three-search-panel.discovery-finder { padding:0; }
+ .discovery-finder-intro { padding:13px 18px; font-size:12px; }
+ .discovery-finder-fields { grid-template-columns:1fr; gap:0; padding:6px 16px 16px; }
+ .discovery-finder-field { padding:13px 0; border-right:0; border-bottom:1px solid #e7e9ed; }
+ .discovery-finder-field input,.discovery-finder-field select { font-size:16px; height:36px; }
+ .section-three-search-button.discovery-finder-button { margin-top:16px; }
+}
+/* Make the editable and selectable areas explicit. */
+.discovery-finder-field input,
+.discovery-finder-field select {
+ height:40px;
+ padding:0 28px 0 10px;
+ border:1px solid #d5dde7;
+ border-radius:7px;
+ background-color:#f9fafc;
+ box-shadow:0 1px 2px rgba(11,32,70,.025) inset;
+}
+.discovery-finder-field input { padding-right:10px; }
+.discovery-finder-field select { background-position:right 9px center; }
+.discovery-finder-field input:hover,
+.discovery-finder-field select:hover { border-color:#b6c2d1; }
+.discovery-finder-field input:focus,
+.discovery-finder-field select:focus { background-color:#fff; border-color:#bb8935; }
+@media(min-width:1001px) and (max-width:1200px) {
+ .discovery-finder-field input,.discovery-finder-field select { padding-left:7px; padding-right:21px; }
+ .discovery-finder-field input { padding-right:7px; }
+ .discovery-finder-field select { background-position:right 5px center; }
+}
+@media(max-width:1000px) {
+ .discovery-finder-field input,.discovery-finder-field select { height:44px; }
+}
+/* Approved search bar: omit title strip and align the action with the controls. */
+.discovery-finder-intro { display:none; }
+.section-three-search-button.discovery-finder-button {
+ align-self:end;
+ height:40px;
+ min-height:40px;
+ margin-bottom:6px;
+ padding-block:8px;
+}
+@media(max-width:1000px) {
+ .section-three-search-button.discovery-finder-button {
+  height:44px;
+  min-height:44px;
+  margin-bottom:0;
+ }
+}
+/* Even field columns and a compact action, with uniform spacing. */
+@media(min-width:1001px) {
+ .discovery-finder-fields {
+  grid-template-columns:repeat(4,minmax(0,1fr)) 156px;
+  gap:14px;
+  padding:15px 18px;
+ }
+ .discovery-finder-field {
+  grid-template-columns:20px minmax(0,1fr);
+  gap:10px;
+  padding:6px 0;
+  border-right:0;
+ }
+ .section-three-search-button.discovery-finder-button {
+  width:100%;
+  margin-left:0;
+  padding-inline:10px;
+  font-size:11px;
+  gap:8px;
+ }
+}
+@media(min-width:1001px) and (max-width:1200px) {
+ .discovery-finder-fields { grid-template-columns:repeat(4,minmax(0,1fr)) 142px; gap:12px; padding-inline:14px; }
+ .discovery-finder-field { grid-template-columns:16px minmax(0,1fr); gap:7px; }
+}
+
+/* Small visual offset only; preserve the header composition and image framing. */
+.section-three-search-panel.discovery-finder { position:relative; top:12px; }
+/* One focus treatment per control; no duplicate wrapper underline or outline. */
+.discovery-finder-field:focus-within {
+ background:transparent;
+ box-shadow:none;
+}
+.discovery-finder-field input:focus,
+.discovery-finder-field select:focus,
+.discovery-finder-field input:focus-visible,
+.discovery-finder-field select:focus-visible {
+ outline:none;
+ border-color:#bb8935;
+ background-color:#fff;
+ box-shadow:0 0 0 3px rgba(187,137,53,.16);
+}
+/* Supplied reference: rounded white finder, ivory icon medallions and gold action. */
+.section-three-search-panel.discovery-finder {
+ padding:0;
+ border:1px solid #e7d7ba;
+ border-radius:48px;
+ background:#fff;
+ box-shadow:0 10px 25px rgba(91,65,24,.10);
+}
+.discovery-finder-intro { display:none; }
+.discovery-finder-fields {
+ grid-template-columns:repeat(4,minmax(0,1fr)) 180px;
+ gap:0;
+ padding:14px 18px;
+ align-items:center;
+}
+.discovery-finder-field {
+ grid-template-columns:44px minmax(0,1fr);
+ gap:14px;
+ padding:4px 18px;
+ border:0;
+ border-right:1px solid #ece9e3;
+ background:transparent;
+}
+.discovery-finder-field > svg {
+ box-sizing:content-box;
+ width:24px;
+ height:24px;
+ padding:10px;
+ border-radius:50%;
+ background:#faf0dc;
+ stroke:#70552c;
+ stroke-width:1.8;
+}
+.discovery-finder-label { color:#7d828b; font-size:9px; font-weight:800; letter-spacing:.08em; margin-bottom:5px; }
+.discovery-finder-field input,
+.discovery-finder-field select {
+ height:36px;
+ border:1px solid #dcdfe4;
+ border-radius:7px;
+ padding-left:9px;
+ background-color:#fffefa;
+ font:600 12px/1.4 'EuroMiles Navigation Sans',Arial,sans-serif;
+ color:#0b2046;
+}
+.discovery-finder-field input::placeholder { color:#263c58; }
+.section-three-search-button.discovery-finder-button {
+ align-self:center;
+ width:calc(100% - 14px);
+ margin:0 0 0 14px;
+ height:54px;
+ min-height:54px;
+ border:1px solid #dfb15a;
+ border-radius:18px;
+ background:linear-gradient(115deg,#e1ad4b,#e9bc62);
+ box-shadow:0 6px 13px rgba(124,83,20,.17);
+ color:#0b2046;
+ font-size:12px;
+ padding:10px;
+ gap:10px;
+}
+.section-three-search-button.discovery-finder-button:hover { background:linear-gradient(115deg,#e9b95e,#f0ca7d); }
+@media(min-width:1001px) and (max-width:1200px) {
+ .discovery-finder-fields { grid-template-columns:repeat(4,minmax(0,1fr)) 155px; padding:12px; }
+ .discovery-finder-field { grid-template-columns:32px minmax(0,1fr); padding-inline:10px; gap:8px; }
+ .discovery-finder-field > svg { width:18px; height:18px; padding:7px; }
+ .discovery-finder-label { font-size:8px; letter-spacing:.025em; }
+ .discovery-finder-field input,.discovery-finder-field select { font-size:11px; padding-left:6px; }
+ .section-three-search-button.discovery-finder-button { font-size:11px; }
+}
+@media(max-width:1000px) {
+ .section-three-search-panel.discovery-finder { border-radius:24px; }
+ .discovery-finder-fields { grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px 0; padding:16px; }
+ .discovery-finder-field { padding:4px 12px; }
+ .discovery-finder-field:nth-child(even) { border-right:0; }
+ .discovery-finder-field input,.discovery-finder-field select { height:44px; font-size:14px; }
+ .section-three-search-button.discovery-finder-button { grid-column:1 / -1; width:100%; margin:0; height:48px; min-height:48px; border-radius:14px; }
+}
+@media(max-width:520px) {
+ .discovery-finder-fields { grid-template-columns:1fr; gap:14px; }
+ .discovery-finder-field { border:0; padding:0; }
+ .discovery-finder-field input,.discovery-finder-field select { font-size:16px; }
+ .discovery-finder-label { font-size:9px; }
+}

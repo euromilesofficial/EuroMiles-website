@@ -12,21 +12,17 @@
 .section-two-opening-visual::before { display: block; position: absolute; z-index: 1; inset: 0; pointer-events: none; content: ''; background: linear-gradient(90deg,#faf8f5 0%,#faf8f5f0 5%,#faf8f599 18%,#faf8f500 35%),linear-gradient(180deg,#faf8f5 0%,#faf8f500 8%,#faf8f500 92%,#faf8f5 100%),linear-gradient(270deg,#faf8f5 0%,#faf8f500 3%); }
 @media (min-width:601px) and (max-width:1024px) {
  .section-two-opening { grid-template-columns: minmax(0,1fr); min-height: 0; }
- .section-two-opening-copy { padding: 24px 20px 12px; }
+ .section-two-opening-copy { padding: 0 0 12px; }
  .section-two-opening-title { font-size: clamp(30px,4vw,38px); }
- .section-two-opening-visual { position: relative; inset: auto; grid-row: 2; width: 100%; aspect-ratio: 1895 / 830; }
- .section-two-opening-visual img { object-position: right 75%; }
- .section-two-opening-visual::before { background: linear-gradient(180deg,#faf8f5,#faf8f500 7%,#faf8f500 90%,#faf8f5),linear-gradient(90deg,#faf8f5,#faf8f500 3%,#faf8f500 97%,#faf8f5); }
+ .section-two-opening-visual { display: none; }
 }
 @media (max-width:600px) {
  .section-two-opening { grid-template-columns: minmax(0,1fr); min-height: 0; }
- .section-two-opening-copy { padding: 24px 20px 12px; }
+ .section-two-opening-copy { padding: 0 0 12px; }
  .section-two-opening-title { width: auto; max-width: 100%; font-size: clamp(30px,8vw,40px); }
  .section-two-opening-title span { white-space: normal; }
  .section-two-opening-description { font-size: 14px; }
- .section-two-opening-visual { position: relative; inset: auto; grid-row: 2; width: 100%; aspect-ratio: 1.8; }
- .section-two-opening-visual img { object-fit: cover; object-position: right center; }
- .section-two-opening-visual::before { background: linear-gradient(180deg,#faf8f5,#faf8f500 6%,#faf8f500 93%,#faf8f5),linear-gradient(90deg,#faf8f5,#faf8f500 3%,#faf8f500 97%,#faf8f5); }
+ .section-two-opening-visual { display: none; }
 }
 
 /* Narrow-phone correction only: retain the approved card appearance. */
@@ -58,4 +54,329 @@
 @media (prefers-reduced-motion:reduce) {
  .section-two-guidance-step::before { opacity: .25; transition: none; }
  .section-two-guidance-step img { transition: none; }
+}
+
+/* Reference update: scoped to the opening and the two large cards only. */
+.section-two-intro { position:relative; isolation:isolate; background:#fcf9f1; padding:clamp(56px,5.7vw,120px) 4% clamp(36px,3.4vw,72px); overflow:hidden; }
+.section-two-intro::before { content:''; position:absolute; z-index:-1; inset:0; background:url('../images/section-2/section-2-header-bg.webp') right center / 78% 100% no-repeat; pointer-events:none; }
+.section-two-intro .section-two-opening { display:block; background:transparent; min-height:0; }
+.section-two-intro .section-two-opening-copy { width:66%; padding:0; }
+.section-two-intro .section-two-opening-eyebrow { flex-wrap:nowrap; gap:clamp(10px,0.8vw,18px); font-size:clamp(10px,.8vw,17px); margin:0 0 10px; color:#bd811f; }
+.section-two-intro .section-two-opening-eyebrow::after { flex:1; background:#c89439; margin-left:4px; }
+.section-two-intro .section-two-opening-flag { width:clamp(25px,1.9vw,40px); height:clamp(17px,1.25vw,27px); flex-basis:clamp(25px,1.9vw,40px); }
+.section-two-intro .section-two-opening-title { width:max-content; max-width:none; font-size:clamp(32px,3.08vw,67px); line-height:1.1; letter-spacing:-.035em; margin:0 0 9px; }
+.section-two-intro .section-two-opening-title span { white-space:nowrap; color:#bc8227; }
+.section-two-intro .section-two-opening-description { max-width:85%; font-size:clamp(13px,1vw,22px); line-height:1.35; font-weight:500; }
+.section-two-intro .section-two-card-row { width:69%; padding:0; margin-top:clamp(20px,1.4vw,32px); gap:clamp(10px,.75vw,18px); background:none; }
+.section-two-intro .section-two-tuition-card { height:auto; min-height:clamp(175px,10.8vw,235px); border:0; border-radius:clamp(14px,1vw,22px); box-shadow:0 8px 24px #6547230d; }
+.section-two-intro .section-two-tuition-card::before { inset:-1px auto -1px -1px; width:74%; background:#fff; border-radius:0 48% 43% 0 / 0 52% 66% 0; border-right:1px solid #e5b968; box-shadow:6px 0 0 #fffaf1; }
+.section-two-intro .section-two-tuition-card__image { width:48%; transform:none; object-position:right center; }
+.section-two-intro .section-two-tuition-card__copy { width:75%; padding:clamp(14px,1vw,22px) 8px 16px clamp(14px,1.2vw,26px); }
+.section-two-intro .section-two-tuition-card__heading { gap:clamp(12px,1.2vw,26px); margin-bottom:6px; }
+.section-two-intro .section-two-tuition-card__icon { width:clamp(42px,3.3vw,72px); height:clamp(42px,3.3vw,72px); flex-basis:clamp(42px,3.3vw,72px); background:#f8eedc; }
+.section-two-intro .section-two-tuition-card__icon svg { width:61%; height:61%; }
+.section-two-intro .section-two-tuition-card__eyebrow { font-size:clamp(8px,.64vw,14px); letter-spacing:.12em; margin:2px 0 7px; }
+.section-two-intro .section-two-tuition-card__eyebrow::after { display:none; }
+.section-two-intro .section-two-tuition-card__title { font-family:'EuroMiles Navigation Serif',Georgia,serif; font-size:clamp(21px,1.65vw,36px); line-height:1.05; letter-spacing:-.045em; }
+.section-two-intro .section-two-tuition-card--scholarships .section-two-tuition-card__title { max-width:95%; font-size:clamp(20px,1.5vw,33px); white-space:normal; }
+.section-two-intro .section-two-tuition-card__price, .section-two-intro .section-two-tuition-card__price > span { font:inherit; }
+.section-two-intro .section-two-tuition-card__description { display:block; max-width:none; margin:0 0 12px clamp(54px,4.5vw,98px); font-family:'EuroMiles Navigation Sans',Arial,sans-serif; font-size:clamp(10px,.72vw,16px); font-weight:400; line-height:1.45; overflow:visible; }
+.section-two-intro .section-two-tuition-card__link { margin-left:clamp(54px,4.5vw,98px); font-size:clamp(11px,.75vw,16px); }
+.section-two-intro .section-two-tuition-card__link::after { display:none; }
+.section-two-card-arrow { position:absolute; z-index:3; right:3%; bottom:6%; display:grid; place-items:center; width:clamp(38px,2.6vw,56px); height:clamp(38px,2.6vw,56px); background:#fffefa; color:#29291f; border-radius:50%; font:28px/1 Arial,sans-serif; text-decoration:none; box-shadow:0 3px 12px #34280e12; transition:color .2s,background .2s; }
+.section-two-card-arrow:hover,.section-two-card-arrow:focus-visible { color:#805600; background:#fff4dc; }
+.section-two-card-arrow:focus-visible { outline:2px solid #805600; outline-offset:3px; }
+@media(min-width:1800px) { .section-two-intro { padding-top:5.7vw; padding-bottom:3.4vw; } }
+@media(max-width:1100px) {
+ .section-two-intro { padding:48px 4% 30px; }
+ .section-two-intro .section-two-opening-copy { width:75%; }
+ .section-two-intro .section-two-opening-title { font-size:3.55vw; }
+ .section-two-intro .section-two-card-row { width:85%; }
+ .section-two-intro .section-two-tuition-card { min-height:190px; }
+}
+@media(max-width:760px) {
+ .section-two-intro { padding:30px 20px 24px; }
+ .section-two-intro::before { background-size:auto 340px; background-position:right top; opacity:.34; }
+ .section-two-intro .section-two-opening-copy { width:100%; }
+ .section-two-intro .section-two-opening-eyebrow { font-size:9px; letter-spacing:.08em; }
+ .section-two-intro .section-two-opening-eyebrow::after { min-width:12px; }
+ .section-two-intro .section-two-opening-title { width:auto; max-width:100%; font-size:clamp(29px,5.8vw,42px); }
+ .section-two-intro .section-two-opening-title span { white-space:normal; }
+ .section-two-intro .section-two-opening-description { max-width:100%; font-size:13px; }
+ .section-two-intro .section-two-card-row { width:100%; grid-template-columns:1fr; gap:14px; margin-top:24px; }
+ .section-two-intro .section-two-tuition-card { min-height:200px; }
+ .section-two-intro .section-two-tuition-card__copy { padding:18px 8px 18px 14px; width:76%; }
+ .section-two-intro .section-two-tuition-card__title { font-size:clamp(20px,4.4vw,28px); }
+ .section-two-intro .section-two-tuition-card--scholarships .section-two-tuition-card__title { font-size:clamp(20px,4.2vw,27px); }
+ .section-two-intro .section-two-tuition-card__eyebrow { font-size:9px; }
+ .section-two-intro .section-two-tuition-card__description { font-size:12px; margin-left:54px; }
+ .section-two-intro .section-two-tuition-card__link { margin-left:54px; font-size:12px; min-height:30px; }
+ .section-two-card-arrow { width:44px; height:44px; }
+}
+@media(max-width:380px) {
+ .section-two-intro { padding-inline:14px; }
+ .section-two-intro .section-two-tuition-card__heading { gap:9px; }
+ .section-two-intro .section-two-tuition-card__icon { width:34px; height:34px; flex-basis:34px; }
+ .section-two-intro .section-two-tuition-card__description,.section-two-intro .section-two-tuition-card__link { margin-left:43px; }
+ .section-two-intro .section-two-tuition-card__title { font-size:19px; }
+ .section-two-intro .section-two-tuition-card__eyebrow { font-size:8px; }
+}
+@media(prefers-reduced-motion:reduce) { .section-two-card-arrow { transition:none; } }
+/* Section 2 scenic background overlay for tablet and mobile (<=1024px) */
+@media(max-width:1024px) {
+ .section-two-intro {
+   position: relative;
+   isolation: isolate;
+   overflow: hidden;
+   display: flex;
+   flex-direction: column;
+   padding: 24px 20px 16px;
+ }
+ .section-two-intro::before {
+   content: '';
+   display: block;
+   position: absolute;
+   z-index: 0;
+   inset: 0;
+   background: url('../images/section-2/section-2-header-bg.webp') right center / auto 100% no-repeat;
+   opacity: 0.38;
+   pointer-events: none;
+   -webkit-mask-image: linear-gradient(180deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.6) 55%, transparent 95%), linear-gradient(90deg, transparent 0%, #000 25%);
+   mask-image: linear-gradient(180deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.6) 55%, transparent 95%), linear-gradient(90deg, transparent 0%, #000 25%);
+   -webkit-mask-composite: source-in;
+   mask-composite: intersect;
+ }
+ .section-two-intro::after { display: none !important; }
+ .section-two-intro .section-two-opening {
+   position: relative;
+   z-index: 1;
+   order: 0;
+ }
+ .section-two-intro .section-two-opening-title {
+   text-shadow: 0 0 6px #fcf9f1, 0 0 12px #fcf9f1, 0 1px 2px #fff;
+ }
+ .section-two-intro .section-two-opening-description {
+   text-shadow: 0 0 4px #fcf9f1, 0 0 10px #fcf9f1;
+ }
+ .section-two-intro .section-two-card-row {
+   position: relative;
+   z-index: 1;
+   order: 1;
+   margin-top: 18px;
+ }
+}
+@media(max-width:900px) {
+ .section-two-intro .section-two-opening-copy { width:100%; }
+ .section-two-intro .section-two-opening-title { width:auto; max-width:100%; font-size:clamp(29px,5.3vw,42px); }
+ .section-two-intro .section-two-opening-title span { white-space:normal; }
+ .section-two-intro .section-two-opening-description { max-width:100%; }
+ .section-two-intro .section-two-card-row { width:100%; grid-template-columns:1fr; margin-top:18px; gap:14px; }
+ .section-two-intro .section-two-tuition-card { min-height:200px; }
+}
+@media(min-width:601px) and (max-width:900px) {
+ .section-two-intro .section-two-tuition-card__copy { width:70%; padding:22px; }
+ .section-two-intro .section-two-tuition-card__title { font-size:30px; }
+ .section-two-intro .section-two-tuition-card--scholarships .section-two-tuition-card__title { font-size:28px; }
+ .section-two-intro .section-two-tuition-card__eyebrow { font-size:11px; }
+ .section-two-intro .section-two-tuition-card__description { font-size:14px; max-width:320px; }
+ .section-two-intro .section-two-tuition-card__link { font-size:13px; }
+}
+/* Match the reference's short rule and asymmetric card sweep. */
+.section-two-intro .section-two-opening-eyebrow::after { flex:0 1 16vw; width:16vw; max-width:270px; }
+.section-two-intro { padding-top:clamp(32px,3.3vw,68px); padding-bottom:clamp(18px,1.5vw,32px); }
+.section-two-intro .section-two-opening-description { max-width:82%; }
+.section-two-intro .section-two-card-row { margin-top:clamp(16px,1.3vw,28px); }
+.section-two-intro .section-two-tuition-card { min-height:0; aspect-ratio:3 / 1; }
+.section-two-intro .section-two-tuition-card::before { inset:0; width:100%; border:0; border-radius:0; box-shadow:none; background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 400' preserveAspectRatio='none'%3E%3Cpath d='M0 0H550C825 22 742 228 580 400H0Z' fill='%23fff'/%3E%3Cpath d='M550 0C825 22 742 228 580 400' fill='none' stroke='%23fff8eb' stroke-width='15'/%3E%3Cpath d='M550 0C825 22 742 228 580 400' fill='none' stroke='%23e6bc77' stroke-width='1.5'/%3E%3C/svg%3E") center / 100% 100% no-repeat; }
+.section-two-intro .section-two-tuition-card__image { width:52%; }
+.section-two-intro .section-two-tuition-card__copy { width:69%; padding:clamp(12px,1vw,22px) 0 clamp(12px,1vw,22px) 18.5%; }
+.section-two-intro .section-two-tuition-card__heading { display:block; margin-bottom:7px; }
+.section-two-intro .section-two-tuition-card__icon { position:absolute; left:4%; top:8%; }
+.section-two-intro .section-two-tuition-card__title { font-size:clamp(22px,1.8vw,39px); }
+.section-two-intro .section-two-tuition-card--scholarships .section-two-tuition-card__title { font-size:clamp(21px,1.65vw,36px); max-width:100%; }
+.section-two-intro .section-two-tuition-card__description { margin:0 0 12px; font-size:clamp(11px,.76vw,17px); line-height:1.4; }
+.section-two-intro .section-two-tuition-card__link { margin-left:0; }
+@media(min-width:901px) { .section-two-intro .section-two-tuition-card__copy { padding-bottom:36px; } .section-two-intro .section-two-tuition-card__link { position:absolute; bottom:12px; left:26.8%; } }
+@media(min-width:901px) and (max-width:1100px) { .section-two-intro .section-two-tuition-card { aspect-ratio:auto; min-height:190px; } }
+@media(max-width:900px) {
+ .section-two-intro { padding:24px 20px 16px; }
+ .section-two-intro .section-two-opening-description { max-width:100%; }
+ .section-two-intro .section-two-opening-eyebrow::after { flex:1 1 12px; max-width:100px; }
+ .section-two-intro .section-two-tuition-card { aspect-ratio:auto; min-height:200px; }
+ .section-two-intro .section-two-tuition-card__copy { width:69%; padding:18px 0 16px 18.5%; }
+ .section-two-intro .section-two-tuition-card__description { margin:0 0 12px; font-size:12px; }
+ .section-two-intro .section-two-tuition-card__link { margin:0; }
+ .section-two-intro .section-two-tuition-card__title { font-size:clamp(19px,4.4vw,30px); }
+ .section-two-intro .section-two-tuition-card--scholarships .section-two-tuition-card__title { font-size:clamp(19px,4.2vw,28px); }
+}
+@media(min-width:901px) {
+ .section-two-intro .section-two-tuition-card { min-height:170px; }
+ .section-two-intro .section-two-tuition-card__copy { height:100%; min-height:170px; box-sizing:border-box; }
+ .section-two-intro .section-two-tuition-card__description { max-width:91%; }
+ .section-two-intro .section-two-tuition-card__link { bottom:16px; }
+}
+/* Preserve the photograph's proportions as the header height changes. */
+.section-two-intro::before { background-size:78% auto; background-position:right center; }
+/* Reference edge: ivory rim at the crown, fine gold curve, and a feathered foot. */
+.section-two-intro .section-two-tuition-card::before {
+ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 400' preserveAspectRatio='none'%3E%3Cdefs%3E%3ClinearGradient id='foot' x1='0' y1='0' x2='.12' y2='1'%3E%3Cstop offset='0' stop-color='white'/%3E%3Cstop offset='.7' stop-color='white'/%3E%3Cstop offset='1' stop-color='white' stop-opacity='0'/%3E%3C/linearGradient%3E%3ClinearGradient id='rim' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop stop-color='%23fffaf0' stop-opacity='.25'/%3E%3Cstop offset='.18' stop-color='%23fff4df'/%3E%3Cstop offset='.65' stop-color='%23fff4df'/%3E%3Cstop offset='1' stop-color='%23fff4df' stop-opacity='0'/%3E%3C/linearGradient%3E%3ClinearGradient id='gold' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop stop-color='%23e6bd7b' stop-opacity='0'/%3E%3Cstop offset='.2' stop-color='%23d9ac62'/%3E%3Cstop offset='.65' stop-color='%23d9ac62'/%3E%3Cstop offset='1' stop-color='%23d9ac62' stop-opacity='0'/%3E%3C/linearGradient%3E%3Cfilter id='soft' x='-.2' y='-.2' width='1.4' height='1.4'%3E%3CfeGaussianBlur stdDeviation='10'/%3E%3C/filter%3E%3Cmask id='m'%3E%3Crect width='1000' height='400' fill='url(%23foot)'/%3E%3C/mask%3E%3C/defs%3E%3Crect width='450' height='400' fill='white'/%3E%3Cpath d='M0 0H550C825 22 742 228 580 400H0Z' fill='white' mask='url(%23m)'/%3E%3Cpath d='M550 0C825 22 742 228 580 400' fill='none' stroke='white' stroke-width='52' filter='url(%23soft)' mask='url(%23m)'/%3E%3Cpath d='M550 0C825 22 742 228 580 400' fill='none' stroke='url(%23rim)' stroke-width='22'/%3E%3Cpath d='M550 0C825 22 742 228 580 400' fill='none' stroke='url(%23gold)' stroke-width='2'/%3E%3C/svg%3E");
+}
+/* Feather the source-photo boundary beneath the curved white panel. */
+.section-two-intro .section-two-tuition-card__image {
+ -webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 22%,#000 100%);
+ mask-image:linear-gradient(90deg,transparent 0%,#000 22%,#000 100%);
+}
+/* Fade the panorama edges without changing the photograph's proportions. */
+.section-two-intro::before {
+ -webkit-mask-image:linear-gradient(180deg,transparent 0%,#000 7%,#000 89%,transparent 100%);
+ mask-image:linear-gradient(180deg,transparent 0%,#000 7%,#000 89%,transparent 100%);
+}
+@media(max-width:900px) {
+ .section-two-intro::after {
+  -webkit-mask-image:linear-gradient(180deg,transparent 0%,#000 8%,#000 89%,transparent 100%);
+  mask-image:linear-gradient(180deg,transparent 0%,#000 8%,#000 89%,transparent 100%);
+ }
+}
+/* Keep the upper cards inside their grid tracks and share the lower row's gutter. */
+.section-two-intro { padding-inline:clamp(24px,3.75vw,48px); }
+.section-two-intro .section-two-tuition-card { width:100%; max-width:100%; min-width:0; box-sizing:border-box; aspect-ratio:auto; }
+.section-two-intro .section-two-card-row { column-gap:clamp(14px,1vw,22px); }
+@media(max-width:900px) { .section-two-intro { padding-inline:20px; } }
+/* Reference card headings use a compact traditional bold serif. */
+.section-two-intro .section-two-tuition-card .section-two-tuition-card__title {
+ font-family:Georgia,'Times New Roman',serif;
+ font-weight:700;
+ font-style:normal;
+ letter-spacing:-.04em;
+ line-height:1.06;
+}
+.section-two-intro .section-two-tuition-card__price,
+.section-two-intro .section-two-tuition-card__price > span { font-family:inherit; font-size:inherit; font-weight:inherit; }
+
+/* Clean modern headings with one consistent currency-and-number text run. */
+.section-two-intro .section-two-tuition-card .section-two-tuition-card__title {
+ font-family:'EuroMiles Navigation Sans','Plus Jakarta Sans',Arial,sans-serif;
+ font-weight:700;
+ letter-spacing:-.035em;
+ line-height:1.14;
+ white-space:normal;
+}
+.section-two-intro .section-two-tuition-card__price {
+ display:inline;
+ font:inherit;
+ font-variant-numeric:lining-nums proportional-nums;
+ vertical-align:baseline;
+ white-space:nowrap;
+}
+/* Subtle shared depth for all six Section 2 cards. */
+.section-two-intro .section-two-tuition-card,
+.section-two-feature-row .section-two-feature-card {
+ box-shadow:0 3px 7px rgba(34,29,19,.035),0 10px 23px rgba(11,32,70,.085),0 1px 0 rgba(255,255,255,.85) inset;
+ outline:1px solid rgba(198,155,82,.12);
+ outline-offset:0;
+ transition:box-shadow 220ms ease;
+}
+@media(hover:hover) and (pointer:fine) {
+ .section-two-intro .section-two-tuition-card:hover,
+ .section-two-feature-row .section-two-feature-card:hover {
+  box-shadow:0 4px 9px rgba(34,29,19,.04),0 13px 28px rgba(11,32,70,.12),0 1px 0 rgba(255,255,255,.9) inset;
+ }
+}
+.section-two-intro .section-two-tuition-card:focus-within,
+.section-two-feature-row .section-two-feature-card:focus-within {
+ box-shadow:0 4px 9px rgba(34,29,19,.04),0 13px 28px rgba(11,32,70,.12),0 1px 0 rgba(255,255,255,.9) inset;
+}
+@media(prefers-reduced-motion:reduce) {
+ .section-two-intro .section-two-tuition-card,
+ .section-two-feature-row .section-two-feature-card { transition:none; }
+}
+/* Stronger resting elevation, with enough space for the shadows to remain visible. */
+.section-two-intro .section-two-tuition-card,
+.section-two-feature-row .section-two-feature-card {
+ box-shadow:0 2px 4px rgba(11,32,70,.10),0 9px 16px rgba(11,32,70,.14),0 18px 30px rgba(74,55,26,.12),0 1px 0 rgba(255,255,255,.9) inset;
+ outline-color:rgba(179,132,58,.22);
+}
+.section-two-intro { padding-bottom:30px; }
+.section-two-feature-row { padding-top:16px; padding-bottom:26px; }
+/* Scale photos by height rather than enlarging them to cover an oversized box. */
+.section-two-intro .section-two-tuition-card__image {
+ width:auto; max-width:none; height:100%; object-fit:contain; object-position:right center; transform:none;
+}
+.section-two-feature-row .section-two-feature-card__image {
+ inset:0 57% 0 auto; width:auto; max-width:none; height:100%; object-fit:contain; object-position:right center; transform:none;
+}
+@media(hover:hover) and (pointer:fine) {
+ .section-two-intro .section-two-tuition-card:hover,
+ .section-two-feature-row .section-two-feature-card:hover {
+  box-shadow:0 3px 6px rgba(11,32,70,.12),0 12px 20px rgba(11,32,70,.17),0 22px 36px rgba(74,55,26,.14),0 1px 0 rgba(255,255,255,.9) inset;
+ }
+}
+
+/* Restore the approved sixth photo's original framing. */
+.section-two-feature-row .section-two-feature-card--opportunities .section-two-feature-card__image {
+ inset:4% 0 auto 0;
+ width:100%;
+ height:92%;
+ object-fit:cover;
+ object-position:100% center;
+ transform:scaleX(1.34);
+ transform-origin:right center;
+}
+@media(min-width:901px) {
+ .section-two-intro .section-two-tuition-card__copy { padding-bottom:48px; }
+}
+
+/* Fill the sixth card's photo area without the previous vertical inset. */
+.section-two-feature-row .section-two-feature-card--opportunities .section-two-feature-card__image {
+ inset:0;
+ width:100%;
+ height:100%;
+ object-fit:cover;
+ object-position:right center;
+ transform:scaleX(1.34);
+ transform-origin:right center;
+}
+/* Compact Section 2 as one opening group, followed closely by its four cards. */
+.section-two-intro { margin-top:0; padding-top:clamp(16px,1.4vw,28px); padding-bottom:8px; }
+.section-two-intro .section-two-opening-eyebrow { margin-bottom:7px; }
+.section-two-intro .section-two-opening-title { margin-bottom:7px; }
+.section-two-intro .section-two-card-row { margin-top:14px; }
+.section-two-intro + .section-two-feature-row { margin-top:0; padding-top:8px; padding-bottom:18px; }
+@media(max-width:900px) {
+ .section-two-intro { padding-top:16px; padding-bottom:6px; }
+ .section-two-intro .section-two-card-row { margin-top:14px; }
+ .section-two-intro::after { margin-top:12px; }
+ .section-two-intro + .section-two-feature-row { padding-top:8px; }
+}
+/* One continuous warm background between the upper and lower card rows. */
+.section-two-intro + .section-two-feature-row { background:#fcf9f1; }
+/* Feather the panorama out before the row boundary; avoid a hard horizontal seam. */
+.section-two-intro::before {
+ -webkit-mask-image:linear-gradient(180deg,transparent 0%,#000 7%,#000 72%,transparent 94%,transparent 100%);
+ mask-image:linear-gradient(180deg,transparent 0%,#000 7%,#000 72%,transparent 94%,transparent 100%);
+}
+.section-two-intro + .section-two-feature-row { background:linear-gradient(180deg,#fcf9f1 0%,#faf8f5 100%); }
+/* Let individual card shadows dissipate naturally instead of clipping at the row edge. */
+.section-two-intro { overflow:visible; }
+.section-two-intro::before { clip-path:inset(0); }
+.section-two-intro + .section-two-feature-row { background:#fcf9f1; }
+.section-two-intro .section-two-tuition-card,
+.section-two-feature-row .section-two-feature-card {
+ box-shadow:0 2px 5px rgba(11,32,70,.09),0 7px 14px rgba(11,32,70,.12);
+}
+@media(hover:hover) and (pointer:fine) {
+ .section-two-intro .section-two-tuition-card:hover,
+ .section-two-feature-row .section-two-feature-card:hover { box-shadow:0 3px 6px rgba(11,32,70,.10),0 9px 18px rgba(11,32,70,.15); }
+}
+/* Intermediate widths need a full-width introduction before the guidance action. */
+@media(min-width:521px) and (max-width:760px) {
+ .section-two-guidance-footer { grid-template-columns:minmax(0,1fr); gap:16px; }
+ .section-two-guidance-intro { grid-column:1; grid-row:1; }
+ .section-two-guidance-steps { grid-column:1; grid-row:2; }
+ .section-two-guidance-cta { grid-column:1; grid-row:3; justify-self:center; width:min(100%,280px); }
+}
+.section-two-feature-card__eyebrow { white-space:normal; overflow-wrap:break-word; }
+@media(max-width:359px) {
+ .section-two-guidance-title { font-size:21px; white-space:normal; }
+ .section-two-guidance-intro { min-width:0; }
 }

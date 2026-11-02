@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
   const scrollTo = target => target?.scrollIntoView({behavior:reduced.matches ? 'auto' : 'smooth',block:'start'});
   footer.querySelector('[data-footer-year]').textContent = new Date().getFullYear();
-  footer.querySelector('[data-footer-assessment]').addEventListener('click',event => {
+  footer.querySelector('[data-footer-assessment]')?.addEventListener('click',event => {
     event.preventDefault();
     scrollTo(document.querySelector('#free-profile-assessment'));
     document.querySelector('#s9-student-name')?.focus({preventScroll:true});

@@ -1,0 +1,138 @@
+/* 30 October review: localized header blending and readable tablet content. */
+#why-euromiles .section-four-principle-category {font-size:11px;line-height:1.4;white-space:normal}
+#why-euromiles .section-four-principle-highlights {flex-wrap:wrap;justify-content:flex-start;gap:6px 12px;font-size:11px;line-height:1.5}
+#why-euromiles .section-four-principle-highlights li {min-width:0;max-width:100%;white-space:normal;overflow-wrap:break-word}
+#why-euromiles .section-four-principle-copy {min-width:0}
+#why-euromiles .section-four-principle-description {line-height:1.5}
+.discovery-finder-field :is(input,select) {font-size:14px;min-height:44px;height:44px}
+.discovery-finder-label {font-size:10px;line-height:1.4;letter-spacing:.035em}
+.s9-field label {font-size:13px;line-height:1.4}
+.s9-field :is(input,select,textarea),.s9-phone-prefix {font-size:14px;line-height:1.5;min-height:44px}
+.s9-phone-prefix {align-self:stretch}
+.s9-form-heading p {font-size:13px;line-height:1.5}
+.s9-benefits p {font-size:13px;line-height:1.5}
+.s9-consent,.s9-privacy {font-size:12px;line-height:1.5}
+.s9-submit {font-size:13px;min-height:48px;line-height:1.4}
+.s9-content .s9-note {max-width:27%;font-size:clamp(25px,2.1vw,40px);overflow-wrap:break-word}
+.s9-content .s9-note strong {max-width:100%}
+.s8-scroll-cue {display:none}
+@media(min-width:701px) and (max-width:1399px) {
+ .s8-scroll-cue {display:block;margin:-8px 4px 18px;color:#6a542d;font:500 12px/1.5 'Plus Jakarta Sans',sans-serif;text-align:right}
+}
+@media(min-width:701px) and (max-width:1100px) {
+ .section-two-intro::before {
+  opacity:1;
+  -webkit-mask-image:linear-gradient(90deg,transparent 38%,#000 67%),linear-gradient(180deg,transparent,#000 8%,#000 83%,transparent);
+  mask-image:linear-gradient(90deg,transparent 38%,#000 67%),linear-gradient(180deg,transparent,#000 8%,#000 83%,transparent);
+  -webkit-mask-composite:source-in;mask-composite:intersect;
+ }
+ .section-three-discovery-header {min-height:320px}
+ .section-three-discovery-visual {
+  inset:0 0 0 auto;width:62%;height:100%;z-index:-1;opacity:1;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 45%),linear-gradient(180deg,transparent,#000 10%,#000 84%,transparent);
+  mask-image:linear-gradient(90deg,transparent,#000 45%),linear-gradient(180deg,transparent,#000 10%,#000 84%,transparent);
+  -webkit-mask-composite:source-in;mask-composite:intersect;
+ }
+ .section-three-discovery-visual > img {object-position:right center}
+ .section-three-discovery-title {max-width:65%;font-size:clamp(34px,4vw,44px)}
+ .section-three-discovery-description {max-width:56%}
+ .section-three-discovery-slogan {right:30%;top:24px;width:145px}
+ #why-euromiles .section-four-intro-photo {
+  inset:0 0 0 auto;width:60%;height:100%;opacity:1;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 55%),linear-gradient(180deg,transparent,#000 15%,#000 78%,transparent);
+  mask-image:linear-gradient(90deg,transparent,#000 55%),linear-gradient(180deg,transparent,#000 15%,#000 78%,transparent);
+  -webkit-mask-composite:source-in;mask-composite:intersect;
+ }
+ #why-euromiles .section-four-header-copy {max-width:none;padding-right:20%}
+ #why-euromiles .section-four-header-title {max-width:660px}
+ #why-euromiles .section-four-header-description {max-width:620px}
+ .section-five-header {min-height:245px}
+ .section-five-header-photo {
+  inset:0 0 0 auto;width:64%;height:100%;opacity:1;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 45%),linear-gradient(180deg,transparent,#000 10%,#000 82%,transparent);
+  mask-image:linear-gradient(90deg,transparent,#000 45%),linear-gradient(180deg,transparent,#000 10%,#000 82%,transparent);
+  -webkit-mask-composite:source-in;mask-composite:intersect;
+ }
+ .section-five-intro {max-width:62%}
+ .section-six-header {min-height:235px}
+ .section-six-header::before {
+  inset:0 0 0 auto;width:65%;height:100%;opacity:1;background-position:right center;background-size:auto 100%;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 35%),linear-gradient(180deg,transparent,#000 12%,#000 80%,transparent);
+  mask-image:linear-gradient(90deg,transparent,#000 35%),linear-gradient(180deg,transparent,#000 12%,#000 80%,transparent);
+  -webkit-mask-composite:source-in;mask-composite:intersect;
+ }
+ .section-six-header-copy {width:60%}
+ .section-seven-intro {min-height:250px}
+ .section-seven-art {
+  inset:0 0 auto;height:280px;z-index:-1;opacity:1;
+  -webkit-mask-image:linear-gradient(90deg,transparent 22%,#000 70%),linear-gradient(180deg,transparent,#000 10%,#000 75%,transparent);
+  mask-image:linear-gradient(90deg,transparent 22%,#000 70%),linear-gradient(180deg,transparent,#000 10%,#000 75%,transparent);
+  -webkit-mask-composite:source-in;mask-composite:intersect;
+ }
+ .section-seven-title {max-width:70%}
+ .section-seven-description {max-width:65%}
+ .s9-background {
+  opacity:1;
+  -webkit-mask-image:linear-gradient(90deg,transparent 15%,#000 52%),linear-gradient(180deg,transparent,#000 10%,#000 85%,transparent);
+  mask-image:linear-gradient(90deg,transparent 15%,#000 52%),linear-gradient(180deg,transparent,#000 10%,#000 85%,transparent);
+  -webkit-mask-composite:source-in;mask-composite:intersect;
+ }
+ .section-six-filters {padding-bottom:10px;scrollbar-width:thin;scrollbar-color:#b7904c #f4eee4}
+ .section-six-filters::-webkit-scrollbar {height:6px}
+ .section-six-filters::-webkit-scrollbar-thumb {background:#b7904c;border-radius:4px}
+}
+@media(min-width:701px) and (max-width:1100px) {
+ .section-three-search-panel.discovery-finder {border-radius:24px}
+ .discovery-finder-fields {grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 0;padding:16px}
+ .discovery-finder-field {grid-template-columns:40px minmax(0,1fr);gap:12px;padding:4px 12px}
+ .discovery-finder-field:nth-child(even) {border-right:0}
+ .discovery-finder-field input,.discovery-finder-field select {font-size:14px;padding-left:10px}
+ .discovery-finder-label {font-size:10px}
+ .section-three-search-button.discovery-finder-button {grid-column:1/-1;width:100%;margin:0;min-height:48px;height:48px;border-radius:14px;font-size:13px}
+}
+@media(max-width:700px) {
+ .section-seven-art {inset:0 0 auto;height:240px;z-index:-1}
+ .s8-scroll-cue {display:block;margin:0 4px 16px;color:#6a542d;font:500 12px/1.5 'Plus Jakarta Sans',sans-serif;text-align:right}
+ .s9-benefits p {font-size:12px}
+}
+@media(max-width:520px) {
+ .discovery-finder-field :is(input,select),.s9-field :is(input,select,textarea) {font-size:16px}
+}
+
+/* Feather the actual artwork boundary, including inset right edges on tablets. */
+.section-two-intro::before,
+.section-three-discovery-visual,
+#why-euromiles .section-four-intro-photo,
+.section-five-header-photo,
+.section-six-header::before,
+.section-seven-art,
+.s8-header-photo,
+.s9-background {
+ --edge-left:linear-gradient(90deg,#000,#000);
+ --edge-vertical:linear-gradient(180deg,transparent,#000 8%,#000 85%,transparent);
+ -webkit-mask-image:var(--edge-left),var(--edge-vertical),linear-gradient(90deg,#000 calc(100% - 48px),transparent);
+ mask-image:var(--edge-left),var(--edge-vertical),linear-gradient(90deg,#000 calc(100% - 48px),transparent);
+ -webkit-mask-composite:source-in;
+ mask-composite:intersect;
+}
+.section-three-discovery-visual {--edge-left:linear-gradient(90deg,transparent,#000 24%)}
+.section-four-intro-photo {--edge-left:linear-gradient(90deg,transparent,#000 var(--photo-fade-left,0%))}
+.section-five-header-photo {--edge-left:linear-gradient(90deg,transparent,#000 12%)}
+.section-six-header::before {--edge-vertical:linear-gradient(180deg,transparent,#000 65px,#000 85%,transparent)}
+.section-seven-art {--edge-vertical:linear-gradient(180deg,transparent,#000 10%,#000 85%,transparent)}
+.s8-header-photo {--edge-left:linear-gradient(90deg,transparent,#000 18%)}
+.s9-background {--edge-vertical:linear-gradient(180deg,#000,#000)}
+@media(min-width:701px) and (max-width:1100px) {
+ .section-two-intro::before {--edge-left:linear-gradient(90deg,transparent 38%,#000 67%)}
+ .section-three-discovery-visual {--edge-left:linear-gradient(90deg,transparent,#000 45%)}
+ #why-euromiles .section-four-intro-photo {--edge-left:linear-gradient(90deg,transparent,#000 55%)}
+ .section-five-header-photo {--edge-left:linear-gradient(90deg,transparent,#000 45%)}
+ .section-six-header::before {--edge-left:linear-gradient(90deg,transparent,#000 35%);--edge-vertical:linear-gradient(180deg,transparent,#000 12%,#000 80%,transparent)}
+ .section-seven-art {--edge-left:linear-gradient(90deg,transparent 22%,#000 70%)}
+ .s8-header-photo {--edge-left:linear-gradient(90deg,transparent,#000 25%)}
+ .s9-background {--edge-left:linear-gradient(90deg,transparent 15%,#000 52%);--edge-vertical:linear-gradient(180deg,transparent,#000 10%,#000 85%,transparent)}
+}
+@media(max-width:700px) {
+ .section-four-intro-photo {--edge-left:linear-gradient(90deg,transparent,#000 25%)}
+ .s9-background {--edge-vertical:linear-gradient(180deg,#000 50%,transparent)}
+}

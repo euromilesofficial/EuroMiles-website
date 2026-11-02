@@ -515,3 +515,6 @@ window.EuroMilesFaqConfig = [
     ]
   }
 ];
+
+// WhatsApp link for advisor consultation.
+window.EuroMilesFaqContact = { whatsappUrl: "https://wa.me/918130304649" };
