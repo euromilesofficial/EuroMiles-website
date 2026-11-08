@@ -1,0 +1,639 @@
+[
+ {
+  "section": "study-in-italy",
+  "group": "Why Study in Italy",
+  "slug": "study-universities",
+  "label": "Italian Public vs Private Universities",
+  "sub": "Compare university types"
+ },
+ {
+  "section": "study-in-italy",
+  "group": "Why Study in Italy",
+  "slug": "study-scholarships",
+  "label": "Tuition Fees & 100% Scholarships",
+  "sub": "Merit-based funding"
+ },
+ {
+  "section": "study-in-italy",
+  "group": "Why Study in Italy",
+  "slug": "study-programs",
+  "label": "500+ English-Taught Programs",
+  "sub": "Top-ranked study options"
+ },
+ {
+  "section": "study-in-italy",
+  "group": "Why Study in Italy",
+  "slug": "post-study-work-visa",
+  "label": "1-Year Post-Study Work Permit",
+  "sub": "Work after graduation"
+ },
+ {
+  "section": "study-in-italy",
+  "group": "Admissions & Process",
+  "slug": "application-guide",
+  "label": "Step-by-Step Application Guide",
+  "sub": "Profile to visa"
+ },
+ {
+  "section": "study-in-italy",
+  "group": "Admissions & Process",
+  "slug": "eligibility-criteria",
+  "label": "12-Year Eligibility Rule Explained",
+  "sub": "Indian student eligibility"
+ },
+ {
+  "section": "study-in-italy",
+  "group": "Admissions & Process",
+  "slug": "university-cimea",
+  "label": "Universitaly & CIMEA Legalisation",
+  "sub": "Document legalisation"
+ },
+ {
+  "section": "study-in-italy",
+  "group": "Admissions & Process",
+  "slug": "entrance-exams",
+  "label": "Entrance Exams (IMAT, TOLC, TIL)",
+  "sub": "Exam prep guidance"
+ },
+ {
+  "section": "study-in-italy",
+  "group": "Living in Italy",
+  "slug": "accommodation",
+  "label": "Cost of Living & Accommodation",
+  "sub": "Living costs, housing"
+ },
+ {
+  "section": "study-in-italy",
+  "group": "Living in Italy",
+  "slug": "part-time-work",
+  "label": "Part-Time Jobs (20 hrs/week rules)",
+  "sub": "Work rules, wages"
+ },
+ {
+  "section": "study-in-italy",
+  "group": "Living in Italy",
+  "slug": "health-insurance",
+  "label": "Student Health Insurance (SSN)",
+  "sub": "SSN and coverage"
+ },
+ {
+  "section": "study-in-italy",
+  "group": "Living in Italy",
+  "slug": "study-faqs",
+  "label": "FAQs for Indian Students",
+  "sub": "Clear student answers"
+ },
+ {
+  "section": "universities",
+  "group": "Explore Universities",
+  "slug": "top-ranked-universities",
+  "label": "Top QS Rank Universities",
+  "sub": "Leading Global Institutions"
+ },
+ {
+  "section": "universities",
+  "group": "Explore Universities",
+  "slug": "technical-universities",
+  "label": "Technical & Polytechnics",
+  "sub": "PoliMi, PoliTo"
+ },
+ {
+  "section": "universities",
+  "group": "Explore Universities",
+  "slug": "english-medical-universities",
+  "label": "English Medical Universities",
+  "sub": "IMAT programs"
+ },
+ {
+  "section": "universities",
+  "group": "Explore Universities",
+  "slug": "business-universities",
+  "label": "Business & Economics",
+  "sub": "Leading schools"
+ },
+ {
+  "section": "universities",
+  "group": "Explore Universities",
+  "slug": "university-directory",
+  "label": "Complete A–Z Directory",
+  "sub": "90+ institutions"
+ },
+ {
+  "section": "universities",
+  "group": "Featured Universities",
+  "slug": "politecnico-milano",
+  "label": "Politecnico di Milano",
+  "sub": "Engineering & design"
+ },
+ {
+  "section": "universities",
+  "group": "Featured Universities",
+  "slug": "university-bologna",
+  "label": "University of Bologna",
+  "sub": "Historic institution"
+ },
+ {
+  "section": "universities",
+  "group": "Featured Universities",
+  "slug": "sapienza-rome",
+  "label": "Sapienza University of Rome",
+  "sub": "Research & medicine"
+ },
+ {
+  "section": "universities",
+  "group": "Featured Universities",
+  "slug": "politecnico-torino",
+  "label": "Politecnico di Torino",
+  "sub": "Engineering & technology"
+ },
+ {
+  "section": "universities",
+  "group": "Featured Universities",
+  "slug": "university-padua",
+  "label": "University of Padua",
+  "sub": "Science & medicine"
+ },
+ {
+  "section": "programs",
+  "group": "Degree Levels",
+  "slug": "bachelors-degrees",
+  "label": "Bachelor’s Degrees",
+  "sub": "3-year Laurea"
+ },
+ {
+  "section": "programs",
+  "group": "Degree Levels",
+  "slug": "masters-degrees",
+  "label": "Master’s Degrees",
+  "sub": "2-year Laurea Magistrale"
+ },
+ {
+  "section": "programs",
+  "group": "Degree Levels",
+  "slug": "research-phd",
+  "label": "Research & PhD",
+  "sub": "Doctoral pathways"
+ },
+ {
+  "section": "programs",
+  "group": "Degree Levels",
+  "slug": "single-cycle-medicine",
+  "label": "Single-Cycle Medicine",
+  "sub": "Six-year IMAT course"
+ },
+ {
+  "section": "programs",
+  "group": "Degree Levels",
+  "slug": "foundation-year",
+  "label": "Foundation Year",
+  "sub": "Entry-year bridge"
+ },
+ {
+  "section": "programs",
+  "group": "Popular Fields in Italy",
+  "slug": "medicine-and-surgery",
+  "label": "Medicine & Surgery",
+  "sub": "English-taught programs"
+ },
+ {
+  "section": "programs",
+  "group": "Popular Fields in Italy",
+  "slug": "engineering-and-ai",
+  "label": "Engineering & AI",
+  "sub": "Robotics & tech"
+ },
+ {
+  "section": "programs",
+  "group": "Popular Fields in Italy",
+  "slug": "architecture-and-design",
+  "label": "Architecture & Design",
+  "sub": "Design hubs"
+ },
+ {
+  "section": "programs",
+  "group": "Popular Fields in Italy",
+  "slug": "business-finance-economics",
+  "label": "Business, Finance & Economics",
+  "sub": "Finance & economics"
+ },
+ {
+  "section": "programs",
+  "group": "Popular Fields in Italy",
+  "slug": "fashion-design",
+  "label": "Fashion & Design",
+  "sub": "Milan fashion hub"
+ },
+ {
+  "section": "programs",
+  "group": "Program Highlights",
+  "slug": "english-taught-degrees",
+  "label": "500+ English-Taught Degrees",
+  "sub": "No Italian required"
+ },
+ {
+  "section": "programs",
+  "group": "Program Highlights",
+  "slug": "low-tuition-programs",
+  "label": "Low Tuition Programs",
+  "sub": "€156–€1,000 per year"
+ },
+ {
+  "section": "programs",
+  "group": "Program Highlights",
+  "slug": "entrance-exam-prep",
+  "label": "Entrance Exam Prep",
+  "sub": "IMAT & English TOLC"
+ },
+ {
+  "section": "programs",
+  "group": "Program Highlights",
+  "slug": "dual-european-degrees",
+  "label": "Dual & European Degrees",
+  "sub": "Study across Europe"
+ },
+ {
+  "section": "programs",
+  "group": "Program Highlights",
+  "slug": "program-finder",
+  "label": "Program Finder Tool",
+  "sub": "Match your interests"
+ },
+ {
+  "section": "scholarships",
+  "group": "Scholarship Benefits",
+  "slug": "regional-tuition-waivers",
+  "label": "100% Tuition Waivers",
+  "sub": "Regional, merit-based"
+ },
+ {
+  "section": "scholarships",
+  "group": "Scholarship Benefits",
+  "slug": "annual-living-stipends",
+  "label": "Annual Living Stipends",
+  "sub": "Up to €8,500 yearly"
+ },
+ {
+  "section": "scholarships",
+  "group": "Scholarship Benefits",
+  "slug": "university-merit-awards",
+  "label": "University Merit Awards",
+  "sub": "Academic distinction"
+ },
+ {
+  "section": "scholarships",
+  "group": "Rules & Strict Deadlines",
+  "slug": "scholarship-filing-mistakes",
+  "label": "Why DIY Applications Get Rejected",
+  "sub": "Filing mistakes"
+ },
+ {
+  "section": "scholarships",
+  "group": "Rules & Strict Deadlines",
+  "slug": "isee-income-limits",
+  "label": "Strict ISEE Income Limits",
+  "sub": "Family income rules"
+ },
+ {
+  "section": "scholarships",
+  "group": "Rules & Strict Deadlines",
+  "slug": "scholarship-deadlines",
+  "label": "2026/27 Submission Deadlines",
+  "sub": "Government filing windows"
+ },
+ {
+  "section": "scholarships",
+  "group": "EuroMiles Assistance",
+  "slug": "error-free-filing",
+  "label": "Guaranteed Error-Free Filing",
+  "sub": "Legal submission"
+ },
+ {
+  "section": "scholarships",
+  "group": "EuroMiles Assistance",
+  "slug": "scholarship-eligibility",
+  "label": "Free Profile & Eligibility Assessment",
+  "sub": "Family income review"
+ },
+ {
+  "section": "scholarships",
+  "group": "EuroMiles Assistance",
+  "slug": "student-award-proof",
+  "label": "Verified Student Award Proof",
+  "sub": "Approval verification"
+ },
+ {
+  "section": "services-visa",
+  "group": "Academic Legalization",
+  "slug": "university-portal-filing",
+  "label": "University Portal Filing",
+  "sub": "Pre-enrolment submission"
+ },
+ {
+  "section": "services-visa",
+  "group": "Academic Legalization",
+  "slug": "cimea-certificates",
+  "label": "CIMEA & Comparability Certificates",
+  "sub": "Academic recognition"
+ },
+ {
+  "section": "services-visa",
+  "group": "Academic Legalization",
+  "slug": "sworn-translations",
+  "label": "Sworn Italian Translations",
+  "sub": "Certified documents"
+ },
+ {
+  "section": "services-visa",
+  "group": "Academic Legalization",
+  "slug": "entrance-exam-guidance",
+  "label": "Entrance Exam Guidance",
+  "sub": "IMAT, TOLC & TIL"
+ },
+ {
+  "section": "services-visa",
+  "group": "National Student Visa",
+  "slug": "financial-dossier",
+  "label": "Embassy Financial Dossier",
+  "sub": "Sponsorship & solvency"
+ },
+ {
+  "section": "services-visa",
+  "group": "National Student Visa",
+  "slug": "visa-mock-interviews",
+  "label": "1-on-1 Visa Mock Interviews",
+  "sub": "Consular interview prep"
+ },
+ {
+  "section": "services-visa",
+  "group": "National Student Visa",
+  "slug": "vfs-slot-management",
+  "label": "VFS & Consular Slot Management",
+  "sub": "Appointment planning"
+ },
+ {
+  "section": "services-visa",
+  "group": "National Student Visa",
+  "slug": "visa-rejection-audit",
+  "label": "Visa Rejection Risk Audit",
+  "sub": "Application review"
+ },
+ {
+  "section": "services-visa",
+  "group": "Post-Arrival in Italy",
+  "slug": "student-accommodation",
+  "label": "Verified Student Accommodation",
+  "sub": "Trusted housing search"
+ },
+ {
+  "section": "services-visa",
+  "group": "Post-Arrival in Italy",
+  "slug": "permesso-assistance",
+  "label": "Permesso di Soggiorno Assistance",
+  "sub": "Residence permit filing"
+ },
+ {
+  "section": "services-visa",
+  "group": "Post-Arrival in Italy",
+  "slug": "codice-fiscale-banking",
+  "label": "Codice Fiscale & Banking",
+  "sub": "Tax code & accounts"
+ },
+ {
+  "section": "services-visa",
+  "group": "Post-Arrival in Italy",
+  "slug": "airport-welcome",
+  "label": "Airport Welcome & Orientation",
+  "sub": "Arrival day support"
+ },
+ {
+  "section": "success-stories",
+  "group": "Verified Results",
+  "slug": "university-admit-letters",
+  "label": "Top University Admit Letters",
+  "sub": "PoliMi, Bologna & Sapienza"
+ },
+ {
+  "section": "success-stories",
+  "group": "Verified Results",
+  "slug": "scholarship-award-proof",
+  "label": "100% Scholarship Award Proof",
+  "sub": "Regional grant winners"
+ },
+ {
+  "section": "success-stories",
+  "group": "Verified Results",
+  "slug": "italian-visa-approvals",
+  "label": "Italian Visa Approvals Gallery",
+  "sub": "Stamped visas & passports"
+ },
+ {
+  "section": "success-stories",
+  "group": "Verified Results",
+  "slug": "gap-year-success-stories",
+  "label": "Gap Year & Low GPA Stories",
+  "sub": "Complex profiles guided"
+ },
+ {
+  "section": "success-stories",
+  "group": "Video & Reviews",
+  "slug": "student-video-testimonials",
+  "label": "Student Video Testimonials",
+  "sub": "Stories from Milan, Rome & Turin"
+ },
+ {
+  "section": "success-stories",
+  "group": "Video & Reviews",
+  "slug": "parent-perspectives",
+  "label": "Parent Perspectives & Reviews",
+  "sub": "Why families trust us"
+ },
+ {
+  "section": "success-stories",
+  "group": "Video & Reviews",
+  "slug": "campus-life-tours",
+  "label": "Campus Life & Dorm Tours",
+  "sub": "Student life in Italy"
+ },
+ {
+  "section": "success-stories",
+  "group": "Video & Reviews",
+  "slug": "verified-reviews",
+  "label": "Verified Google & Trustpilot",
+  "sub": "Independent 4.9-star reviews"
+ },
+ {
+  "section": "success-stories",
+  "group": "Students by Italian City",
+  "slug": "students-in-milan",
+  "label": "Our Students in Milan",
+  "sub": "PoliMi, Statale & Bicocca"
+ },
+ {
+  "section": "success-stories",
+  "group": "Students by Italian City",
+  "slug": "students-in-rome",
+  "label": "Our Students in Rome",
+  "sub": "Sapienza & Tor Vergata"
+ },
+ {
+  "section": "success-stories",
+  "group": "Students by Italian City",
+  "slug": "students-in-bologna-padua",
+  "label": "Our Students in Bologna & Padua",
+  "sub": "Historic university towns"
+ },
+ {
+  "section": "success-stories",
+  "group": "Students by Italian City",
+  "slug": "students-in-turin",
+  "label": "Our Students in Turin",
+  "sub": "Engineering hub at PoliTo"
+ },
+ {
+  "section": "about",
+  "group": "Who We Are",
+  "slug": "about-euromiles",
+  "label": "About EuroMiles",
+  "sub": "Italian education specialists"
+ },
+ {
+  "section": "about",
+  "group": "Who We Are",
+  "slug": "our-mission",
+  "label": "Our Origin & Mission",
+  "sub": "Affordable European degrees"
+ },
+ {
+  "section": "about",
+  "group": "Who We Are",
+  "slug": "italy-only-advantage",
+  "label": "The Italy-Only Advantage",
+  "sub": "Focused expert guidance"
+ },
+ {
+  "section": "about",
+  "group": "Who We Are",
+  "slug": "leadership-advisors",
+  "label": "Leadership & Advisors",
+  "sub": "Alumni and academic experts"
+ },
+ {
+  "section": "about",
+  "group": "Trust & Transparency",
+  "slug": "university-network",
+  "label": "Recognized University Network",
+  "sub": "Direct Italian university ties"
+ },
+ {
+  "section": "about",
+  "group": "Trust & Transparency",
+  "slug": "transparent-fees",
+  "label": "Transparent Fee Policy",
+  "sub": "No hidden charges"
+ },
+ {
+  "section": "about",
+  "group": "Trust & Transparency",
+  "slug": "track-record",
+  "label": "Proven Track Record",
+  "sub": "1,000+ admits and grants"
+ },
+ {
+  "section": "about",
+  "group": "Trust & Transparency",
+  "slug": "accreditations",
+  "label": "Accreditations & Media",
+  "sub": "Recognized education authority"
+ },
+ {
+  "section": "about",
+  "group": "Connect & Visit",
+  "slug": "student-lounges",
+  "label": "Visit Our Student Lounges",
+  "sub": "In-person counselling"
+ },
+ {
+  "section": "about",
+  "group": "Connect & Visit",
+  "slug": "senior-advisor",
+  "label": "Book a Senior Advisor",
+  "sub": "Personal profile review"
+ },
+ {
+  "section": "about",
+  "group": "Connect & Visit",
+  "slug": "partnerships",
+  "label": "University & School Partners",
+  "sub": "Institutional collaborations"
+ },
+ {
+  "section": "about",
+  "group": "Connect & Visit",
+  "slug": "contact-euromiles",
+  "label": "Contact & Dedicated Support",
+  "sub": "Direct, helpful answers"
+ },
+ {
+  "section": "universities",
+  "group": "Study by City",
+  "slug": "universities-milan",
+  "label": "Universities in Milan",
+  "sub": "Design, finance & engineering capital"
+ },
+ {
+  "section": "universities",
+  "group": "Study by City",
+  "slug": "universities-rome",
+  "label": "Universities in Rome",
+  "sub": "Historic capital, research & medicine"
+ },
+ {
+  "section": "universities",
+  "group": "Study by City",
+  "slug": "universities-bologna",
+  "label": "Universities in Bologna",
+  "sub": "The world’s oldest university city"
+ },
+ {
+  "section": "universities",
+  "group": "Study by City",
+  "slug": "universities-turin",
+  "label": "Universities in Turin",
+  "sub": "Engineering, automotive & tech hub"
+ },
+ {
+  "section": "universities",
+  "group": "Study by City",
+  "slug": "universities-padua",
+  "label": "Universities in Padua",
+  "sub": "Science, medicine & student life"
+ },
+ {
+  "section": "universities",
+  "group": "Study by City",
+  "slug": "universities-florence",
+  "label": "Universities in Florence",
+  "sub": "Art, architecture & humanities"
+ },
+ {
+  "section": "universities",
+  "group": "Study by City",
+  "slug": "university-cities",
+  "label": "All University Cities in Italy",
+  "sub": "Compare cities by cost and lifestyle"
+ },
+ {
+  "section": "universities",
+  "group": "Tools",
+  "slug": "university-match-tool",
+  "label": "University Match Tool",
+  "sub": "Filter by GPA, IELTS and budget"
+ },
+ {
+  "section": "about",
+  "group": "Who We Are",
+  "slug": "about-team",
+  "label": "Meet the EuroMiles Team",
+  "sub": "Counsellors and academic experts"
+ }
+]
