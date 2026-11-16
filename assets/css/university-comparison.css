@@ -34,6 +34,7 @@
 .university-guide .university-hero-facts a{color:#f9d77f;text-decoration:underline;text-underline-offset:3px}
 @media(max-width:700px){.university-guide .sp-hero{padding:30px 0}.university-guide .university-hero-facts{padding:22px}.university-guide .university-hero-facts div{padding:9px 0}.university-guide .university-hero-facts div:first-child{padding-top:0}}
 
-/* Poppins is limited to the At a Glance block. */
-.university-guide .university-hero-facts h2,.university-guide .university-hero-facts dt,.university-guide .university-hero-facts dd,.university-guide .university-hero-facts p{font-family:Poppins, sans-serif}
-.university-guide .university-hero-facts dd{font-weight:600}
+/* Manrope brings a clean, modern feel while matching the site's existing UI. */
+.university-guide .university-hero-facts h2,.university-guide .university-hero-facts dt,.university-guide .university-hero-facts dd,.university-guide .university-hero-facts p{font-family:Manrope, sans-serif}
+.university-guide .university-hero-facts dd{font-weight:700;letter-spacing:-.025em}
+.university-guide .university-hero-facts dt{letter-spacing:.08em}
