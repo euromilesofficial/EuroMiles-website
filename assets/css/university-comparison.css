@@ -61,3 +61,5 @@
 .university-guide .sp-related{padding:clamp(30px,4vw,48px) 0 18px}
 .university-guide .sp-cta{margin:20px 0 clamp(36px,4vw,56px)}
 @media(max-width:700px){.university-guide .university-ribbon .sp-wrap{padding-block:16px}.university-guide .university-editorial-image{min-height:0}.university-guide .university-editorial-photo{min-height:220px}.university-guide .sp-faq-band{padding:32px 0}.university-guide .sp-related{padding:32px 0 16px}}
+/* Keep the university fee examples visible and make their next step easy to find. */
+.university-fee-next{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:20px 24px;border-top:1px solid #eee5d7;background:#fffaf1}.university-fee-next strong{font:700 18px/1.3 var(--sp-display);color:#0b2046}.university-guide .sp-sec .university-fee-next p{margin:5px 0 0;font-size:14px;line-height:1.5}.university-fee-next .sp-btn{flex-shrink:0;min-height:44px;padding-inline:19px;font-size:13px}@media(max-width:700px){.university-fee-next{align-items:flex-start;flex-direction:column}.university-fee-next .sp-btn{width:100%}}
