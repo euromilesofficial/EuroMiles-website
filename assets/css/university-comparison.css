@@ -23,3 +23,11 @@
 @media(max-width:700px){.university-cost-stats{grid-template-columns:repeat(2,minmax(0,1fr))}.university-scholarship-cards{grid-template-columns:1fr}.university-editorial-image{grid-template-columns:1fr}.university-editorial-photo{min-height:230px}.university-editorial-image figcaption{padding:26px}.university-editorial-photo:after{background:linear-gradient(0deg,rgba(11,32,70,.25),transparent 60%)}}
 @media(prefers-reduced-motion:reduce){.university-editorial-photo img{transition:none}}
 .university-fee-details{margin:20px 0 26px;border:1px solid #e8dfcd;border-radius:14px;background:#fff}.university-fee-details>summary{cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:17px 20px;color:#0b2046;font:800 14px/1.4 var(--sp-ui)}.university-fee-details>summary::-webkit-details-marker{display:none}.university-fee-details>summary:after{content:'+';color:#b9822d;font-size:22px}.university-fee-details[open]>summary:after{content:'−'}.university-fee-details>summary:focus-visible{outline:3px solid #bd8127;outline-offset:2px}.university-fee-details .university-fee-examples{margin:0;border:0;border-top:1px solid #e8dfcd;border-radius:0 0 14px 14px;box-shadow:none}
+/* Keep the four figures clear and vertically spacious, like the reference. */
+.university-guide .university-hero-facts{padding:clamp(28px,3vw,40px)}
+.university-guide .university-hero-facts h2{margin-bottom:22px}
+.university-guide .university-hero-facts div{padding:18px 0}
+.university-guide .university-hero-facts div:first-child{padding-top:0}
+.university-guide .university-hero-facts dd{font-size:clamp(22px,2.3vw,30px)}
+.university-guide .university-hero-facts a{color:#f9d77f;text-decoration:underline;text-underline-offset:3px}
+@media(max-width:700px){.university-guide .university-hero-facts{padding:26px}.university-guide .university-hero-facts div{padding:15px 0}.university-guide .university-hero-facts div:first-child{padding-top:0}}
