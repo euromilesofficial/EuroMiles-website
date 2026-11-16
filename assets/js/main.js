@@ -536,12 +536,36 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }, true);
 
-  consultationForm?.addEventListener('submit', (event) => {
+  consultationForm?.addEventListener('submit', async (event) => {
     event.preventDefault();
     if (!validateIndianMobileField(consultationMobile, consultationMobileFeedback)
-      || !validateEmailField(consultationEmail, consultationEmailFeedback)) return;
-    if (consultationFormStatus) {
-      consultationFormStatus.textContent = 'This prototype form is not connected yet, so your details have not been sent.';
+      || !validateEmailField(consultationEmail, consultationEmailFeedback)
+      || !consultationForm.reportValidity()) return;
+
+    const submitButton = consultationForm.querySelector('[type="submit"]');
+    if (submitButton?.disabled) return;
+    if (submitButton) submitButton.disabled = true;
+    if (consultationFormStatus) consultationFormStatus.textContent = 'Sending your request…';
+    const data = new FormData(consultationForm);
+    const payload = {
+      full_name: data.get('full_name'), mobile: data.get('mobile'), email: data.get('email'),
+      qualification: data.get('qualification'), degree_level: data.get('degree_level'),
+      intake_year: data.get('intake_year'), message: data.get('message') || '',
+      contact_consent: data.has('contact_consent'), page: window.location.pathname
+    };
+    try {
+      const response = await fetch('/api/consultation', {
+        method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload)
+      });
+      const result = await response.json();
+      if (!response.ok || !result.ok) throw new Error('Submission failed');
+      consultationForm.reset();
+      consultationForm.querySelectorAll('.consultation-input-wrap input, .consultation-input-wrap textarea').forEach(syncHeroFieldPlaceholder);
+      if (consultationFormStatus) consultationFormStatus.textContent = 'Thank you! Your consultation request has been sent.';
+    } catch {
+      if (consultationFormStatus) consultationFormStatus.textContent = 'We could not send your request. Please try again later.';
+    } finally {
+      if (submitButton) submitButton.disabled = false;
     }
   });
 
