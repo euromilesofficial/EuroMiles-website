@@ -18,6 +18,11 @@ Apply these rules to new sections and future edits.
 - The Study in Italy, Universities, Programs, and Scholarships dropdowns share a 1250px desktop width and aligned edges/column rhythm. Use 330px as the baseline panel height; add height when extra rows need comfortable spacing rather than compressing the links (the current five-row Programs panel is 350px tall). Keep row-link titles at 13px across all mega menus.
 - Use a full-bleed promo image in a near-square card about 312px wide and 300–320px tall for current menus. Do not reduce an approved promo-card width to make room for columns; widen the panel and let columns take the additional space. Keep promo-card text and buttons editable in HTML/CSS, with the approved white text-glow treatment and no broad gradient fade over the image.
 
+## Content and approved block typography
+
+- Manrope in the university comparison page's At a Glance block is approved and locked. Use this font for similar blocks when the user requests it; do not change other approved typography without direction.
+- For every subpage, write for students and parents with concise, confident, benefit-led, SEO-conscious copy that makes scholarship opportunities, tuition waivers, meals and living support clear where relevant, answers key doubts and encourages a free assessment or enquiry. Avoid repetitive hedging, lengthy academic prose and confusing verdicts. Connect each benefit to a clear next step. Always explain relevant eligibility and actual costs accurately; never imply a scholarship, visa or admission is guaranteed, invent benefits or manufacture urgency.
+
 ## Current approved interaction details
 
 - Section 6 is approved and locked as of 27 October 2026, including its scenic header and typography, category/context tabs, video gallery, hover previews and speaker toggle, automatic carousel, and context-sensitive social strips. Preserve its current design and interactions unless the user explicitly requests a change. This approval does not authorize Git staging, commits, checkpoints or pushes.
